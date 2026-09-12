@@ -1,0 +1,11 @@
+# Netlify configuration file for pure static HTML
+[build]
+  publish = "."
+  command = ""
+
+# Optional: redirects or headers if needed
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
