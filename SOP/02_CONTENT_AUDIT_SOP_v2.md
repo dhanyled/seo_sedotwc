@@ -45,8 +45,10 @@ Draf konten **wajib lolos 9 Hard Gates** berikut dengan status `PASS` sebelum di
   - [ ] Wajib memiliki sudut melengkung **`border-radius: 8px`** yang konsisten.
   - [ ] **Simetri Teks di Tengah (*Perfect Flex Centering*):** Teks tombol wajib benar-benar di tengah secara horizontal dan vertikal (`display: inline-flex; align-items: center; justify-content: center; text-align: center;`). Dilarang teks melenceng ke kiri atau kanan.
   - [ ] **Ikon Resmi WhatsApp Wajib:** Wajib menyertakan ikon resmi WhatsApp (SVG putih 20×20 px atau otomatisasi CSS mask `::before`) di sebelah kiri teks tombol. Dilarang menggunakan emoji teks (💬, 📱, dll) yang rapuh dan inkonsisten.
-  - [ ] **Container Pembungkus Terpusat:** Tombol dibungkus container flex pemusat (`display: flex; justify-content: center; width: 100%; margin-top: 15px;`) sehingga rapi dan simetris di desktop maupun smartphone 320px.
-  - [ ] **Teks Tombol Ringkas & Anti-Nomor Telepon (*Mobile Readability*):** DILARANG menyertakan nomor telepon panjang (seperti `0813-8888-4349`) di dalam teks tombol CTA. Teks tombol wajib ringkas (maksimal 30–40 karakter), berorientasi tindakan dan manfaat langsung (*action + benefit*, misal: *"Konsultasi & Cek Lokasi Gratis"* atau *"Hubungi Teknisi (Respon WA < 5 Menit)"*). Mencegah pembengkakan vertikal tombol pada layar smartphone (320px–375px).
+  - [ ] **Container Pembungkus Terpusat Vertikal (*Flex Column Alignment*):** Tombol dibungkus container flex kolom pemusat (`display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin-top: 15px;`) sehingga tombol utama dan subtext penenang di bawahnya simetris di tengah pada desktop maupun smartphone 320px.
+  - [ ] **Pola Two-Layer CTA (NLP Action Button + Microcopy Subtext):**
+    - [ ] **Layer 1 (Tombol Utama):** Teks tombol menggunakan frasa NLP/aksi langsung yang ringkas (2–3 kata, tanpa kurung, contoh: *"Chat Teknisi Sekarang"*, *"Panggil Ahli Pipa Sekarang"*). Dilarang nomor telepon di tombol.
+    - [ ] **Layer 2 (Microcopy di Bawah Tombol):** Penjelasan kecepatan respon / jaminan / konsultasi gratis berada di bawah tombol sebagai teks penenang (`font-size: 0.82rem`).
 
 ### ⛔ Hard Gate 2: Proteksi Halaman Sakral 749 & Isolasi MU-Plugin
 * [ ] Tidak memodifikasi layout, grid, atau struktur kontainer Elementor di Halaman 749 (`/landing-page-google-ads/`).
