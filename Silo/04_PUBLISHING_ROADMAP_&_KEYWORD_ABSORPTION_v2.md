@@ -211,14 +211,13 @@ Untuk membangun otoritas tanpa memicu deteksi spam pada domain muda (`sedotwcdij
 * **Bahaya Kurva Logaritmik (Banyak di Awal):** Mem-publish massal di awal lalu melambat di akhir sangat berbahaya untuk domain muda karena memicu radar Google SpamBrain (Sandbox AI Detection).
 * **Keunggulan Kurva Akselerasi Eksponensial (*Progressive Exponential Warming*):**  
   Makin tua umur domain dan makin sering Googlebot datang merayapi website, **kuota rilis ditingkatkan secara progresif**:
-  - **Fase 1 (Minggu 1–2):** Interval 3 hari (lambat & hati-hati — bot Google mulai mengenali pola posting).
-  - **Fase 2 (Minggu 3–4):** Interval 2 hari (akselerasi moderat — crawl frequency bot mulai meningkat).
-  - **Fase 3 (Minggu 5–6):** Interval 1–2 hari (akselerasi tinggi — klaster topik mulai mengkristal).
-  - **Fase 4 (Minggu 7):** Interval 1 hari / harian (kecepatan penuh — crawl budget sudah establish).
+  - **Fase 1 (Minggu 1–3 / Gelombang 1):** Interval 2 hari (ritme stabil & hati-hati — bot Google mulai merekam crawl cadence teratur).
+  - **Fase 2 (Minggu 4–5 / Gelombang 2):** Interval 1–2 hari (akselerasi moderat — crawl frequency bot meningkat).
+  - **Fase 3 (Minggu 6–7 / Gelombang 3):** Interval 1 hari / harian penuh (kecepatan maksimal — crawl budget sudah establish & authority terbentuk).
 
 ### 3.2 Aturan Publikasi > 1 Artikel per Hari:
-1. **Minggu 1 s/d 3 (Gelombang 1):** **DILARANG** merilis > 1 artikel per hari agar sinyal indexing tidak tumpang-tindih.
-2. **Minggu 5 ke atas (Gelombang 3):** **DIPERBOLEHKAN** merilis maksimal 2 artikel per hari dengan 2 syarat mutlak:
+1. **Minggu 1 s/d 4 (Gelombang 1 & 2):** **DILARANG** merilis > 1 artikel per hari agar sinyal indexing tidak tumpang-tindih.
+2. **Minggu 6 ke atas (Gelombang 3):** **DIPERBOLEHKAN** merilis maksimal 2 artikel per hari dengan 2 syarat mutlak:
    * **Beda Silo (Cross-Silo Disjoint):** Contoh: 1 artikel Silo 1 (Septic Tank Rumah) dan 1 artikel Silo 3 (Grease Trap Resto). Dilarang merilis 2 artikel dari Silo yang sama di hari yang sama.
    * **Jeda Waktu (*Time Jitter*):** Artikel pertama rilis pagi (07.30–08.30 WIB), artikel kedua rilis sore/malam (16.30–18.00 WIB).
 
@@ -229,35 +228,35 @@ Untuk membangun otoritas tanpa memicu deteksi spam pada domain muda (`sedotwcdij
 | No | Kode | Target Tanggal Rilis | Gelombang & Interval | Peran Konten | Rencana Judul Artikel (H1) & Target Silo |
 | :---: | :---: | :--- | :---: | :---: | :--- |
 | **1** | **S1-P** | **Sabtu, 12 Sep 2026** *(Hari Ini)* | 🌊 Gel. 1 (Kickoff) | ⭐ PILAR HUB | Panduan Lengkap Kuras Septic Tank Rumah Tangga: Cara Kerja, Biaya Resmi & Waktu Ideal |
-| **2** | **S2-P** | **Selasa, 15 Sep 2026** | 🌊 Gel. 1 (+3 hari) | ⭐ PILAR HUB | Solusi Tuntas Pipa Saluran Mampet Tanpa Bongkar Lantai: Spiral Drain & Mesin Vakum |
-| **3** | **S3-P** | **Jumat, 18 Sep 2026** | 🌊 Gel. 1 (+3 hari) | ⭐ PILAR HUB | Standar Sanitasi Grease Trap Dapur Komersial: Kuras Lemak Resto & Dapur Program MBG |
-| **4** | **S4-P** | **Senin, 21 Sep 2026** | 🌊 Gel. 1 (+3 hari) | ⭐ PILAR HUB | Manajemen Bak STP Gedung & Pabrik: Prosedur Sedot Lumpur Domestik Non-B3 |
-| **5** | **S5-P** | **Rabu, 23 Sep 2026** | 🌊 Gel. 1 (+2 hari) | ⭐ PILAR HUB | Jaringan Pos Armada Sedot WC Terdekat se-Jabodetabek: Waktu Respon < 5 Menit |
-| **6** | **S1-01** | **Jumat, 25 Sep 2026** | 🌊 Gel. 1 (+2 hari) | 📄 Pendukung | 5 Ciri Septic Tank Penuh vs Kloset Mampet: Jangan Salah Panggil Tukang! |
-| **7** | **S1-02** | **Minggu, 27 Sep 2026** | 🌊 Gel. 1 (+2 hari) | 📄 Pendukung | Rincian Biaya Sedot WC Jakarta Resmi 2026: Tarif per Tangki vs per Kubik |
-| **8** | **S2-01** | **Selasa, 29 Sep 2026** | 🌊 Gel. 1 (+2 hari) | 📄 Pendukung | Kloset Tersumbat Pembalut atau Tisu Basah? Hindari Soda Api, Lakukan Cara Aman Ini |
-| **9** | **S3-01** | **Kamis, 01 Okt 2026** | 🌊 Gel. 1 (+2 hari) | 📄 Pendukung | Karakteristik Limbah Minyak Jenuh (FOG) Dapur Sentral Masak Porsi Besar MBG |
-| **10** | **S5-01** | **Sabtu, 03 Okt 2026** | 🌊 Gel. 1 (+2 hari) | 📄 Pendukung | Sedot WC Jakarta Selatan: Jangkauan Armada Tebet, Kebayoran Baru, Cilandak |
-| **11** | **S1-03** | **Senin, 05 Okt 2026** | 🌊 Gel. 2 (+2 hari) | 📄 Pendukung | Berapa Lama Septic Tank Harus Disedot? Kenali Siklus Kuras Penghuni Rumah |
-| **12** | **S1-04** | **Rabu, 07 Okt 2026** | 🌊 Gel. 2 (+2 hari) | 📄 Pendukung | Apakah Truk Tangki Sedot WC Bisa Masuk Gang Sempit? Solusi Selang 100 Meter |
-| **13** | **S2-02** | **Kamis, 08 Okt 2026** | 🌊 Gel. 2 (+1 hari) | 📄 Pendukung | Wastafel Dapur Mampet Total Akibat Lemak Membeku? Ini Solusi Cepat Melancarkannya |
-| **14** | **S2-03** | **Sabtu, 10 Okt 2026** | 🌊 Gel. 2 (+2 hari) | 📄 Pendukung | Bahaya Menggunakan Soda Api untuk Kloset & Paralon PVC yang Jarang Diketahui |
-| **15** | **S3-02** | **Minggu, 11 Okt 2026** | 🌊 Gel. 2 (+1 hari) | 📄 Pendukung | Jadwal Ideal Pembersihan Grease Trap Cafe & Rumah Makan Tanpa Ganggu Pengunjung |
-| **16** | **S3-03** | **Selasa, 13 Okt 2026** | 🌊 Gel. 2 (+2 hari) | 📄 Pendukung | Cara Mengatasi Bau Busuk dari Perangkap Lemak Dapur yang Menyengat |
-| **17** | **S4-01** | **Rabu, 14 Okt 2026** | 🌊 Gel. 2 (+1 hari) | 📄 Pendukung | Perbedaan Limbah Domestik Gedung (Non-B3) vs Limbah B3 dalam Aturan Sedot |
-| **18** | **S4-02** | **Jumat, 16 Okt 2026** | 🌊 Gel. 2 (+2 hari) | 📄 Pendukung | Kapasitas Armada Truk Tangki Besar (4.000 - 6.000 Liter) Kuras Massal Pabrik |
-| **19** | **S5-02** | **Sabtu, 17 Okt 2026** | 🌊 Gel. 2 (+1 hari) | 📄 Pendukung | Sedot WC Jakarta Barat: Layanan Cepat Kebon Jeruk, Cengkareng, Grogol |
-| **20** | **S5-03** | **Senin, 19 Okt 2026** | 🌊 Gel. 2 (+2 hari) | 📄 Pendukung | Sedot WC Jakarta Timur: Siaga 24 Jam Duren Sawit, Cakung, Matraman |
-| **21** | **S1-05** | **Selasa, 20 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Kenapa Septic Tank Cepat Penuh Padahal Baru Disedot? Waspadai Resapan Mampet |
-| **22** | **S2-04** | **Rabu, 21 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Bak Kontrol Got Rumah Meluap Saat Hujan? Langkah Praktis Deteksi Pipa Sumbat |
-| **23** | **S2-05** | **Kamis, 22 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Kelebihan Jasa Pelancar Spiral Wire Dibandingkan Tukang Bongkar Keramik |
-| **24** | **S3-04** | **Jumat, 23 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Layanan Sedot Lemak Malam & Subuh Jabodetabek: Higienis Bergaransi |
-| **25** | **S3-05** | **Sabtu, 24 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Regulasi Pengelolaan Air Limbah Restoran DKI Jakarta & Sanksi Pencemaran |
-| **26** | **S4-03** | **Minggu, 25 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Mekanisme Pembuangan Resmi ke IPLT Pemda DKI Bebas Sanksi Lingkungan |
-| **27** | **S4-04** | **Senin, 26 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Biaya Borongan Kuras STP Gedung Perkantoran & Ruko Kawasan Bisnis |
-| **28** | **S4-05** | **Selasa, 27 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Tanda Endapan Lumpur STP Sudah Mengeras dan Butuh Water Jetting |
-| **29** | **S5-04** | **Rabu, 28 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Sedot WC Jakarta Pusat: Akses Cepat Menteng, Tanah Abang, Kemayoran |
-| **30** | **S5-05** | **Kamis, 29 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Sedot WC Jakarta Utara: Layanan Wilayah Kelapa Gading, Pluit, Sunter |
+| **2** | **S2-P** | **Senin, 14 Sep 2026** | 🌊 Gel. 1 (+2 hari) | ⭐ PILAR HUB | Solusi Tuntas Pipa Saluran Mampet Tanpa Bongkar Lantai: Spiral Drain & Mesin Vakum |
+| **3** | **S3-P** | **Rabu, 16 Sep 2026** | 🌊 Gel. 1 (+2 hari) | ⭐ PILAR HUB | Standar Sanitasi Grease Trap Dapur Komersial: Kuras Lemak Resto & Dapur Program MBG |
+| **4** | **S4-P** | **Jumat, 18 Sep 2026** | 🌊 Gel. 1 (+2 hari) | ⭐ PILAR HUB | Manajemen Bak STP Gedung & Pabrik: Prosedur Sedot Lumpur Domestik Non-B3 |
+| **5** | **S5-P** | **Minggu, 20 Sep 2026** | 🌊 Gel. 1 (+2 hari) | ⭐ PILAR HUB | Jaringan Pos Armada Sedot WC Terdekat se-Jabodetabek: Waktu Respon < 5 Menit |
+| **6** | **S1-01** | **Selasa, 22 Sep 2026** | 🌊 Gel. 1 (+2 hari) | 📄 Pendukung | 5 Ciri Septic Tank Penuh vs Kloset Mampet: Jangan Salah Panggil Tukang! |
+| **7** | **S1-02** | **Kamis, 24 Sep 2026** | 🌊 Gel. 1 (+2 hari) | 📄 Pendukung | Rincian Biaya Sedot WC Jakarta Resmi 2026: Tarif per Tangki vs per Kubik |
+| **8** | **S2-01** | **Sabtu, 26 Sep 2026** | 🌊 Gel. 1 (+2 hari) | 📄 Pendukung | Kloset Tersumbat Pembalut atau Tisu Basah? Hindari Soda Api, Lakukan Cara Aman Ini |
+| **9** | **S3-01** | **Senin, 28 Sep 2026** | 🌊 Gel. 1 (+2 hari) | 📄 Pendukung | Karakteristik Limbah Minyak Jenuh (FOG) Dapur Sentral Masak Porsi Besar MBG |
+| **10** | **S5-01** | **Rabu, 30 Sep 2026** | 🌊 Gel. 1 (+2 hari) | 📄 Pendukung | Sedot WC Jakarta Selatan: Jangkauan Armada Tebet, Kebayoran Baru, Cilandak |
+| **11** | **S1-03** | **Jumat, 02 Okt 2026** | 🌊 Gel. 2 (+2 hari) | 📄 Pendukung | Berapa Lama Septic Tank Harus Disedot? Kenali Siklus Kuras Penghuni Rumah |
+| **12** | **S1-04** | **Sabtu, 03 Okt 2026** | 🌊 Gel. 2 (+1 hari) | 📄 Pendukung | Apakah Truk Tangki Sedot WC Bisa Masuk Gang Sempit? Solusi Selang 100 Meter |
+| **13** | **S2-02** | **Senin, 05 Okt 2026** | 🌊 Gel. 2 (+2 hari) | 📄 Pendukung | Wastafel Dapur Mampet Total Akibat Lemak Membeku? Ini Solusi Cepat Melancarkannya |
+| **14** | **S2-03** | **Selasa, 06 Okt 2026** | 🌊 Gel. 2 (+1 hari) | 📄 Pendukung | Bahaya Menggunakan Soda Api untuk Kloset & Paralon PVC yang Jarang Diketahui |
+| **15** | **S3-02** | **Kamis, 08 Okt 2026** | 🌊 Gel. 2 (+2 hari) | 📄 Pendukung | Jadwal Ideal Pembersihan Grease Trap Cafe & Rumah Makan Tanpa Ganggu Pengunjung |
+| **16** | **S3-03** | **Jumat, 09 Okt 2026** | 🌊 Gel. 2 (+1 hari) | 📄 Pendukung | Cara Mengatasi Bau Busuk dari Perangkap Lemak Dapur yang Menyengat |
+| **17** | **S4-01** | **Minggu, 11 Okt 2026** | 🌊 Gel. 2 (+2 hari) | 📄 Pendukung | Perbedaan Limbah Domestik Gedung (Non-B3) vs Limbah B3 dalam Aturan Sedot |
+| **18** | **S4-02** | **Senin, 12 Okt 2026** | 🌊 Gel. 2 (+1 hari) | 📄 Pendukung | Kapasitas Armada Truk Tangki Besar (4.000 - 6.000 Liter) Kuras Massal Pabrik |
+| **19** | **S5-02** | **Rabu, 14 Okt 2026** | 🌊 Gel. 2 (+2 hari) | 📄 Pendukung | Sedot WC Jakarta Barat: Layanan Cepat Kebon Jeruk, Cengkareng, Grogol |
+| **20** | **S5-03** | **Kamis, 15 Okt 2026** | 🌊 Gel. 2 (+1 hari) | 📄 Pendukung | Sedot WC Jakarta Timur: Siaga 24 Jam Duren Sawit, Cakung, Matraman |
+| **21** | **S1-05** | **Jumat, 16 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Kenapa Septic Tank Cepat Penuh Padahal Baru Disedot? Waspadai Resapan Mampet |
+| **22** | **S2-04** | **Sabtu, 17 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Bak Kontrol Got Rumah Meluap Saat Hujan? Langkah Praktis Deteksi Pipa Sumbat |
+| **23** | **S2-05** | **Minggu, 18 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Kelebihan Jasa Pelancar Spiral Wire Dibandingkan Tukang Bongkar Keramik |
+| **24** | **S3-04** | **Senin, 19 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Layanan Sedot Lemak Malam & Subuh Jabodetabek: Higienis Bergaransi |
+| **25** | **S3-05** | **Selasa, 20 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Regulasi Pengelolaan Air Limbah Restoran DKI Jakarta & Sanksi Pencemaran |
+| **26** | **S4-03** | **Rabu, 21 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Mekanisme Pembuangan Resmi ke IPLT Pemda DKI Bebas Sanksi Lingkungan |
+| **27** | **S4-04** | **Kamis, 22 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Biaya Borongan Kuras STP Gedung Perkantoran & Ruko Kawasan Bisnis |
+| **28** | **S4-05** | **Jumat, 23 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Tanda Endapan Lumpur STP Sudah Mengeras dan Butuh Water Jetting |
+| **29** | **S5-04** | **Sabtu, 24 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Sedot WC Jakarta Pusat: Akses Cepat Menteng, Tanah Abang, Kemayoran |
+| **30** | **S5-05** | **Minggu, 25 Okt 2026** | 🌊 Gel. 3 (+1 hari) | 📄 Pendukung | Sedot WC Jakarta Utara: Layanan Wilayah Kelapa Gading, Pluit, Sunter |
 
 ---
 

@@ -38,14 +38,14 @@ Seluruh kueri pencarian warga Jabodetabek diserap secara sistematis ke dalam 3 s
 
 ---
 
-## 📅 Jadwal Rilis: Kurva Akselerasi Eksponensial (12 Sep – 29 Okt 2026)
+## 📅 Jadwal Rilis: Kurva Akselerasi Eksponensial (12 Sep – 25 Okt 2026)
 * **Pola Rilis:** Progresif meningkat (Makin tua umur domain, makin rapat kuota publikasi):
-  - **Fase Awal (Minggu 1–2):** Interval 3 hari (Seed Otoritas & Trust Bot Google).
-  - **Fase Menengah (Minggu 3–4):** Interval 2 hari (Akselerasi Moderat).
-  - **Fase Lanjutan (Minggu 5–6):** Interval 1–2 hari (Akselerasi Tinggi).
-  - **Fase Matang (Minggu 7):** Interval 1 hari / Harian Penuh (Crawl Budget Establish).
+  - **Fase 1 (Minggu 1–3 / Gelombang 1):** Interval 2 hari (Ritme stabil & hati-hati — crawl frequency teratur).
+  - **Fase 2 (Minggu 4–5 / Gelombang 2):** Interval 1–2 hari (Akselerasi moderat — klaster topik mengkristal).
+  - **Fase 3 (Minggu 6–7 / Gelombang 3):** Interval 1 hari / Harian penuh (Crawl budget establish & full velocity).
 * **Kickoff Artikel Pertama:** **Sabtu, 12 September 2026** (`S1-P`: Panduan Lengkap Kuras Septic Tank Rumah Tangga).
-* **Penyelesaian Gelombang 1 (10 Artikel):** 03 Oktober 2026.
-* **Penyelesaian Gelombang 2 (20 Artikel):** 19 Oktober 2026.
-* **Penyelesaian Gelombang 3 (30 Artikel Penuh):** 29 Oktober 2026.
+* **Penyelesaian Gelombang 1 (10 Artikel):** 30 September 2026.
+* **Penyelesaian Gelombang 2 (20 Artikel):** 15 Oktober 2026.
+* **Penyelesaian Gelombang 3 (30 Artikel Penuh):** 25 Oktober 2026.
+
 
