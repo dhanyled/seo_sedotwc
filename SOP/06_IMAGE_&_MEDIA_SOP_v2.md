@@ -102,6 +102,11 @@ Gambar yang dihasilkan untuk website sanitasi wajib mematuhi standar realisme op
    * **Selang Hisap Industri:** Selang spiral fleksibel bertenaga vakum warna oranye/kuning/biru standar industri sanitasi dengan sambungan coupling rapi.
    * **Mesin Pelancar Pipa:** Menggambarkan mesin *spiral drain cleaner* / *roding machine* atau *jetting pump* bertekanan tinggi modern tanpa merusak ubin lantai.
 4. **Kepatuhan Anatomi AI:** DILARANG KERAS gambar AI dengan jari berlebih, tangan ganda, sendi terdistorsi, atau bentuk tangki truk yang tidak masuk akal secara fisik. Setiap sosok wajib memiliki 2 tangan dengan 5 jari sempurna.
+5. **Integritas & Kontinuitas Selang Hisap (Hose Logic & Closed Circuit Continuity):**  
+   Jika gambar menampilkan selang hisap/vakum, alur selang wajib tampak normal dan kedua ujungnya terlihat jelas fungsinya secara logis:
+   * **Ujung Hulu (Input):** Terhubung ke katup hisap tangki truk (*vacuum intake valve*) atau tergulung rapi di rak/tatakan samping bodi mobil tangki (*hose tray*).
+   * **Ujung Hilir (Output):** Sedang dipegang mantap oleh teknisi bersarung tangan, sedang diulur/ditarik rapi di sepanjang jalan pemukiman, atau dimasukkan langsung ke lubang septic tank (*manhole/inspection hole*), lubang kloset, atau bak grease trap.
+   * **Titik Sambungan (Ekstensi 50–100M Gang Sempit):** Jika menggambarkan sambungan antar-selang panjang, titik sambung wajib menggunakan klem kopling cepat (*quick coupling / camlock fitting*) yang menyentuh permukaan tanah secara wajar.
 
 ---
 
@@ -136,6 +141,8 @@ Untuk menjaga reputasi otoritas dan konversi, hal-hal berikut **DILARANG KERAS**
    Dilarang menampilkan teknisi atau model warga asing Kaukasia yang jelas-jelas diambil dari database foto stok luar negeri gratisan.
 4. ❌ **Gambar Kartun / Clipart Rendahan:**  
    Dilarang menggunakan ilustrasi clipart 2D atau gambar kartun tidak profesional yang menurunkan nilai kepercayaan (*trust factor*) pelanggan komersial/B2B.
+5. ❌ **Halusinasi Selang AI (AI Hose Glitches):**  
+   Dilarang keras memuat gambar dengan selang melayang di udara tanpa gravitasi (*floating hoses*), selang yang ujungnya buntung/terpotong di tengah aspal tanpa tujuan, selang yang melebur aneh (*merging*) ke dalam ban/roda truk atau dinding rumah, serta lilitan ruwet tidak masuk akal (*spaghetti loop*) yang mustahil digunakan teknisi di lapangan.
 
 ---
 

@@ -94,6 +94,7 @@ Draf konten **wajib lolos 9 Hard Gates** berikut dengan status `PASS` sebelum di
 * [ ] **Anti-Self & Cross Duplicate:** Featured Image berbeda dengan In-Content Image, serta tidak mendaur ulang gambar dari artikel lain.
 * [ ] **Zero Distortion:** Atribut HTML `width` dan `height` pada tag `<img>` mencerminkan rasio asli biner file (misal 1200 × 675 px), bukan dipaksa ukuran yang menggepengkan gambar.
 * [ ] **Anti-Rename Bypass & Larangan Comot Cache:** Bukan hasil rename dari gambar lama dan bukan comot dari folder cache lokal tanpa izin.
+* [ ] **Integritas & Alur Selang Hisap (Hose Logic):** Jika gambar menampilkan selang vakum/sedot tinja, alur selang wajib tampak normal dan kedua ujungnya terlihat jelas fungsinya secara logis (terhubung ke katup hisap truk, tergulung di rak tangki, dipegang mantap oleh teknisi bersarung tangan, atau masuk ke lubang septic tank/kloset). DILARANG KERAS selang melayang tanpa gravitasi, buntung terpotong tanpa tujuan, atau melebur aneh ke ban mobil/dinding.
 * [ ] **Format Berkas:** 100% `.webp` terkompresi (< 100 KB untuk Featured, < 80 KB untuk Content) dengan atribut `alt` deskriptif.
 
 ### ⛔ Hard Gate 8: Aksesibilitas WCAG 2.1 AA/AAA, Keselarasan Warna Header-Footer & Tata Letak Rekomendasi
