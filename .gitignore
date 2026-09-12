@@ -3,6 +3,7 @@
 .playwright-mcp/
 client_secrets.json
 google-ads-mcp-setup.html
+github_ssh_key.txt
 *.yaml
 *.key
 *.pem
