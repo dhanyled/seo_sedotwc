@@ -10,8 +10,8 @@ post_status: "publish"
 post_date: "2026-09-12 16:35:00"
 featured_image_id: 873
 featured_image_url: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/kuras-septic-tank-rumah-tangga-jakarta.webp"
-in_content_image_id: 874
-in_content_image_url: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/skema-anatomi-septic-tank-sni.webp"
+in_content_image_id: 893
+in_content_image_url: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/diagram-struktur-septic-tank-sni.webp"
 seopress_title: "Panduan Lengkap Kuras Septic Tank Rumah Tangga - Sedot WC Jakarta"
 seopress_desc: "Panduan lengkap kuras septic tank rumah tangga: pahami cara kerja, waktu ideal sedot tinja & estimasi biaya resmi. Respon WA < 5 Menit di 0813-8888-4349."
 ---
@@ -40,7 +40,7 @@ Secara teknis, tangki septik konvensional bekerja mengandalkan gravitasi dan akt
    Pipa berbentuk huruf T wajib dipasang menjulang ke atas minimal 1,5 meter untuk membuang akumulasi gas metana ($CH_4$) dan hidrogen sulfida ($H_2S$). Tanpa pipa hawa yang lancar, tekanan gas di dalam tangki akan menolak air siraman kloset sehingga menimbulkan kesan WC mampet.
 
 <figure style="margin: 30px 0; text-align: center;">
-  <img src="https://sedotwcdijakarta.com/wp-content/uploads/2026/09/skema-anatomi-septic-tank-sni.webp" alt="Skema struktur tangki septik rumah tangga sesuai standar SNI" width="1200" height="675" style="width: 100%; max-width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);" />
+  <img src="https://sedotwcdijakarta.com/wp-content/uploads/2026/09/diagram-struktur-septic-tank-sni.webp?v=2" alt="Skema struktur tangki septik rumah tangga sesuai standar SNI" width="1200" height="675" style="width: 100%; max-width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);" />
   <figcaption style="margin-top: 10px; font-size: 0.85rem; color: #64748b;">Gambar 1: Anatomi pembagian kompartemen tangki septik pemukiman dan bidang resapan air tanah sesuai standar SNI 2398:2017.</figcaption>
 </figure>
 

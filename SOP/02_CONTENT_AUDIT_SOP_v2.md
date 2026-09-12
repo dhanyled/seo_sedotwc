@@ -70,15 +70,18 @@ Draf konten **wajib lolos 9 Hard Gates** berikut dengan status `PASS` sebelum di
 * [ ] **Metadata SEOPress:** `_seopress_titles_title` terpasang exact match, `_seopress_titles_desc` terisi 140–160 karakter dengan ajakan bertindak (tidak kosong), dan `_seopress_analysis_target_kw` terisi fokus keyword resmi.
 * [ ] **Evidence-Grade External Link Test:** Rujukan ke regulasi sanitasi (SNI 2398:2017, Permen LHK No. P.68/2016, Perda DKI No. 3/2013) terverifikasi lolos uji 4-Object: `[Kalimat Klaim] <-> [Anchor Text] <-> [Final URL] <-> [Isi Sumber]`. Wajib live HTTP 200 deep-link (bukan broken, bukan soft-404, dan bukan root homepage).
 * [ ] **Zero Front-End Code Leaks:** Tidak ada kode JSON-LD mentah, tag `<script>`, kode CSS mentah, atau komentar HTML yang bocor di layar pembaca akibat filter sanitasi `wp_kses`.
+* [ ] **Zero Frontmatter & Editorial Leaks:** Memastikan `post_content` bersih 100% dari header YAML markdown (`--- code: S... ---`) dan blok catatan internal redaksi (`[REKOMENDASI INBOUND LINK - ANTI-ORPHAN]`).
 
 ### ⛔ Hard Gate 6: Anti-Orphan Post (Alur Operasional 3 Langkah)
-* [ ] Draf penulis memuat blok `[REKOMENDASI INBOUND LINK]` yang jelas menunjuk 1–2 artikel seklaster eksisting.
-* [ ] Publisher telah mengeksekusi pembaruan pada 1–2 artikel lama tersebut di WordPress.
+* [ ] Draf penulis memuat blok `[REKOMENDASI INBOUND LINK]` yang jelas menunjuk 1–2 artikel seklaster eksisting (khusus dokumen draf lokal).
+* [ ] Publisher telah mengeksekusi pembaruan pada 1–2 artikel lama tersebut di WordPress dan membersihkan blok rekomendasi dari `post_content`.
 * [ ] Auditor memverifikasi bahwa link masuk (*inbound link*) menuju artikel baru sudah live berstatus HTTP 200 (Status 0 orphan post).
 
 ### ⛔ Hard Gate 7: Manajemen Media, Format WebP & Zero Distortion
 * [ ] Mengikuti standar penuh [`SOP/06_IMAGE_&_MEDIA_SOP_v2.md`](file:///D:/Dhany/Client/sedotwcdijakarta/SOP/06_IMAGE_&_MEDIA_SOP_v2.md).
 * [ ] **Two-Way Media Protocol:** Memiliki `featured_media > 0` DAN minimal 1 gambar konten independen di badan teks ($N$ artikel = $2N$ media unik di database).
+* [ ] **Core Business & Content Alignment:** Visual 100% selaras dengan industri sanitasi Jabodetabek (truk tangki vakum, seragam teknisi, diagram 3D septic tank SNI / spiral drain cleaner / grease trap FOG / STP aerasi). DILARANG foto pertukangan (bor, palu) atau stock photo asing.
+* [ ] **Cache-Busting Compliance:** Jika merupakan gambar revisi/pengganti, wajib menggunakan *versioned filename* atau query string `?v=N` agar tidak tertahan di cache CDN/browser pengunjung.
 * [ ] **Anti-Self & Cross Duplicate:** Featured Image berbeda dengan In-Content Image, serta tidak mendaur ulang gambar dari artikel lain.
 * [ ] **Zero Distortion:** Atribut HTML `width` dan `height` pada tag `<img>` mencerminkan rasio asli biner file (misal 1200 × 675 px), bukan dipaksa ukuran yang menggepengkan gambar.
 * [ ] **Anti-Rename Bypass & Larangan Comot Cache:** Bukan hasil rename dari gambar lama dan bukan comot dari folder cache lokal tanpa izin.
@@ -93,7 +96,7 @@ Draf konten **wajib lolos 9 Hard Gates** berikut dengan status `PASS` sebelum di
 ### ⛔ Hard Gate 9: Jalur Konversi Ganda, Gamifikasi & Garansi Tuntas
 * [ ] Terdapat CTA WhatsApp cepat di bagian atas (*above the fold*) untuk kebutuhan darurat.
 * [ ] Terdapat internal link kontekstual ke Artikel Pilar Silo-nya atau Landing Page Wilayah Organik (`/jakarta-selatan/`, `/sedot-wc-terdekat/`). Maksimal 2–3 link per artikel.
-* [ ] Sematan modul interaktif gamifikasi (Kuis Diagnosa / Kalkulator Selang) dari `Silo/03` terpasang dan berfungsi interaktif.
+* [ ] **Gamifikasi via Shortcode:** Modul interaktif (Kuis Diagnosa / Kalkulator Selang) terpasang melalui shortcode resmi (`[kuis_diagnosa_septic]`) via MU-Plugin `sanitasi-gamifikasi.php`, BUKAN raw form HTML/inline script yang rawan rusak oleh `wp_filter_post_kses` dan `wpautop`.
 * [ ] Menyertakan komitmen keterbukaan biaya di awal (*zero hidden cost*) dan garansi pengerjaan ulang jika saluran masih mampet.
 
 ---

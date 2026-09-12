@@ -59,15 +59,18 @@ Algoritma mesin pencari Google modern (**NavBoost & Helpful Content System**) sa
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-#### 📦 Kode Blok Gutenberg Resmi (Copy-Paste Ready: Custom HTML Block):
-Penulis di [`SOP/01_CONTENT_WRITER_SOP_v2.md`](file:///D:/Dhany/Client/sedotwcdijakarta/SOP/01_CONTENT_WRITER_SOP_v2.md) cukup menyalin blok HTML berikut ke blok *Custom HTML* di Gutenberg:
+#### 📦 Implementasi Resmi via Shortcode (MU-Plugin Architecture):
+> ⚠️ **ATURAN MUTLAK ARSITEKTUR WORDPRESS:**  
+> DILARANG MENYUNTIKKAN FORM HTML DAN INLINE JAVASCRIPT LANGSUNG KE POST CONTENT ATAU GUTENBERG!  
+> **Mengapa?** Filter keamanan WordPress (`wp_filter_post_kses`) otomatis melucuti tag `<form>`, `<select>`, dan `<input>`, sedangkan fungsi `wpautop` menyisipkan tag `<p>` ke baris kode JavaScript yang memicu `SyntaxError` di konsol browser (sehingga tombol menjadi macet tanpa respon saat diklik).
+> 
+> **Solusi Standar:** Cukup pasang Shortcode resmi di badan artikel:
+> ```
+> [kuis_diagnosa_septic]
+> ```
+> Seluruh logika form dan kalkulasi dieksekusi secara aman melalui MU-Plugin `wp-content/mu-plugins/sanitasi-gamifikasi.php` dengan script yang di-enqueue pada `wp_footer` beratribut `data-no-optimize="1"` (kebal kompresi agresif LiteSpeed Cache).
 
-```html
-<!-- wp:html -->
-<div class="swc-quiz-card" style="background:#f8fafc;border:2px solid #0284c7;border-radius:12px;padding:20px;margin:28px 0;font-family:sans-serif;">
-  <h3 style="margin-top:0;color:#0f172a;font-size:1.15rem;display:flex;align-items:center;gap:8px;">
-    🩺 <span>Kuis Diagnosa WC (30 Detik): Kenali Masalah Anda</span>
-  </h3>
+Untuk pengujian lokal atau pratinjau standalone, struktur logika kuis adalah sebagai berikut:
   <form id="swcDiagnosaForm" onchange="runDiagnosa()" style="display:flex;flex-direction:column;gap:14px;">
     <div>
       <label style="font-weight:600;font-size:0.9rem;display:block;margin-bottom:6px;">1. Bagaimana reaksi air saat kloset disiram?</label>

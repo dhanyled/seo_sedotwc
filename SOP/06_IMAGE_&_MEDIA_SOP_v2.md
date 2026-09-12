@@ -102,3 +102,55 @@ Gambar yang dihasilkan untuk website sanitasi wajib mematuhi standar realisme op
    * **Selang Hisap Industri:** Selang spiral fleksibel bertenaga vakum warna oranye/kuning/biru standar industri sanitasi dengan sambungan coupling rapi.
    * **Mesin Pelancar Pipa:** Menggambarkan mesin *spiral drain cleaner* / *roding machine* atau *jetting pump* bertekanan tinggi modern tanpa merusak ubin lantai.
 4. **Kepatuhan Anatomi AI:** DILARANG KERAS gambar AI dengan jari berlebih, tangan ganda, sendi terdistorsi, atau bentuk tangki truk yang tidak masuk akal secara fisik. Setiap sosok wajib memiliki 2 tangan dengan 5 jari sempurna.
+
+---
+
+## 🎯 5. Panduan Gaya Visual & Keselarasan Core Business Sanitasi (5 Silo Directives)
+
+Setiap aset visual (Featured & In-Content) **WAJIB MENYATU** dengan inti bisnis sanitasi *sedotwcdijakarta.com*. Visual dibagi menjadi 2 pilar gaya utama:
+
+### 5.1 Gaya 1: Realisme Lapangan & Dokumenter Operasional (Hero / Featured Images)
+* **Pencahayaan:** Natural daylight pemukiman perkotaan Indonesia, pencahayaan alami tanpa filter fantasi berlebihan.
+* **Konteks Lingkungan:** Pemukiman warga Jakarta (gang perumahan padat, paving block/aspal lingkungan, ruko komersial, atau basement gedung perkantoran).
+* **Objek Utama:** Truk tangki vakum bersih, selang hisap spiral industri, perlengkapan APD teknisi Indonesia yang profesional.
+
+### 5.2 Gaya 2: Diagram Teknik 3D & Skema Penampang Melintang (In-Content Images)
+* **Karakter Visual:** 3D technical cutaway diagram / isometric cross-section beresolusi tinggi dengan anotasi komponen yang informatif dan akurat secara teknik teknik lingkungan.
+* **Keselarasan 5 Silo:**
+  1. **Silo 1 (Septic Tank):** Diagram penampang melintang bak beton bertulang SNI 2398:2017, sekat pemisah (*baffle wall*), lapisan lumpur dasar (*sludge*), buih lemak (*scum*), cairan limbah jernih (*effluent*), bidang resapan kerikil/ijuk, serta pipa hawa T-vent.
+  2. **Silo 2 (Saluran Pipa Mampet):** Diagram penampang pipa paralon PVC dengan kawat spiral baja fleksibel (*drain cleaner rooter*) menembus sumbatan lemak atau benda asing di tikungan L-bow tanpa merusak dinding pipa.
+  3. **Silo 3 (Grease Trap Resto & MBG):** Skema kompartemen 3 sekat stainless steel pemisah minyak dan lemak (FOG) di bawah bak cuci piring komersial, memperlihatkan keranjang saringan sisa makanan, ruang perangkap minyak terapung, dan pipa pembuangan air jernih.
+  4. **Silo 4 (Limbah STP Industri):** Skema fasilitas Sewage Treatment Plant (STP) gedung bertingkat/pabrik, memperlihatkan bak aerasi biologis, blower oksigen, proses sedimentasi lumpur aktif sekunder, dan bak desinfeksi sebelum dibuang ke saluran kota berizin IPLT.
+  5. **Silo 5 (Hyperlocal Jabodetabek):** Infografis peta pangkalan armada pos reaksi cepat 5 wilayah DKI Jakarta (< 5 menit respon WhatsApp, 30–45 menit tiba di lokasi) dengan rute jalan dan ilustrasi jangkauan selang 100 meter.
+
+---
+
+## 🚫 6. Daftar Hitam Visual (Strict Visual Blacklist)
+
+Untuk menjaga reputasi otoritas dan konversi, hal-hal berikut **DILARANG KERAS** muncul di artikel blog maupun landing page:
+1. ❌ **Peralatan Pertukangan / Konstruksi Lepas Konteks:**  
+   Dilarang keras memuat foto bor tangan, bor listrik, palu, gergaji, gerinda, scaffolding bangunan, atau pekerja proyek bertopi proyek kuning di lokasi cor semen gedung. Ini adalah bisnis sanitasi/sedot WC/pelancaran pipa, BUKAN renovasi bangunan sipil.
+2. ❌ **Toilet Mewah Gaya Barat:**  
+   Dilarang menggunakan foto kamar mandi mewah gaya Eropa/Amerika (bathtub marmer, jendela kaca besar dengan salju di luar) yang tidak relevan dengan tipikal hunian di Indonesia.
+3. ❌ **Foto Stok Generik Asing (Bule/Western):**  
+   Dilarang menampilkan teknisi atau model warga asing Kaukasia yang jelas-jelas diambil dari database foto stok luar negeri gratisan.
+4. ❌ **Gambar Kartun / Clipart Rendahan:**  
+   Dilarang menggunakan ilustrasi clipart 2D atau gambar kartun tidak profesional yang menurunkan nilai kepercayaan (*trust factor*) pelanggan komersial/B2B.
+
+---
+
+## ⚡ 7. Protokol Cache-Busting & Invalidation CDN / Browser
+
+### 7.1 Masalah Caching CDN & Browser
+Server Hostinger (`hcdn`) dan browser modern menerapkan header `Cache-Control: public, max-age=31557600` (1 tahun) pada file gambar WebP. Jika suatu file gambar lama diperbarui di server dengan nama file yang persis sama:
+* Browser pengunjung yang pernah membuka halaman tersebut **TIDAK AKAN** mendownload gambar baru dan tetap menampilkan gambar lama dari memori cache lokalnya.
+
+### 7.2 Prosedur Wajib Penggantian Gambar (Atomic Cache-Busting):
+Saat melakukan revisi atau perbaikan gambar yang sudah pernah terbit:
+1. **Gunakan Nama Berkas Baru / Berversi (*Versioned Filename*):**  
+   Ganti nama file gambar baru, misalnya dari `skema-anatomi-septic-tank-sni.webp` menjadi `diagram-struktur-septic-tank-sni.webp` (atau tambahkan suffix spesifik).
+2. **Tambahkan Query String Cache-Busting di HTML:**  
+   Pada tag `<img>` di dalam konten, sertakan parameter versi, contoh: `src=".../diagram-struktur-septic-tank-sni.webp?v=2"`.
+3. **Purge Cache Server Menyeluruh:**  
+   Segera jalankan pembersihan cache LiteSpeed (`LiteSpeed\Purge::purge_all()`) agar server menyajikan HTML segar kepada seluruh CDN edge dan browser klien.
+
