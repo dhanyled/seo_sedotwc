@@ -62,72 +62,9 @@ Jangan menunggu kloset meluap baru mencari jasa sedot tinja. Berikut adalah tabe
 Jika lapisan lumpur di dasar tangki sudah mencapai sepertiga dari total volume tangki, bakteri pengurai tidak lagi memiliki ruang gerak yang cukup untuk memproses kotoran baru. Akibatnya, lumpur padat akan terbawa masuk ke bidang resapan tanah dan menyumbat pori-pori tanah secara permanen.
 
 <!-- WIDGET GAMIFIKASI INTERAKTIF -->
-<div id="quiz-diagnosa-septic" style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 12px; padding: 24px; margin: 35px 0; font-family: inherit;">
-  <h3 style="margin-top: 0; color: #0f172a; font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
-    <span>🔍</span> Kuis Diagnosa Mandiri: Kloset Mampet atau Septic Tank Penuh?
-  </h3>
-  <p style="font-size: 0.9rem; color: #475569; margin-bottom: 20px;">Jawab 3 pertanyaan singkat berikut untuk mendeteksi secara akurat apakah rumah Anda butuh penyedotan tangki atau pelancaran pipa paralon:</p>
-  
-  <div style="margin-bottom: 16px;">
-    <label style="font-weight: 600; font-size: 0.9rem; color: #1e293b; display: block; margin-bottom: 6px;">1. Bagaimana kondisi genangan air saat kloset disiram?</label>
-    <select id="q1" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #94a3b8; font-size: 0.9rem; background: #fff;">
-      <option value="0">-- Pilih Gejala --</option>
-      <option value="penuh">Air turun sangat lambat berjam-jam, ada suara gelembung udara keluar</option>
-      <option value="mampet">Air langsung meluap penuh seketika dan tidak turun sama sekali</option>
-      <option value="normal">Air turun lancar tetapi tercium bau busuk di sekitar kloset</option>
-    </select>
-  </div>
+[kuis_diagnosa_septic]
 
-  <div style="margin-bottom: 16px;">
-    <label style="font-weight: 600; font-size: 0.9rem; color: #1e293b; display: block; margin-bottom: 6px;">2. Kapan terakhir kali septic tank rumah Anda disedot?</label>
-    <select id="q2" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #94a3b8; font-size: 0.9rem; background: #fff;">
-      <option value="0">-- Pilih Waktu --</option>
-      <option value="lama">Lebih dari 3 tahun lalu / Belum pernah disedot sama sekali</option>
-      <option value="sedang">Sekitar 1 sampai 2 tahun yang lalu</option>
-      <option value="baru">Baru disedot kurang dari 6 bulan yang lalu</option>
-    </select>
-  </div>
 
-  <div style="margin-bottom: 20px;">
-    <label style="font-weight: 600; font-size: 0.9rem; color: #1e293b; display: block; margin-bottom: 6px;">3. Apakah kloset lain di lantai yang sama juga bermasalah?</label>
-    <select id="q3" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #94a3b8; font-size: 0.9rem; background: #fff;">
-      <option value="0">-- Pilih Kondisi --</option>
-      <option value="semua">Ya, semua kloset dan saluran buang bawah ikut meluap</option>
-      <option value="satu">Hanya 1 kloset ini saja, kamar mandi lain normal</option>
-    </select>
-  </div>
-
-  <button onclick="diagnosaSepticTank()" style="background: #0284c7; color: #fff; border: none; padding: 12px 24px; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 0.95rem; width: 100%;">Lihat Hasil Diagnosa Teknis</button>
-
-  <div id="hasil-diagnosa" style="display: none; margin-top: 20px; padding: 16px; border-radius: 8px; font-size: 0.95rem; line-height: 1.5;"></div>
-</div>
-
-<script>
-function diagnosaSepticTank() {
-  const q1 = document.getElementById('q1').value;
-  const q2 = document.getElementById('q2').value;
-  const q3 = document.getElementById('q3').value;
-  const hasil = document.getElementById('hasil-diagnosa');
-  
-  if (q1 === '0' || q2 === '0' || q3 === '0') {
-    alert('Mohon jawab ketiga pertanyaan di atas terlebih dahulu.');
-    return;
-  }
-  
-  hasil.style.display = 'block';
-  if (q1 === 'penuh' || q2 === 'lama' || q3 === 'semua') {
-    hasil.style.background = '#fef2f2';
-    hasil.style.border = '1px solid #ef4444';
-    hasil.style.color = '#991b1b';
-    hasil.innerHTML = '<strong>⚠️ Indikasi Kuat: Bak Septic Tank Penuh / Resapan Jenuh.</strong><br/>Gejala gelembung udara dan lambatnya air turun bersamaan menandakan bak penampungan kotoran sudah tidak sanggup menampung debit limbah baru. Solusi tepat adalah pemanggilan truk tangki sedot vakum untuk pengosongan lumpur padat.';
-  } else {
-    hasil.style.background = '#eff6ff';
-    hasil.style.border = '1px solid #3b82f6';
-    hasil.style.color = '#1e40af';
-    hasil.innerHTML = '<strong>🔧 Indikasi: Sumbatan Mekanis Pipa Saluran (Pipa Mampet).</strong><br/>Karena hanya 1 kloset yang bermasalah dan riwayat sedot belum lama, kemungkinan besar terjadi penyumbatan di leher angsa kloset akibat tisu, pembalut, atau benda padat. Penanganan cukup menggunakan alat spiral kawat baja tanpa perlu menguras tangki.';
-  }
-}
-</script>
 
 ## Berapa Rincian Biaya Kuras Septic Tank Resmi di Jakarta?
 
@@ -153,7 +90,7 @@ Bagaimana cara menyedot septic tank jika mobil tangki tidak bisa parkir di depan
 * **Penyambungan Selang Spiral Fleksibel 50 – 100 Meter:** Menggunakan sambungan kopling cepat (*camlock quick-coupling*) kedap udara, selang hisap dibentangkan dari pangkalan truk di jalan utama hingga ke titik lubang septic tank di dalam rumah tanpa menyebabkan tetesan air kotor di lantai keramik warga.
 * **Mesin Pompa Vakum Daya Hisap Tinggi:** Mesin vakum modern tetap mempertahankan daya hisap stabil meskipun jarak bentang selang mencapai 100 meter dari posisi mesin mobil tangki.
 
-Jika Anda tinggal di kawasan Jakarta Selatan dan membutuhkan pengecekan rute armada terdekat, Anda dapat memeriksa halaman pangkalan [Sedot WC Jakarta Selatan](file:///D:/Dhany/Client/sedotwcdijakarta/jakarta-selatan/) atau langsung berkonsultasi melalui pos pusat [Area Layanan Kami](file:///D:/Dhany/Client/sedotwcdijakarta/area-layanan/).
+Jika Anda tinggal di kawasan Jakarta Selatan dan membutuhkan pengecekan rute armada terdekat, Anda dapat memeriksa halaman pangkalan [Sedot WC Jakarta Selatan](/jakarta-selatan/) atau langsung berkonsultasi melalui pos pusat [Area Layanan Kami](/area-layanan/).
 
 ## Legalitas Pembuangan Lumpur Tinja: Waspada Oknum Buang Sembarangan
 

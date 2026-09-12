@@ -127,7 +127,7 @@ Setelah pipa pembuangan rumah tangga Anda kembali lancar dan bersih, terapkan ke
 * **Siram Air Mendidih Secara Berkala:** Setiap seminggu sekali, siramkan 2 hingga 3 ceret air panas mendidih (tanpa bahan kimia) ke dalam lubang wastafel dapur untuk melarutkan lapisan lemak tipis sebelum sempat membeku mengeras di dalam pipa.
 * **Pasang Perangkap Lemak Mini (*Under-Sink Grease Trap*):** Untuk dapur rumah yang aktif memasak hidangan berminyak, pasang unit perangkap lemak portable di bawah wastafel cucian piring.
 
-Untuk Anda yang membutuhkan layanan darurat di area Jakarta Barat, Anda dapat melihat informasi jangkauan armada pos [Sedot WC Jakarta Barat](file:///D:/Dhany/Client/sedotwcdijakarta/jakarta-barat/) atau mengecek jaringan terdekat di [Pos Armada Sedot WC](file:///D:/Dhany/Client/sedotwcdijakarta/sedot-wc-terdekat/).
+Untuk Anda yang membutuhkan layanan darurat di area Jakarta Barat, Anda dapat melihat informasi jangkauan armada pos [Sedot WC Jakarta Barat](/jakarta-barat/) atau mengecek jaringan terdekat di [Pos Armada Sedot WC](/sedot-wc-terdekat/).
 
 ## Pertanyaan Sering Diajukan (FAQ)
 

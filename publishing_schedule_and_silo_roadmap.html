@@ -556,6 +556,10 @@
     .img-thumb-container:hover .img-zoom-modal {
       display: block;
     }
+    .img-zoom-modal.modal-down {
+      bottom: auto;
+      top: 54px;
+    }
     .zoom-banner {
       width: 100%;
       height: 130px;
@@ -569,11 +573,18 @@
       box-sizing: border-box;
       position: relative;
     }
+    .zoom-banner.live-banner {
+      padding: 0;
+      overflow: hidden;
+      height: 160px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
     .zoom-banner.live-banner img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       border-radius: 6px;
+      display: block;
     }
     .banner-header {
       display: flex;
@@ -892,18 +903,18 @@
       volume: "2.400 / bln",
       lsi: ["kapan septic tank harus disedot", "cara kerja septic tank resapan", "biaya sedot wc resmi pemda", "tanda septic tank bermasalah"],
       featImg: {
-        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/truk-tangki-vakum-sedot-septic-tank-jakarta.webp",
-        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/truk-tangki-vakum-sedot-septic-tank-jakarta.webp",
+        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/kuras-septic-tank-rumah-tangga-jakarta.webp",
+        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/kuras-septic-tank-rumah-tangga-jakarta.webp",
         title: "Featured Image: Truk Tangki Vakum Rumah Tangga",
         desc: "Armada truk tangki vakum bersih dengan teknisi berseragam melayani perumahan di Jakarta.",
         alt: "Truk tangki vakum sedot septic tank di pemukiman Jakarta"
       },
       contentImg: {
-        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/skema-diagram-septic-tank-resapan-sni.webp",
-        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/skema-diagram-septic-tank-resapan-sni.webp",
-        title: "In-Content: Diagram Anatomi Septic Tank",
+        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/skema-anatomi-septic-tank-sni.webp",
+        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/skema-anatomi-septic-tank-sni.webp",
+        title: "In-Content: Diagram Anatomi Septic Tank SNI",
         desc: "Diagram penampang bak penampungan, ruang resapan air, dan pipa ventilasi gas.",
-        alt: "Diagram skema cara kerja septic tank rumah tangga"
+        alt: "Diagram skema anatomi dan cara kerja septic tank rumah tangga SNI"
       },
       linkPath: "➔ /jakarta-selatan/ & WhatsApp Direct"
     },
@@ -928,16 +939,16 @@
       volume: "2.900 / bln",
       lsi: ["jasa saluran mampet tanpa bongkar", "mesin drain cleaner spiral baja", "alat pelancar pipa tersumbat", "biaya pelancaran saluran air"],
       featImg: {
-        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/mesin-spiral-drain-cleaner-pelancar-saluran-mampet.webp",
-        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/mesin-spiral-drain-cleaner-pelancar-saluran-mampet.webp",
-        title: "Featured Image: Mesin Spiral Drain Cleaner",
+        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/solusi-pipa-saluran-mampet-tanpa-bongkar.webp",
+        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/solusi-pipa-saluran-mampet-tanpa-bongkar.webp",
+        title: "Featured Image: Teknisi Mesin Spiral Drain Cleaner",
         desc: "Alat canggih kawat spiral baja elektrik yang mampu membersihkan paralon tanpa merusak ubin.",
         alt: "Mesin pelancar saluran mampet spiral cleaner tanpa bongkar"
       },
       contentImg: {
-        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/mekanisme-kawat-spiral-baja-tikungan-pipa-paralon.webp",
-        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/mekanisme-kawat-spiral-baja-tikungan-pipa-paralon.webp",
-        title: "In-Content: Jalur Tikungan Pipa Paralon",
+        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/alat-spiral-drain-cleaner-baja.webp",
+        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/alat-spiral-drain-cleaner-baja.webp",
+        title: "In-Content: Mekanisme Kawat Spiral Pipa Paralon",
         desc: "Ilustrasi gerak putar kawat baja fleksibel menembus tikungan L-bow pipa pembuangan.",
         alt: "Mekanisme kawat spiral baja melancarkan kotoran di tikungan pipa paralon"
       },
@@ -964,15 +975,15 @@
       volume: "1.800 / bln",
       lsi: ["pembersihan grease trap dapur sentral", "pengolahan limbah lemak makan bergizi gratis", "perangkap lemak stainless steel resto"],
       featImg: {
-        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/instalasi-grease-trap-dapur-restoran-mbg-jakarta.webp",
-        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/instalasi-grease-trap-dapur-restoran-mbg-jakarta.webp",
-        title: "Featured Image: Dapur Restoran Higienis",
+        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/kuras-grease-trap-dapur-restoran-mbg.webp",
+        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/kuras-grease-trap-dapur-restoran-mbg.webp",
+        title: "Featured Image: Dapur Restoran Higienis & MBG",
         desc: "Dapur katering dan restoran modern berstandar higienis dengan unit perangkap lemak stainless.",
         alt: "Dapur sentral komersial dengan instalasi grease trap higienis"
       },
       contentImg: {
-        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/skema-pemisah-lemak-minyak-grease-trap-komersial.webp",
-        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/skema-pemisah-lemak-minyak-grease-trap-komersial.webp",
+        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/instalasi-grease-trap-stainless-dapur.webp",
+        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/instalasi-grease-trap-stainless-dapur.webp",
         title: "In-Content: Skema Kompartemen Grease Trap",
         desc: "Bagan pemisahan minyak, air buangan, dan endapan padat sisa makanan.",
         alt: "Skema pemisahan lemak dan minyak pada unit grease trap komersial"
@@ -1000,16 +1011,16 @@
       volume: "1.100 / bln",
       lsi: ["kuras bak stp pabrik", "sedot lumpur aktif aerasi gedung", "pengolahan air limbah domestik perkantoran"],
       featImg: {
-        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/fasilitas-stp-aerasi-limbah-domestik-gedung-pabrik.webp",
-        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/fasilitas-stp-aerasi-limbah-domestik-gedung-pabrik.webp",
+        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/sedot-limbah-domestik-stp-pabrik-gedung.webp",
+        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/sedot-limbah-domestik-stp-pabrik-gedung.webp",
         title: "Featured Image: Fasilitas STP Basement Gedung",
         desc: "Instalasi pengolahan air limbah domestik skala gedung bertingkat dan pabrik.",
         alt: "Instalasi Sewage Treatment Plant gedung komersial Jakarta"
       },
       contentImg: {
-        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/skema-alur-sedimentasi-lumpur-aktif-aerasi-stp.webp",
-        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/skema-alur-sedimentasi-lumpur-aktif-aerasi-stp.webp",
-        title: "In-Content: Alur Bak Aerasi & Sedimentasi",
+        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/fasilitas-instalasi-stp-pengolahan-limbah.webp",
+        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/fasilitas-instalasi-stp-pengolahan-limbah.webp",
+        title: "In-Content: Alur Bak Aerasi & Sedimentasi STP",
         desc: "Diagram siklus pengolahan lumpur aktif dan pembuangan endapan dasar tangki.",
         alt: "Diagram alur pemisahan lumpur aktif pada bak aerasi STP pabrik"
       },
@@ -1036,16 +1047,16 @@
       volume: "5.400 / bln",
       lsi: ["sedot wc panggilan terdekat", "nomor wa sedot wc 24 jam", "tukang sedot wc cepat datang", "pos armada sedot tinja jabodetabek"],
       featImg: {
-        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/pos-armada-truk-tangki-sedot-wc-terdekat-jabodetabek.webp",
-        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/pos-armada-truk-tangki-sedot-wc-terdekat-jabodetabek.webp",
-        title: "Featured Image: Peta Jaringan Armada",
+        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/jasa-sedot-wc-terdekat-jabodetabek-24-jam.webp",
+        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/jasa-sedot-wc-terdekat-jabodetabek-24-jam.webp",
+        title: "Featured Image: Pos Pangkalan Armada Jakarta",
         desc: "Visual sebaran pangkalan mobil tangki di 5 kota administrasi DKI Jakarta.",
         alt: "Peta jaringan pos armada sedot WC terdekat di Jabodetabek"
       },
       contentImg: {
-        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/peta-waktu-tempuh-armada-sedot-wc-jabodetabek.webp",
-        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/peta-waktu-tempuh-armada-sedot-wc-jabodetabek.webp",
-        title: "In-Content: Estimasi Waktu Tempuh Wilayah",
+        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/peta-pos-armada-truk-tangki-jakarta.webp",
+        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/peta-pos-armada-truk-tangki-jakarta.webp",
+        title: "In-Content: Peta Respon Cepat DKI Jakarta",
         desc: "Tabel jarak tempuh rata-rata 30-45 menit dari pos terdekat ke rumah warga.",
         alt: "Estimasi waktu tempuh armada sedot WC terdekat per kecamatan"
       },
@@ -2002,42 +2013,39 @@
       };
       const theme = siloThemes[item.siloId] || siloThemes['silo-1'];
 
-      // Komponen Featured Image (Live WP Image jika sudah terbit, atau Blueprint Card jika planned)
-      const featThumbContent = item.liveFeatImg 
-        ? `<img src="${item.liveFeatImg}" alt="${item.featImg.alt}">`
-        : `<span class="box-icon">${theme.icon}</span>`;
+      // Komponen Visual Media SOP/06 (Thumbnail & Hover Zoom untuk Semua 30 Artikel)
+      const featThumbUrl = (item.featImg && item.featImg.thumb) || (item.featImg && item.featImg.full) || '';
+      const featFullUrl = (item.featImg && item.featImg.full) || featThumbUrl;
+      const featAlt = (item.featImg && item.featImg.alt) || item.title;
+      const featTitle = (item.featImg && item.featImg.title) || 'Featured Image';
+      const featDesc = (item.featImg && item.featImg.desc) || '';
 
-      const featZoomBanner = item.liveFeatImg
-        ? `<div class="zoom-banner live-banner"><img src="${item.liveFeatImg}" alt="${item.featImg.alt}"></div>`
-        : `<div class="zoom-banner" style="background: linear-gradient(135deg, ${theme.bg1} 0%, ${theme.bg2} 100%); border: 1.5px solid ${theme.border};">
-            <div class="banner-header">
-              <span class="banner-badge" style="color: ${theme.accent}; border: 1px solid ${theme.border};">${item.code} • FEAT</span>
-              <span style="font-family: var(--font-mono); font-size: 9px; color: #94A3B8;">SOP/06 WEBP HD</span>
-            </div>
-            <div class="banner-body">
-              <span class="banner-icon">${theme.icon}</span>
-              <span class="banner-dim">16:9 • 1200×675 px</span>
-            </div>
-            <div class="banner-footer" style="color: ${theme.accent}; font-weight: 600;">
-              ⭐ Featured Hero (Above-the-Fold)
-            </div>
-          </div>`;
+      const bodyThumbUrl = (item.contentImg && item.contentImg.thumb) || (item.contentImg && item.contentImg.full) || '';
+      const bodyFullUrl = (item.contentImg && item.contentImg.full) || bodyThumbUrl;
+      const bodyAlt = (item.contentImg && item.contentImg.alt) || item.title;
+      const bodyTitle = (item.contentImg && item.contentImg.title) || 'In-Content Image';
+      const bodyDesc = (item.contentImg && item.contentImg.desc) || '';
 
-      // Komponen In-Content Image
-      const bodyThumbContent = `<span class="box-icon">${theme.icon}</span>`;
-      const bodyZoomBanner = `<div class="zoom-banner" style="background: linear-gradient(135deg, ${theme.bg1} 0%, ${theme.bg2} 100%); border: 1.5px solid ${theme.border};">
-            <div class="banner-header">
-              <span class="banner-badge" style="color: ${theme.accent}; border: 1px solid ${theme.border};">${item.code} • BODY</span>
-              <span style="font-family: var(--font-mono); font-size: 9px; color: #94A3B8;">SOP/06 WEBP HD</span>
-            </div>
-            <div class="banner-body">
-              <span class="banner-icon">${theme.icon}</span>
-              <span class="banner-dim">16:9 • 1200×675 px</span>
-            </div>
-            <div class="banner-footer" style="color: ${theme.accent}; font-weight: 600;">
-              📐 Diagram / Infografis Lapangan
-            </div>
-          </div>`;
+      const featSvg = generateSanitationVisual(item.siloId, 'feat', item.code);
+      const bodySvg = generateSanitationVisual(item.siloId, 'content', item.code);
+
+      const featThumbContent = featThumbUrl 
+        ? `<img src="${featThumbUrl}" alt="${featAlt}" loading="lazy" onerror="this.onerror=null; this.src='${featSvg}';">`
+        : `<img src="${featSvg}" alt="${featAlt}">`;
+
+      const featZoomBanner = featFullUrl
+        ? `<div class="zoom-banner live-banner"><img src="${featFullUrl}" alt="${featAlt}" loading="lazy" onerror="this.onerror=null; this.src='${featSvg}';"></div>`
+        : `<div class="zoom-banner live-banner"><img src="${featSvg}" alt="${featAlt}"></div>`;
+
+      const bodyThumbContent = bodyThumbUrl 
+        ? `<img src="${bodyThumbUrl}" alt="${bodyAlt}" loading="lazy" onerror="this.onerror=null; this.src='${bodySvg}';">`
+        : `<img src="${bodySvg}" alt="${bodyAlt}">`;
+
+      const bodyZoomBanner = bodyFullUrl
+        ? `<div class="zoom-banner live-banner"><img src="${bodyFullUrl}" alt="${bodyAlt}" loading="lazy" onerror="this.onerror=null; this.src='${bodySvg}';"></div>`
+        : `<div class="zoom-banner live-banner"><img src="${bodySvg}" alt="${bodyAlt}"></div>`;
+
+      const modalPosClass = index < 3 ? 'modal-down' : '';
 
       tr.innerHTML = `
         <td>
@@ -2088,11 +2096,11 @@
                 ${featThumbContent}
               </div>
               <span class="img-type-badge badge-feat">Feat</span>
-              <div class="img-zoom-modal">
+              <div class="img-zoom-modal ${modalPosClass}">
                 ${featZoomBanner}
-                <div class="img-zoom-title">${item.featImg.title}</div>
-                <div class="img-zoom-desc">${item.featImg.desc}</div>
-                <div class="img-zoom-alt">🏷️ Alt: "${item.featImg.alt}"</div>
+                <div class="img-zoom-title">${featTitle}</div>
+                <div class="img-zoom-desc">${featDesc}</div>
+                <div class="img-zoom-alt">🏷️ Alt: "${featAlt}"</div>
               </div>
             </div>
 
@@ -2102,11 +2110,11 @@
                 ${bodyThumbContent}
               </div>
               <span class="img-type-badge badge-cont">Body</span>
-              <div class="img-zoom-modal">
+              <div class="img-zoom-modal ${modalPosClass}">
                 ${bodyZoomBanner}
-                <div class="img-zoom-title">${item.contentImg.title}</div>
-                <div class="img-zoom-desc">${item.contentImg.desc}</div>
-                <div class="img-zoom-alt">🏷️ Alt: "${item.contentImg.alt}"</div>
+                <div class="img-zoom-title">${bodyTitle}</div>
+                <div class="img-zoom-desc">${bodyDesc}</div>
+                <div class="img-zoom-alt">🏷️ Alt: "${bodyAlt}"</div>
               </div>
             </div>
           </div>

@@ -112,7 +112,7 @@ Bukan rahasia lagi bahwa di internet bertebaran jasa sedot WC dengan nomor konta
 * **Legalitas Pembuangan ke Fasilitas Resmi Pemerintah:**  
   Limbah tinja dan kotoran rumah tangga tidak dibuang ke kali atau saluran umum melainkan langsung diangkut ke IPLT Duri Kosambi dan IPLT Pulo Gebang sesuai amanat Perda DKI Jakarta No. 3 Tahun 2013.
 
-Untuk informasi detail mengenai jangkauan kelurahan dan armada di wilayah Jakarta Selatan, Anda dapat membuka panduan [Sedot WC Jakarta Selatan](file:///D:/Dhany/Client/sedotwcdijakarta/jakarta-selatan/), atau meninjau pos armada [Sedot WC Jakarta Barat](file:///D:/Dhany/Client/sedotwcdijakarta/jakarta-barat/), [Sedot WC Jakarta Timur](file:///D:/Dhany/Client/sedotwcdijakarta/jakarta-timur/), serta direktori lengkap di [Area Layanan Kami](file:///D:/Dhany/Client/sedotwcdijakarta/area-layanan/).
+Untuk informasi detail mengenai jangkauan kelurahan dan armada di wilayah Jakarta Selatan, Anda dapat membuka panduan [Sedot WC Jakarta Selatan](/jakarta-selatan/), atau meninjau pos armada [Sedot WC Jakarta Barat](/jakarta-barat/), [Sedot WC Jakarta Timur](/jakarta-timur/), serta direktori lengkap di [Area Layanan Kami](/area-layanan/).
 
 ## Pertanyaan Sering Diajukan (FAQ)
 

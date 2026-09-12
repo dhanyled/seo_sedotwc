@@ -112,7 +112,7 @@ Pengerjaan kuras bak STP gedung perkantoran dan pabrik menuntut kepatuhan Kesela
 4. **Penerbitan Manifest Legal Pembuangan IPLT:**  
    Setiap ritase truk yang keluar dari gerbang gedung dicatat volumenya dan dilengkapi surat jalan resmi yang distempel oleh petugas gerbang penerimaan IPLT Pemda DKI Jakarta sebagai bukti audit kepatuhan lingkungan hidup (*environmental compliance audit*).
 
-Untuk kebutuhan proyek pemeliharaan instalasi gedung di wilayah Jakarta Timur dan sekitarnya, Anda dapat meninjau pos armada [Sedot WC Jakarta Timur](file:///D:/Dhany/Client/sedotwcdijakarta/jakarta-timur/) atau melihat seluruh jaringan pos kami di [Sedot WC Terdekat](file:///D:/Dhany/Client/sedotwcdijakarta/sedot-wc-terdekat/).
+Untuk kebutuhan proyek pemeliharaan instalasi gedung di wilayah Jakarta Timur dan sekitarnya, Anda dapat meninjau pos armada [Sedot WC Jakarta Timur](/jakarta-timur/) atau melihat seluruh jaringan pos kami di [Sedot WC Terdekat](/sedot-wc-terdekat/).
 
 ## Pertanyaan Sering Diajukan (FAQ)
 

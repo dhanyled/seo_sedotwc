@@ -114,7 +114,7 @@ Restoran atau dapur katering yang terbukti membiarkan saluran got meluap penuh l
 * **Pencabutan Sertifikat Laik Sehat Sanitasi** dari Suku Dinas Kesehatan.
 * **Penutupan Sementara Tempat Usaha** hingga sistem instalasi pengelolaan air limbah diperbaiki dan dinyatakan memenuhi baku mutu lingkungan.
 
-Untuk restoran dan cafe di area Jakarta Selatan, rincian pos armada terdekat kami dapat dilihat pada halaman [Sedot WC Jakarta Selatan](file:///D:/Dhany/Client/sedotwcdijakarta/jakarta-selatan/) atau halaman direktori [Area Layanan Kami](file:///D:/Dhany/Client/sedotwcdijakarta/area-layanan/).
+Untuk restoran dan cafe di area Jakarta Selatan, rincian pos armada terdekat kami dapat dilihat pada halaman [Sedot WC Jakarta Selatan](/jakarta-selatan/) atau halaman direktori [Area Layanan Kami](/area-layanan/).
 
 ## Pertanyaan Sering Diajukan (FAQ)
 
