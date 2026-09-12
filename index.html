@@ -2046,6 +2046,14 @@
     return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
   }
 
+  function handleImgError(el) {
+    el.parentElement.innerHTML = '<div class="no-pic-box"><span class="no-pic-icon">📷</span><span class="no-pic-text">NO PIC</span></div>';
+  }
+
+  function handleBannerError(el) {
+    el.parentElement.outerHTML = '<div class="zoom-banner no-pic-banner"><div class="no-pic-large-icon">📷</div><div class="no-pic-large-title">NO PIC / BELUM ADA GAMBAR</div><div class="no-pic-large-sub">Aset WebP asli akan diproduksi saat artikel masuk jadwal penulisan WordPress (Standar SOP/06).</div></div>';
+  }
+
   function renderTable(data) {
     const tbody = document.getElementById('tableBody');
     tbody.innerHTML = '';
@@ -2087,28 +2095,28 @@
       const bodyDesc = (item.contentImg && item.contentImg.desc) || '';
 
       // Standardized White Placeholder Box (SOP/06 - "NO PIC" Clean & Bulletproof)
-      const noPicThumb = `<div class="no-pic-box"><span class="no-pic-icon">📷</span><span class="no-pic-text">NO PIC</span></div>`;
+      const noPicThumb = '<div class="no-pic-box"><span class="no-pic-icon">📷</span><span class="no-pic-text">NO PIC</span></div>';
 
-      const noPicBanner = `<div class="zoom-banner no-pic-banner">
-        <div class="no-pic-large-icon">📷</div>
-        <div class="no-pic-large-title">NO PIC / BELUM ADA GAMBAR</div>
-        <div class="no-pic-large-sub">Aset WebP asli akan diproduksi saat artikel masuk jadwal penulisan WordPress (Standar SOP/06).</div>
-      </div>`;
+      const noPicBanner = '<div class="zoom-banner no-pic-banner">' +
+        '<div class="no-pic-large-icon">📷</div>' +
+        '<div class="no-pic-large-title">NO PIC / BELUM ADA GAMBAR</div>' +
+        '<div class="no-pic-large-sub">Aset WebP asli akan diproduksi saat artikel masuk jadwal penulisan WordPress (Standar SOP/06).</div>' +
+      '</div>';
 
       const featThumbContent = featThumbUrl 
-        ? `<img src="${featThumbUrl}" alt="${featAlt}" loading="lazy" onerror="this.parentElement.innerHTML='${noPicThumb}';">`
+        ? `<img src="${featThumbUrl}" alt="${featAlt}" loading="lazy" onerror="handleImgError(this)">`
         : noPicThumb;
 
       const featZoomBanner = featFullUrl
-        ? `<div class="zoom-banner live-banner"><img src="${featFullUrl}" alt="${featAlt}" loading="lazy"></div>`
+        ? `<div class="zoom-banner live-banner"><img src="${featFullUrl}" alt="${featAlt}" loading="lazy" onerror="handleBannerError(this)"></div>`
         : noPicBanner;
 
       const bodyThumbContent = bodyThumbUrl 
-        ? `<img src="${bodyThumbUrl}" alt="${bodyAlt}" loading="lazy" onerror="this.parentElement.innerHTML='${noPicThumb}';">`
+        ? `<img src="${bodyThumbUrl}" alt="${bodyAlt}" loading="lazy" onerror="handleImgError(this)">`
         : noPicThumb;
 
       const bodyZoomBanner = bodyFullUrl
-        ? `<div class="zoom-banner live-banner"><img src="${bodyFullUrl}" alt="${bodyAlt}" loading="lazy"></div>`
+        ? `<div class="zoom-banner live-banner"><img src="${bodyFullUrl}" alt="${bodyAlt}" loading="lazy" onerror="handleBannerError(this)"></div>`
         : noPicBanner;
 
       const modalPosClass = index < 3 ? 'modal-down' : '';
