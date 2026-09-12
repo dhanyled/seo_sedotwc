@@ -36,10 +36,16 @@ Setiap butir pemeriksaan wajib diberi salah satu dari 4 status verifikasi:
 
 Draf konten **wajib lolos 9 Hard Gates** berikut dengan status `PASS` sebelum diizinkan terbit:
 
-### ⛔ Hard Gate 1: Integritas Kontak & Tombol WhatsApp
+### ⛔ Hard Gate 1: Integritas Kontak, Ikon & Standarisasi Tombol WhatsApp
 * [ ] Tautan WhatsApp menggunakan format resmi yang valid (`https://wa.me/62...` atau shortcode Click-to-Chat).
 * [ ] Teks pesan pembuka WhatsApp otomatis (*prefilled text*) mencantumkan nama layanan dan lokasi asal pembaca (misal: *"Halo admin Sedot WC, saya mau konsultasi kloset mampet di daerah..."*).
-* [ ] Tombol CTA mudah disentuh di ponsel dengan target sentuh minimal **44 × 44 px**.
+* [ ] Tombol CTA mudah disentuh di ponsel dengan target sentuh minimal **44 × 44 px** (WCAG AA Touch Target).
+* [ ] **Standarisasi Desain Tombol In-Content (`.wa-btn-static`):**
+  - [ ] Wajib menggunakan kelas `.wa-btn-static`.
+  - [ ] Wajib memiliki sudut melengkung **`border-radius: 8px`** yang konsisten.
+  - [ ] **Simetri Teks di Tengah (*Perfect Flex Centering*):** Teks tombol wajib benar-benar di tengah secara horizontal dan vertikal (`display: inline-flex; align-items: center; justify-content: center; text-align: center;`). Dilarang teks melenceng ke kiri atau kanan.
+  - [ ] **Ikon Resmi WhatsApp Wajib:** Wajib menyertakan ikon resmi WhatsApp (SVG putih 20×20 px atau otomatisasi CSS mask `::before`) di sebelah kiri teks tombol. Dilarang menggunakan emoji teks (💬, 📱, dll) yang rapuh dan inkonsisten.
+  - [ ] **Container Pembungkus Terpusat:** Tombol dibungkus container flex pemusat (`display: flex; justify-content: center; width: 100%; margin-top: 15px;`) sehingga rapi dan simetris di desktop maupun smartphone 320px.
 
 ### ⛔ Hard Gate 2: Proteksi Halaman Sakral 749 & Isolasi MU-Plugin
 * [ ] Tidak memodifikasi layout, grid, atau struktur kontainer Elementor di Halaman 749 (`/landing-page-google-ads/`).

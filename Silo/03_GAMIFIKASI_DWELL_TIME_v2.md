@@ -70,6 +70,13 @@ Algoritma mesin pencari Google modern (**NavBoost & Helpful Content System**) sa
 > ```
 > Seluruh logika form dan kalkulasi dieksekusi secara aman melalui MU-Plugin `wp-content/mu-plugins/sanitasi-gamifikasi.php` dengan script yang di-enqueue pada `wp_footer` beratribut `data-no-optimize="1"` (kebal kompresi agresif LiteSpeed Cache).
 
+#### 📱 Standarisasi Tombol Aksi Hasil Diagnosa (Result CTA Button):
+Tombol aksi WhatsApp yang dimunculkan saat diagnosa selesai (baik Indikasi Penuh maupun Pipa Mampet) **wajib mengikuti standarisasi tombol statis**:
+1. **Identitas Kelas:** Menggunakan kelas `.wa-btn-static` agar sinkron dengan sakelar A/B testing di `ab-testing-wa-master.php`.
+2. **Sudut Melengkung:** Menggunakan `border-radius: 8px` konsisten.
+3. **Simetri Centering:** Menggunakan `display: inline-flex; align-items: center; justify-content: center; text-align: center;` dibungkus container `text-align: center; margin-top: 15px; display: flex; justify-content: center; width: 100%;`.
+4. **Ikon Resmi WhatsApp:** Wajib menyertakan ikon resmi WhatsApp (SVG putih 20×20 px) di sebelah kiri teks tombol. Dilarang menggunakan emoji teks (💬, 📱, dll).
+
 Untuk pengujian lokal atau pratinjau standalone, struktur logika kuis adalah sebagai berikut:
   <form id="swcDiagnosaForm" onchange="runDiagnosa()" style="display:flex;flex-direction:column;gap:14px;">
     <div>
