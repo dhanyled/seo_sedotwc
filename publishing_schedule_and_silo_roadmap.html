@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Publishing Roadmap & Topical Authority (30 Artikel Silo) — sedotwcdijakarta.com</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0A0F1D;
+      --bg-secondary: #111827;
+      --bg-card: #1F293D;
+      --bg-card-hover: #27354F;
+      --border: #2D3748;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --accent-cyan: #06B6D4;
+      --accent-blue: #38BDF8;
+      --accent-green: #10B981;
+      --accent-gold: #F59E0B;
+      --accent-purple: #A855F7;
+      --accent-rose: #F43F5E;
+      --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: var(--font-main);
+      line-height: 1.5;
+      padding: 28px 24px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: 1720px; margin: 0 auto; }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 30px 36px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .header-title h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      letter-spacing: -0.5px;
+    }
+    .header-title h1 span.highlight {
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header-title p {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    .header-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-cyan { background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan); border: 1px solid rgba(6, 182, 212, 0.35); }
+    .badge-gold { background: rgba(245, 158, 11, 0.15); color: var(--accent-gold); border: 1px solid rgba(245, 158, 11, 0.35); }
+    .badge-green { background: rgba(16, 185, 129, 0.15); color: var(--accent-green); border: 1px solid rgba(16, 185, 129, 0.35); }
+    .badge-purple { background: rgba(168, 85, 247, 0.15); color: var(--accent-purple); border: 1px solid rgba(168, 85, 247, 0.35); }
+
+    /* Live Sync Bar */
+    .sync-bar {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .sync-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      color: #E2E8F0;
+    }
+    .sync-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      box-shadow: 0 0 10px var(--accent-green);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { opacity: 0.6; transform: scale(0.95); }
+      50% { opacity: 1; transform: scale(1.15); }
+      100% { opacity: 0.6; transform: scale(0.95); }
+    }
+    .btn-sync {
+      background: linear-gradient(135deg, #0284C7, #0369A1);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .btn-sync:hover {
+      background: linear-gradient(135deg, #0EA5E9, #0284C7);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+    }
+
+    /* Telemetry Grid */
+    .telemetry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .telemetry-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .telemetry-card:hover {
+      transform: translateY(-2px);
+      border-color: #475569;
+    }
+    .telemetry-card .label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .telemetry-card .value {
+      font-size: 26px;
+      font-weight: 800;
+      color: #FFFFFF;
+      font-family: var(--font-mono);
+    }
+    .telemetry-card .subtext {
+      font-size: 12px;
+      color: var(--accent-cyan);
+    }
+
+    /* Absorption & Keyword Architecture Panel */
+    .absorption-panel {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+    .absorption-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .absorption-header h2 {
+      font-size: 16px;
+      font-weight: 800;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .absorption-header p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .absorption-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+    }
+    .absorption-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .absorption-box-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 8px;
+    }
+    .absorption-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 12px;
+      color: #CBD5E1;
+    }
+    .absorption-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 0;
+      border-bottom: 1px dashed rgba(255,255,255,0.06);
+    }
+    .absorption-list li:last-child {
+      border-bottom: none;
+    }
+    .badge-count {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.08);
+      color: var(--accent-blue);
+    }
+    .tag-intent {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .tag-trans { background: rgba(244, 63, 94, 0.15); color: var(--accent-rose); border: 1px solid rgba(244, 63, 94, 0.3); }
+    .tag-info { background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); border: 1px solid rgba(56, 189, 248, 0.3); }
+    .tag-geo { background: rgba(168, 85, 247, 0.15); color: var(--accent-purple); border: 1px solid rgba(168, 85, 247, 0.3); }
+    .phase-badge {
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .phase-active { background: rgba(16, 185, 129, 0.2); color: var(--accent-green); border: 1px solid rgba(16, 185, 129, 0.4); }
+    .phase-plan { background: rgba(245, 158, 11, 0.2); color: var(--accent-gold); border: 1px solid rgba(245, 158, 11, 0.4); }
+
+    /* Controls Bar */
+    .controls-bar {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .filter-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .btn-filter {
+      background: var(--bg-card);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-filter:hover {
+      background: var(--bg-card-hover);
+      color: #FFFFFF;
+    }
+    .btn-filter.active {
+      background: #0284C7;
+      color: #FFFFFF;
+      border-color: #38BDF8;
+      box-shadow: 0 2px 8px rgba(56, 189, 248, 0.3);
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 320px;
+    }
+    .search-input {
+      width: 100%;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 14px 8px 36px;
+      color: #FFFFFF;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-input:focus { border-color: var(--accent-cyan); }
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* Table Container */
+    .table-container {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow-x: auto;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    th {
+      background: #1E293B;
+      color: #CBD5E1;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #1E293B;
+      color: #E2E8F0;
+      vertical-align: middle;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(255, 255, 255, 0.02); }
+
+    /* Custom Badges */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    .status-live { background: rgba(16, 185, 129, 0.15); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .status-scheduled { background: rgba(245, 158, 11, 0.15); color: #FBBF24; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .status-planned { background: rgba(148, 163, 184, 0.12); color: #94A3B8; border: 1px solid rgba(148, 163, 184, 0.25); }
+
+    .role-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 9px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .role-pillar { background: rgba(245, 158, 11, 0.2); color: #F59E0B; border: 1px solid rgba(245, 158, 11, 0.4); }
+    .role-supporting { background: rgba(56, 189, 248, 0.15); color: #38BDF8; border: 1px solid rgba(56, 189, 248, 0.35); }
+
+    .silo-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      background: #1E293B;
+      color: #94A3B8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid #334155;
+    }
+
+    .kw-main {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #38BDF8;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .kw-volume {
+      font-size: 11px;
+      color: #34D399;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .lsi-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      max-width: 280px;
+    }
+    .lsi-pill {
+      font-size: 10px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid #334155;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #94A3B8;
+      white-space: normal;
+    }
+
+    .slug-text {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: #6EE7B7;
+    }
+
+    /* Interactive Image Thumbnails & Zoom Hover */
+    .img-cell-group {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .img-thumb-container {
+      position: relative;
+      cursor: pointer;
+    }
+    .img-thumb-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      border: 1.5px solid #334155;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, border-color 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .img-thumb-container:hover .img-thumb-box {
+      border-color: var(--accent-cyan);
+      transform: scale(1.08);
+      box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+    }
+    .img-thumb-box .box-icon {
+      font-size: 20px;
+      line-height: 1;
+    }
+    .img-thumb-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .img-type-badge {
+      position: absolute;
+      bottom: -3px;
+      right: -3px;
+      font-size: 8px;
+      font-weight: 800;
+      padding: 1px 4px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .badge-feat { background: #0284C7; color: #FFF; }
+    .badge-cont { background: #10B981; color: #FFF; }
+
+    /* Zoom Hover Tooltip Modal */
+    .img-zoom-modal {
+      display: none;
+      position: absolute;
+      bottom: 54px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      background: #0F172A;
+      border: 2px solid var(--accent-cyan);
+      border-radius: 12px;
+      padding: 12px;
+      width: 320px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7);
+      pointer-events: none;
+      animation: popIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      white-space: normal;
+    }
+    .img-thumb-container:hover .img-zoom-modal {
+      display: block;
+    }
+    .zoom-banner {
+      width: 100%;
+      height: 130px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      border: 1px dashed rgba(255, 255, 255, 0.2);
+      box-sizing: border-box;
+      position: relative;
+    }
+    .zoom-banner.live-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .banner-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      font-weight: 700;
+    }
+    .banner-badge {
+      background: rgba(56, 189, 248, 0.2);
+      color: #38BDF8;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 9px;
+    }
+    .banner-body {
+      text-align: center;
+    }
+    .banner-icon {
+      font-size: 32px;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .banner-dim {
+      font-size: 11px;
+      font-weight: 800;
+      color: #FFFFFF;
+      font-family: var(--font-mono);
+    }
+    .banner-footer {
+      font-size: 9px;
+      color: #94A3B8;
+      text-align: center;
+      font-style: italic;
+    }
+    .img-zoom-title {
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .img-zoom-desc {
+      font-size: 11px;
+      color: #CBD5E1;
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+    .img-zoom-alt {
+      font-size: 10px;
+      color: #94A3B8;
+      padding-top: 6px;
+      border-top: 1px dashed #334155;
+      font-style: italic;
+    }
+
+    .link-path {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: #FBBF24;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 28px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 12px;
+      padding: 16px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-title">
+      <h1>
+        <span>🚽</span> 
+        Master Publishing Roadmap & <span class="highlight">Topical Authority</span>
+      </h1>
+      <p>Peta Operasional Penyerapan 800+ Kueri Jabodetabek, 5 Silo Sanitasi, Arsitektur Hub & Spoke, & Preview Visual Aset</p>
+    </div>
+    <div class="header-meta">
+      <span class="badge badge-cyan">Domain: sedotwcdijakarta.com</span>
+      <span class="badge badge-gold">Umur: ~3,5 Bulan (109 Hari)</span>
+      <span class="badge badge-green">Pola Rilis: Logaritmik Bertahap</span>
+      <span class="badge badge-purple">Standard: E-E-A-T & AI Overviews</span>
+    </div>
+  </header>
+
+  <!-- Live Sync Bar -->
+  <div class="sync-bar">
+    <div class="sync-info">
+      <div class="sync-dot"></div>
+      <span id="sync-status-text">Sinkronisasi Database WordPress Aktif — Terakhir diperiksa: <strong>9 September 2026, 20:15 WIB</strong></span>
+    </div>
+    <button class="btn-sync" onclick="syncWordPressData()">
+      <span>🔄</span> Periksa Data WordPress Real-Time
+    </button>
+  </div>
+
+  <!-- Telemetry Grid -->
+  <div class="telemetry-grid">
+    <div class="telemetry-card">
+      <div class="label">Total Rencana Artikel Silo</div>
+      <div class="value" id="count-total">30</div>
+      <div class="subtext">5 Silo Tertutup (100% Bebas Tag)</div>
+    </div>
+    <div class="telemetry-card">
+      <div class="label">Artikel Live di WordPress</div>
+      <div class="value" style="color: var(--accent-green);" id="count-live">0</div>
+      <div class="subtext">Fase 1: Pemanasan Dimulai</div>
+    </div>
+    <div class="telemetry-card">
+      <div class="label">Artikel Scheduled (Future)</div>
+      <div class="value" style="color: var(--accent-gold);" id="count-sched">0</div>
+      <div class="subtext">Jadwal Acak (Jittered Time)</div>
+    </div>
+    <div class="telemetry-card">
+      <div class="label">Artikel Planned (Roadmap)</div>
+      <div class="value" style="color: var(--accent-blue);" id="count-plan">30</div>
+      <div class="subtext">3 Gelombang Publikasi Bertahap</div>
+    </div>
+    <div class="telemetry-card">
+      <div class="label">Halaman Statis Aktif (Money)</div>
+      <div class="value" style="color: var(--accent-purple);" id="count-pages">16</div>
+      <div class="subtext">Proteksi Halaman 749 + Hub Wilayah</div>
+    </div>
+    <div class="telemetry-card">
+      <div class="label">Total Universe Kueri</div>
+      <div class="value" style="color: var(--accent-cyan);">800+</div>
+      <div class="subtext">Diserap ke Ads, Hub & Blog Silo</div>
+    </div>
+  </div>
+
+  <!-- Absorption & Keyword Architecture Panel -->
+  <div class="absorption-panel">
+    <div class="absorption-header">
+      <div>
+        <h2><span>📊</span> Arsitektur Penyerapan 800+ Kueri & Roadmap Skalabilitas 2 Fase</h2>
+        <p>Prinsip Anti-Kanibalisasi: Mengapa 30 Artikel Strategis, Bagaimana Kueri Diserap, & Kapan Ekspansi Dilakukan</p>
+      </div>
+      <div>
+        <span class="phase-badge phase-active">Fase 1: 30 Artikel Aktif</span>
+        <span class="phase-badge phase-plan" style="margin-left: 6px;">Fase 2: 45–55 Artikel Pasca-GSC</span>
+      </div>
+    </div>
+
+    <div class="absorption-grid">
+      <!-- Box 1 -->
+      <div class="absorption-box">
+        <div class="absorption-box-title">
+          <span>🔍</span> 1. Inventaris Sumber Data Kueri (Audit Riil)
+        </div>
+        <ul class="absorption-list">
+          <li>
+            <span>Laporan Penelusuran (Search Terms Riil)</span>
+            <span class="badge-count">137 Kueri</span>
+          </li>
+          <li>
+            <span>Bidded Keywords Google Ads (3 Kampanye)</span>
+            <span class="badge-count">286 Kueri</span>
+          </li>
+          <li>
+            <span>Trigger Dynamic Content If-So (Lokasi/Jasa)</span>
+            <span class="badge-count">167 Triggers</span>
+          </li>
+          <li>
+            <span>GBP / Near-Me & Peta Hiperlokal</span>
+            <span class="badge-count">120+ Kueri</span>
+          </li>
+          <li>
+            <span>GKP & Permutasi Semantik Jabodetabek</span>
+            <span class="badge-count">800–1.200 Kueri</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="absorption-box">
+        <div class="absorption-box-title">
+          <span>🎯</span> 2. Matriks Penyerapan Search Intent
+        </div>
+        <ul class="absorption-list">
+          <li>
+            <div>
+              <span class="tag-intent tag-trans">🛒 Transaksional (35%)</span>
+              <div style="font-size: 11px; color: var(--text-muted); margin-top: 3px;">"pesan sedot wc", "biaya kuras wc"</div>
+            </div>
+            <span style="font-size: 11px; color: var(--accent-rose); font-weight: 700;">➔ Halaman 749 & WA</span>
+          </li>
+          <li>
+            <div>
+              <span class="tag-intent tag-geo">📍 Hiperlokal (15%)</span>
+              <div style="font-size: 11px; color: var(--text-muted); margin-top: 3px;">"sedot wc tebet", "gang sempit"</div>
+            </div>
+            <span style="font-size: 11px; color: var(--accent-purple); font-weight: 700;">➔ 6 Hub Wilayah WP</span>
+          </li>
+          <li>
+            <div>
+              <span class="tag-intent tag-info">📚 Edukasi / Solusi (50%)</span>
+              <div style="font-size: 11px; color: var(--text-muted); margin-top: 3px;">"ciri septic tank penuh", "pipa mampet"</div>
+            </div>
+            <span style="font-size: 11px; color: var(--accent-blue); font-weight: 700;">➔ 30 Artikel Silo (1:15-30)</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Box 3 -->
+      <div class="absorption-box">
+        <div class="absorption-box-title">
+          <span>🛡️</span> 3. Framework Skalabilitas & Anti-Kanibalisasi
+        </div>
+        <ul class="absorption-list">
+          <li>
+            <span>Fase 1: MVTA (Minimum Viable Authority)</span>
+            <span class="badge-count" style="color: var(--accent-green);">30 Artikel (Aktif)</span>
+          </li>
+          <li>
+            <span>Fase 2: Ekspansi Pasca-Audit GSC (Hari 60–90)</span>
+            <span class="badge-count" style="color: var(--accent-gold);">+15–25 Artikel</span>
+          </li>
+          <li>
+            <span>Batas Maksimal Sehat Niche Sedot WC</span>
+            <span class="badge-count" style="color: #FFFFFF;">45–55 Artikel</span>
+          </li>
+          <li>
+            <span>Alasan Bukan 100–300 Artikel</span>
+            <span style="font-size: 11px; color: var(--accent-rose); font-weight: 700;">Cegah Kanibalisasi & HCU</span>
+          </li>
+          <li>
+            <span>Kepadatan Semantik per Artikel</span>
+            <span style="font-size: 11px; color: var(--accent-cyan); font-weight: 700;">1 Fokus + 3–6 Turunan + LSI</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls Bar -->
+  <div class="controls-bar">
+    <div class="filter-buttons">
+      <button class="btn-filter active" onclick="filterData('all')">Semua (30)</button>
+      <button class="btn-filter" onclick="filterData('silo-1')">Silo 1: Septic Tank (6)</button>
+      <button class="btn-filter" onclick="filterData('silo-2')">Silo 2: Saluran Mampet (6)</button>
+      <button class="btn-filter" onclick="filterData('silo-3')">Silo 3: Grease Trap (6)</button>
+      <button class="btn-filter" onclick="filterData('silo-4')">Silo 4: STP Industri (6)</button>
+      <button class="btn-filter" onclick="filterData('silo-5')">Silo 5: Hyperlocal (6)</button>
+      <button class="btn-filter" onclick="filterData('pillar')">⭐ Pilar Hub (5)</button>
+      <button class="btn-filter" onclick="filterData('supporting')">📄 Pendukung (25)</button>
+      <button class="btn-filter" onclick="filterData('wave-1')">🌊 Gelombang 1 (10)</button>
+    </div>
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" class="search-input" placeholder="Cari judul, keyword, LSI, atau slug..." oninput="handleSearch()">
+    </div>
+  </div>
+
+  <!-- Table Container -->
+  <div class="table-container">
+    <table id="articlesTable">
+      <thead>
+        <tr>
+          <th>No & Kode</th>
+          <th>Status</th>
+          <th>Silo & Kategori WP</th>
+          <th>Peran</th>
+          <th>Judul Rencana Artikel (H1) & Slug URL</th>
+          <th>Fokus Keyword & Volume (MSV)</th>
+          <th>Keyword Turunan & LSI (AI Fan-Out)</th>
+          <th>Aset Visual (Hover to Zoom)</th>
+          <th>Aliran Internal Link (PageRank)</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- Rows will be rendered by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="footer">
+    Master Publishing Roadmap & AI Search Architecture v2.0 • Proyek sedotwcdijakarta.com • Diperbarui otomatis dari database WordPress.
+  </footer>
+
+</div>
+
+<script>
+  // Dataset 30 Artikel Silo Berdasarkan Roadmap v2.0
+  const articlesData = [
+    // SILO 1
+    {
+      code: "S1-P",
+      siloId: "silo-1",
+      siloName: "Silo 1: Septic Tank",
+      category: "septic-tank-pemukiman",
+      role: "pillar",
+      roleLabel: "⭐ PILAR HUB",
+      wave: "wave-1",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Panduan Lengkap Kuras Septic Tank Rumah Tangga: Cara Kerja, Biaya Resmi & Waktu Ideal Sedot WC",
+      slug: "/panduan-kuras-septic-tank-rumah/",
+      focusKw: "cara merawat septic tank rumah tangga",
+      volume: "2.400 / bln",
+      lsi: ["kapan septic tank harus disedot", "cara kerja septic tank resapan", "biaya sedot wc resmi pemda", "tanda septic tank bermasalah"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80",
+        title: "Featured Image: Truk Tangki Vakum Rumah Tangga",
+        desc: "Armada truk tangki vakum bersih dengan teknisi berseragam melayani perumahan di Jakarta.",
+        alt: "Truk tangki vakum sedot septic tank di pemukiman Jakarta"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
+        title: "In-Content: Diagram Anatomi Septic Tank",
+        desc: "Diagram penampang bak penampungan, ruang resapan air, dan pipa ventilasi gas.",
+        alt: "Diagram skema cara kerja septic tank rumah tangga"
+      },
+      linkPath: "➔ /jakarta-selatan/ & WhatsApp Direct"
+    },
+    {
+      code: "S1-01",
+      siloId: "silo-1",
+      siloName: "Silo 1: Septic Tank",
+      category: "septic-tank-pemukiman",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-1",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "5 Ciri Septic Tank Penuh vs Kloset Mampet: Jangan Salah Panggil Tukang!",
+      slug: "/ciri-septic-tank-penuh-vs-mampet/",
+      focusKw: "ciri septic tank penuh",
+      volume: "3.600 / bln",
+      lsi: ["tanda wc penuh", "perbedaan kloset mampet dan penuh", "kenapa air wc turun lambat", "bau got di kamar mandi"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80",
+        title: "Featured Image: Kloset Kamar Mandi Meluap",
+        desc: "Visual kloset duduk dengan air surut lambat untuk menggambarkan kepanikan pembaca.",
+        alt: "Air kloset meluap lambat tanda septic tank penuh"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
+        title: "In-Content: Tabel Perbandingan Gejala",
+        desc: "Tabel komparasi cepat: Gejala Septic Tank Penuh vs Gejala Pipa Sumbat Benda Asing.",
+        alt: "Tabel perbandingan ciri septic tank penuh vs saluran pipa mampet"
+      },
+      linkPath: "➔ /panduan-kuras-septic-tank-rumah/ (Pilar)"
+    },
+    {
+      code: "S1-02",
+      siloId: "silo-1",
+      siloName: "Silo 1: Septic Tank",
+      category: "septic-tank-pemukiman",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-1",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Rincian Biaya Sedot WC Jakarta Resmi 2026: Tarif per Tangki vs per Kubik Tanpa Biaya Siluman",
+      slug: "/biaya-sedot-wc-jakarta-resmi/",
+      focusKw: "biaya sedot wc jakarta resmi",
+      volume: "4.400 / bln",
+      lsi: ["harga sedot wc per kubik", "tarif sedot wc jakarta selatan", "biaya sedot tinja per tangki", "harga sedot wc resmi paljaya"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80",
+        title: "Featured Image: Transparansi Biaya",
+        desc: "Nota resmi transparan dan meteran volume tangki untuk membangun kepercayaan E-E-A-T.",
+        alt: "Estimasi biaya sedot WC resmi tanpa biaya siluman"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
+        title: "In-Content: Infografis Komparasi Tarif",
+        desc: "Perbandingan skema hitungan per ritase tangki engkel vs meteran kubik.",
+        alt: "Tabel perbandingan tarif sedot tinja per kubik vs per rit"
+      },
+      linkPath: "➔ /panduan-kuras-septic-tank-rumah/ (Pilar)"
+    },
+    {
+      code: "S1-03",
+      siloId: "silo-1",
+      siloName: "Silo 1: Septic Tank",
+      category: "septic-tank-pemukiman",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-2",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Berapa Lama Septic Tank Harus Disedot? Kenali Siklus Kuras Sesuai Jumlah Penghuni Rumah",
+      slug: "/siklus-kuras-septic-tank-rutin/",
+      focusKw: "berapa lama septic tank harus disedot",
+      volume: "1.900 / bln",
+      lsi: ["siklus kuras septic tank berkala", "waktu ideal sedot wc", "kapasitas septic tank 4 orang", "anjuran dinas kesehatan sedot wc"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=600&q=80",
+        title: "Featured Image: Kalender Perawatan Sanitasi",
+        desc: "Visual jadwal berkala perawatan sanitasi rumah tangga.",
+        alt: "Kalender jadwal rutin sedot WC berkala"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80",
+        title: "In-Content: Matriks Kapasitas vs Penghuni",
+        desc: "Tabel durasi tahunan sedot tangki untuk keluarga 2, 4, 6, dan 8 orang.",
+        alt: "Tabel estimasi waktu kuras septic tank berdasarkan jumlah anggota keluarga"
+      },
+      linkPath: "➔ /panduan-kuras-septic-tank-rumah/ (Pilar)"
+    },
+    {
+      code: "S1-04",
+      siloId: "silo-1",
+      siloName: "Silo 1: Septic Tank",
+      category: "septic-tank-pemukiman",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-2",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Apakah Truk Tangki Sedot WC Bisa Masuk Gang Sempit? Solusi Selang 100 Meter & Truk Engkel",
+      slug: "/sedot-wc-gang-sempit-selang-panjang/",
+      focusKw: "sedot wc gang sempit",
+      volume: "1.600 / bln",
+      lsi: ["sedot wc selang 100 meter", "truk engkel sedot wc masuk gang", "sedot wc pemukiman padat jakarta", "daya hisap selang panjang"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=600&q=80",
+        title: "Featured Image: Truk Engkel di Gang Sempit",
+        desc: "Truk roda 4 khusus jalan perumahan padat penduduk bermanuver masuk ke gang.",
+        alt: "Armada truk engkel sedot WC masuk gang sempit Jakarta"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80",
+        title: "In-Content: Penyambungan Selang 100M",
+        desc: "Dokumentasi penyambungan selang spiral tanpa bocor hingga jarak 100 meter.",
+        alt: "Penyambungan selang sedot WC panjang hingga 100 meter"
+      },
+      linkPath: "➔ /panduan-kuras-septic-tank-rumah/ (Pilar)"
+    },
+    {
+      code: "S1-05",
+      siloId: "silo-1",
+      siloName: "Silo 1: Septic Tank",
+      category: "septic-tank-pemukiman",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-3",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Kenapa Septic Tank Cepat Penuh Padahal Baru Disedot? Waspadai Resapan Air Tanah Mampet",
+      slug: "/penyebab-septic-tank-cepat-penuh/",
+      focusKw: "kenapa septic tank cepat penuh",
+      volume: "2.200 / bln",
+      lsi: ["septic tank cepat penuh saat musim hujan", "resapan air septic tank buntu", "air tanah tinggi rembes ke septic tank", "bakteri pengurai mati"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?w=600&q=80",
+        title: "Featured Image: Cek Bak Resapan",
+        desc: "Pengecekan lubang resapan air tanah yang jenuh oleh tim teknisi.",
+        alt: "Pemeriksaan bak resapan septic tank yang tersumbat lumpur"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?w=600&q=80",
+        title: "In-Content: Lapisan Pori Resapan",
+        desc: "Diagram lapisan ijuk, batu kali, dan pasir pada sumur resapan septic tank.",
+        alt: "Diagram struktur pori resapan air tanah septic tank"
+      },
+      linkPath: "➔ /panduan-kuras-septic-tank-rumah/ (Pilar)"
+    },
+
+    // SILO 2
+    {
+      code: "S2-P",
+      siloId: "silo-2",
+      siloName: "Silo 2: Saluran Mampet",
+      category: "saluran-pipa-mampet",
+      role: "pillar",
+      roleLabel: "⭐ PILAR HUB",
+      wave: "wave-1",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Solusi Tuntas Pipa Saluran Mampet Tanpa Bongkar Lantai: Teknik Spiral Drain Cleaner & Mesin Vakum",
+      slug: "/pelancar-saluran-pipa-mampet-tanpa-bongkar/",
+      focusKw: "pelancar pipa mampet tanpa bongkar",
+      volume: "2.900 / bln",
+      lsi: ["jasa saluran mampet tanpa bongkar", "mesin drain cleaner spiral baja", "alat pelancar pipa tersumbat", "biaya pelancaran saluran air"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=600&q=80",
+        title: "Featured Image: Mesin Spiral Drain Cleaner",
+        desc: "Alat canggih kawat spiral baja elektrik yang mampu membersihkan paralon tanpa merusak ubin.",
+        alt: "Mesin pelancar saluran mampet spiral cleaner tanpa bongkar"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?w=600&q=80",
+        title: "In-Content: Jalur Tikungan Pipa Paralon",
+        desc: "Ilustrasi gerak putar kawat baja fleksibel menembus tikungan L-bow pipa pembuangan.",
+        alt: "Mekanisme kawat spiral baja melancarkan kotoran di tikungan pipa paralon"
+      },
+      linkPath: "➔ /sedot-wc-terdekat/ & WhatsApp Direct"
+    },
+    {
+      code: "S2-01",
+      siloId: "silo-2",
+      siloName: "Silo 2: Saluran Mampet",
+      category: "saluran-pipa-mampet",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-1",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Kloset Tersumbat Pembalut atau Tisu Basah? Hindari Soda Api, Lakukan Cara Aman Ini",
+      slug: "/cara-mengatasi-kloset-tersumbat-pembalut/",
+      focusKw: "kloset tersumbat pembalut cara mengatasi",
+      volume: "3.100 / bln",
+      lsi: ["cara mengeluarkan pembalut dari kloset", "tisu basah menyumbat leher angsa wc", "alat penarik sumbatan kloset spiral"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?w=600&q=80",
+        title: "Featured Image: Leher Angsa Kloset Tersumbat",
+        desc: "Potongan penampang leher angsa toilet duduk yang tersangkut gumpalan serat.",
+        alt: "Sumbatan pembalut di leher angsa kloset duduk"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=600&q=80",
+        title: "In-Content: Pertolongan Pertama Mandiri",
+        desc: "Langkah aman menggunakan plunger mangkuk karet sebelum menghubungi spesialis.",
+        alt: "Teknik menggunakan pompa karet plunger pada kloset tersumbat"
+      },
+      linkPath: "➔ /pelancar-saluran-pipa-mampet-tanpa-bongkar/ (Pilar)"
+    },
+    {
+      code: "S2-02",
+      siloId: "silo-2",
+      siloName: "Silo 2: Saluran Mampet",
+      category: "saluran-pipa-mampet",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-2",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Wastafel Dapur Mampet Total Akibat Lemak Membeku? Ini Solusi Cepat Melancarkannya",
+      slug: "/mengatasi-wastafel-mampet-lemak/",
+      focusKw: "wastafel cuci piring mampet lemak",
+      volume: "2.800 / bln",
+      lsi: ["cara melarutkan lemak di pipa pembuangan", "wastafel dapur airnya tidak turun", "lemak membatu di pipa paralon"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600&q=80",
+        title: "Featured Image: Bak Wastafel Cuci Piring",
+        desc: "Wastafel dapur dengan genangan air akibat endapan lemak sisa minyak goreng.",
+        alt: "Wastafel cuci piring dapur tersumbat lemak beku"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80",
+        title: "In-Content: Gumpalan Kerak Lemak Paralon",
+        desc: "Penampakan pipa yang tersumbat endapan putih lemak jenuh.",
+        alt: "Endapan lemak membeku di dalam pipa paralon wastafel"
+      },
+      linkPath: "➔ /pelancar-saluran-pipa-mampet-tanpa-bongkar/ (Pilar)"
+    },
+    {
+      code: "S2-03",
+      siloId: "silo-2",
+      siloName: "Silo 2: Saluran Mampet",
+      category: "saluran-pipa-mampet",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-2",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Bahaya Menggunakan Soda Api untuk Kloset & Paralon PVC yang Jarang Diketahui",
+      slug: "/bahaya-soda-api-saluran-pipa/",
+      focusKw: "bahaya soda api untuk kloset",
+      volume: "2.400 / bln",
+      lsi: ["efek samping soda api untuk pipa pvc", "pipa meleleh akibat soda api", "kloset retak terkena soda api"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=600&q=80",
+        title: "Featured Image: Pipa Rusak Bahan Kimia",
+        desc: "Pipa paralon yang meleleh dan retak akibat panas reaksi eksotermik soda api.",
+        alt: "Kerusakan pipa paralon akibat soda api panas"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&q=80",
+        title: "In-Content: Matriks Reaksi Kimia",
+        desc: "Perbandingan keamanan kawat spiral mekanis vs bahaya cairan korosif kimia.",
+        alt: "Tabel risiko bahan kimia korosif pada instalasi sanitasi rumah"
+      },
+      linkPath: "➔ /pelancar-saluran-pipa-mampet-tanpa-bongkar/ (Pilar)"
+    },
+    {
+      code: "S2-04",
+      siloId: "silo-2",
+      siloName: "Silo 2: Saluran Mampet",
+      category: "saluran-pipa-mampet",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-3",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Bak Kontrol Got Rumah Meluap Saat Hujan? Langkah Praktis Deteksi Pipa Sumbat",
+      slug: "/mengatasi-bak-kontrol-got-meluap/",
+      focusKw: "bak kontrol got meluap",
+      volume: "1.500 / bln",
+      lsi: ["penyebab air got naik ke rumah", "membersihkan endapan pasir di bak kontrol", "saluran pembuangan air hujan tersumbat"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?w=600&q=80",
+        title: "Featured Image: Bak Kontrol Luapan Got",
+        desc: "Bak kontrol depan garasi rumah dengan air kotor meluap saat hujan.",
+        alt: "Air got meluap dari bak kontrol saluran rumah tangga"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80",
+        title: "In-Content: Pembersihan Sedimen Pasir",
+        desc: "Teknik pembersihan endapan lumpur padat dan pasir dari dasar bak kontrol.",
+        alt: "Pengerukan lumpur sedimen di dalam bak kontrol saluran pembuangan"
+      },
+      linkPath: "➔ /pelancar-saluran-pipa-mampet-tanpa-bongkar/ (Pilar)"
+    },
+    {
+      code: "S2-05",
+      siloId: "silo-2",
+      siloName: "Silo 2: Saluran Mampet",
+      category: "saluran-pipa-mampet",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-3",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Kelebihan Jasa Pelancar Saluran Mampet Spiral Wire Dibandingkan Tukang Bongkar Keramik",
+      slug: "/kelebihan-pelancar-saluran-spiral-cleaner/",
+      focusKw: "jasa pelancar saluran spiral drain cleaner",
+      volume: "1.200 / bln",
+      lsi: ["biaya bongkar lantai vs sedot saluran", "keunggulan kawat spiral baja fleksibel", "waktu pengerjaan saluran mampet 30 menit"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=600&q=80",
+        title: "Featured Image: Pengerjaan Bersih Tanpa Rusak",
+        desc: "Lantai keramik rumah tetap rapi dan bersih setelah pipa saluran kembali plong lancar.",
+        alt: "Hasil pengerjaan saluran mampet tanpa membongkar keramik lantai"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
+        title: "In-Content: Matriks Hemat Biaya",
+        desc: "Tabel perbandingan biaya perbaikan: Hemat hingga 70% dibanding pengerjaan renovasi bongkar.",
+        alt: "Perbandingan biaya jasa pelancar saluran vs renovasi bongkar ubin"
+      },
+      linkPath: "➔ /pelancar-saluran-pipa-mampet-tanpa-bongkar/ (Pilar)"
+    },
+
+    // SILO 3
+    {
+      code: "S3-P",
+      siloId: "silo-3",
+      siloName: "Silo 3: Grease Trap",
+      category: "grease-trap-resto-mbg",
+      role: "pillar",
+      roleLabel: "⭐ PILAR HUB",
+      wave: "wave-1",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Standar Sanitasi Grease Trap Dapur Komersial: Panduan Kuras Lemak Restoran & Dapur Program MBG SPPG",
+      slug: "/panduan-kuras-grease-trap-restoran-mbg/",
+      focusKw: "kuras grease trap restoran jakarta",
+      volume: "1.800 / bln",
+      lsi: ["pembersihan grease trap dapur sentral", "pengolahan limbah lemak makan bergizi gratis", "perangkap lemak stainless steel resto"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&q=80",
+        title: "Featured Image: Dapur Restoran Higienis",
+        desc: "Dapur katering dan restoran modern berstandar higienis dengan unit perangkap lemak stainless.",
+        alt: "Dapur sentral komersial dengan instalasi grease trap higienis"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=600&q=80",
+        title: "In-Content: Skema Kompartemen Grease Trap",
+        desc: "Bagan pemisahan minyak, air buangan, dan endapan padat sisa makanan.",
+        alt: "Skema pemisahan lemak dan minyak pada unit grease trap komersial"
+      },
+      linkPath: "➔ /kontak/ & WhatsApp B2B"
+    },
+    {
+      code: "S3-01",
+      siloId: "silo-3",
+      siloName: "Silo 3: Grease Trap",
+      category: "grease-trap-resto-mbg",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-1",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Karakteristik Limbah Minyak Jenuh (FOG) Dapur Sentral Masak Porsi Besar & Risiko Pipa Beku",
+      slug: "/penanganan-limbah-minyak-dapur-mbg/",
+      focusKw: "limbah minyak jenuh dapur sentral",
+      volume: "950 / bln",
+      lsi: ["bahaya fats oils grease bagi saluran pipa", "volume limbah katering porsi ribuan", "dapur mbg sanksi pipa buntu"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&q=80",
+        title: "Featured Image: Dapur Produksi Porsi Besar",
+        desc: "Aktivitas memasak skala besar yang menghasilkan residu minyak jenuh masif setiap hari.",
+        alt: "Dapur program makan bergizi gratis dengan volume memasak masif"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80",
+        title: "In-Content: Titik Beku Lemak Minyak",
+        desc: "Diagram visual bagaimana suhu air buangan mendingin dan membekukan lemak di pipa.",
+        alt: "Proses pembekuan lemak jenuh di dalam saluran pembuangan dapur"
+      },
+      linkPath: "➔ /panduan-kuras-grease-trap-restoran-mbg/ (Pilar)"
+    },
+    {
+      code: "S3-02",
+      siloId: "silo-3",
+      siloName: "Silo 3: Grease Trap",
+      category: "grease-trap-resto-mbg",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-2",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Jadwal Ideal Pembersihan Grease Trap Cafe & Rumah Makan Tanpa Mengganggu Jam Pengunjung",
+      slug: "/jadwal-pembersihan-grease-trap-resto/",
+      focusKw: "jadwal kuras grease trap cafe",
+      volume: "850 / bln",
+      lsi: ["frekuensi kuras bak lemak resto", "membersihkan grease trap harian vs bulanan", "kapan grease trap harus disedot tangki"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80",
+        title: "Featured Image: Suasana Cafe Nyaman",
+        desc: "Kafe modern ramai pengunjung yang membutuhkan lingkungan higienis bebas aroma tak sedap.",
+        alt: "Kafe kuliner yang nyaman dan bebas dari bau saluran air kotor"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=600&q=80",
+        title: "In-Content: Checklist Rutin Resto",
+        desc: "Format lembar kontrol pembersihan harian, mingguan, dan penyedotan bulanan.",
+        alt: "Checklist jadwal perawatan rutin grease trap restoran"
+      },
+      linkPath: "➔ /panduan-kuras-grease-trap-restoran-mbg/ (Pilar)"
+    },
+    {
+      code: "S3-03",
+      siloId: "silo-3",
+      siloName: "Silo 3: Grease Trap",
+      category: "grease-trap-resto-mbg",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-2",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Cara Mengatasi Bau Busuk dari Perangkap Lemak Dapur yang Menyengat Sampai ke Ruang Makan",
+      slug: "/cara-menghilangkan-bau-grease-trap/",
+      focusKw: "menghilangkan bau grease trap dapur",
+      volume: "1.400 / bln",
+      lsi: ["penyebab grease trap bau busuk", "deodorizer bakteri pengurai lemak", "segel gasket penutup grease trap bocor"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80",
+        title: "Featured Image: Ruang Makan Restoran Bersih",
+        desc: "Area makan restoran yang terlindungi dari kebocoran aroma asam lemak busuk.",
+        alt: "Area dining restoran bersih tanpa gangguan bau saluran dapur"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?w=600&q=80",
+        title: "In-Content: Sistem Gasket Kedap Udara",
+        desc: "Pemasangan segel karet silikon pada penutup bak lemak komersial.",
+        alt: "Pemasangan segel gasket karet penutup grease trap kedap udara"
+      },
+      linkPath: "➔ /panduan-kuras-grease-trap-restoran-mbg/ (Pilar)"
+    },
+    {
+      code: "S3-04",
+      siloId: "silo-3",
+      siloName: "Silo 3: Grease Trap",
+      category: "grease-trap-resto-mbg",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-3",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Layanan Sedot Lemak Malam & Subuh Jabodetabek: Pengerjaan Cepat Higienis Bergaransi",
+      slug: "/layanan-sedot-lemak-malam-subuh/",
+      focusKw: "sedot lemak dapur malam hari",
+      volume: "720 / bln",
+      lsi: ["sedot grease trap shift malam jakarta", "kuras lemak restoran setelah tutup toko", "armada vakum senyap area mall"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80",
+        title: "Featured Image: Pengerjaan Shift Malam",
+        desc: "Armada truk tangki siaga di luar jam operasional mall dan restoran.",
+        alt: "Penyedotan lemak restoran shift malam setelah jam operasional tutup"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80",
+        title: "In-Content: SOP Sterilisasi Pasca-Sedot",
+        desc: "Protokol desinfeksi area dapur agar siap digunakan untuk memasak di pagi hari.",
+        alt: "SOP sterilisasi dan pembersihan lantai dapur setelah penyedotan lemak"
+      },
+      linkPath: "➔ /panduan-kuras-grease-trap-restoran-mbg/ (Pilar)"
+    },
+    {
+      code: "S3-05",
+      siloId: "silo-3",
+      siloName: "Silo 3: Grease Trap",
+      category: "grease-trap-resto-mbg",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-3",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Regulasi Pengelolaan Air Limbah Restoran DKI Jakarta & Sanksi Pencemaran Selokan",
+      slug: "/regulasi-pengelolaan-limbah-cair-resto/",
+      focusKw: "regulasi air limbah restoran dki",
+      volume: "650 / bln",
+      lsi: ["pergub dki baku mutu air limbah domestik", "izin pembuangan limbah cair restoran", "denda membuang minyak ke selokan"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=600&q=80",
+        title: "Featured Image: Dokumen Kepatuhan Lingkungan",
+        desc: "Berkas manifest limbah resmi dan audit kepatuhan lingkungan dinas LH.",
+        alt: "Kepatuhan hukum pengelolaan air limbah restoran DKI Jakarta"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
+        title: "In-Content: Parameter Baku Mutu Limbah",
+        desc: "Tabel ambang batas minyak dan lemak (BOD/COD) yang diizinkan masuk saluran kota.",
+        alt: "Tabel baku mutu air limbah komersial Dinas Lingkungan Hidup DKI"
+      },
+      linkPath: "➔ /panduan-kuras-grease-trap-restoran-mbg/ (Pilar)"
+    },
+
+    // SILO 4
+    {
+      code: "S4-P",
+      siloId: "silo-4",
+      siloName: "Silo 4: STP Industri",
+      category: "limbah-stp-industri",
+      role: "pillar",
+      roleLabel: "⭐ PILAR HUB",
+      wave: "wave-1",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Manajemen Bak STP (Sewage Treatment Plant) Gedung & Pabrik: Prosedur Sedot Lumpur Domestik Non-B3",
+      slug: "/panduan-sedot-stp-limbah-domestik-pabrik/",
+      focusKw: "jasa sedot stp gedung jakarta",
+      volume: "1.100 / bln",
+      lsi: ["kuras bak stp pabrik", "sedot lumpur aktif aerasi gedung", "pengolahan air limbah domestik perkantoran"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?w=600&q=80",
+        title: "Featured Image: Fasilitas STP Basement Gedung",
+        desc: "Instalasi pengolahan air limbah domestik skala gedung bertingkat dan pabrik.",
+        alt: "Instalasi Sewage Treatment Plant gedung komersial Jakarta"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80",
+        title: "In-Content: Alur Bak Aerasi & Sedimentasi",
+        desc: "Diagram siklus pengolahan lumpur aktif dan pembuangan endapan dasar tangki.",
+        alt: "Diagram alur pemisahan lumpur aktif pada bak aerasi STP pabrik"
+      },
+      linkPath: "➔ /sedot-wc-jakarta/ & Kontrak B2B"
+    },
+    {
+      code: "S4-01",
+      siloId: "silo-4",
+      siloName: "Silo 4: STP Industri",
+      category: "limbah-stp-industri",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-2",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Perbedaan Limbah Domestik Gedung (Non-B3) vs Limbah B3 Industri dalam Aturan Sedot Tangki",
+      slug: "/perbedaan-limbah-stp-domestik-dan-b3/",
+      focusKw: "limbah stp non b3 pabrik",
+      volume: "880 / bln",
+      lsi: ["klasifikasi limbah tinja dan kantin pabrik", "apakah lumpur stp termasuk limbah b3", "izin pengangkutan limbah non b3"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1618042164219-62c820f10723?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1618042164219-62c820f10723?w=600&q=80",
+        title: "Featured Image: Kawasan Industri Modern",
+        desc: "Area pergudangan dan pabrik yang memproduksi limbah sanitasi karyawan.",
+        alt: "Penyedotan limbah sanitasi karyawan di kawasan industri"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
+        title: "In-Content: Tabel Perizinan KLHK",
+        desc: "Matriks perbandingan hukum: Prosedur limbah domestik vs prosedur ketat limbah B3.",
+        alt: "Tabel perbedaan regulasi penanganan limbah domestik non-B3 vs limbah B3"
+      },
+      linkPath: "➔ /panduan-sedot-stp-limbah-domestik-pabrik/ (Pilar)"
+    },
+    {
+      code: "S4-02",
+      siloId: "silo-4",
+      siloName: "Silo 4: STP Industri",
+      category: "limbah-stp-industri",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-2",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Kapasitas Armada Truk Tangki Besar (4.000 - 6.000 Liter) untuk Kuras Massal Gudang & Pabrik",
+      slug: "/armada-truk-tangki-kapasitas-besar-industri/",
+      focusKw: "truk tangki sedot limbah kapasitas besar",
+      volume: "920 / bln",
+      lsi: ["sewa truk tangki sedot lumpur 6 kubik", "armada fuso sedot wc pabrik jakarta", "biaya sedot lumpur per rit"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&q=80",
+        title: "Featured Image: Truk Tangki Volume 6.000L",
+        desc: "Armada truk tangki heavy-duty kapasitas 6 kubik bertenaga vakum tinggi.",
+        alt: "Truk tangki vakum kapasitas 6.000 liter untuk sedot pabrik industri"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80",
+        title: "In-Content: Spesifikasi Mesin Vakum PTO",
+        desc: "Rincian teknis diameter selang hisap 4 inci dan kecepatan hisap 1.000 liter/menit.",
+        alt: "Spesifikasi pompa vakum truk tangki kuras limbah industri"
+      },
+      linkPath: "➔ /panduan-sedot-stp-limbah-domestik-pabrik/ (Pilar)"
+    },
+    {
+      code: "S4-03",
+      siloId: "silo-4",
+      siloName: "Silo 4: STP Industri",
+      category: "limbah-stp-industri",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-3",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Mekanisme Pembuangan Resmi ke IPLT Pemda DKI (Duri Kosambi & Pulo Gebang) Bebas Sanksi Lingkungan",
+      slug: "/prosedur-resmi-pembuangan-iplt-dki/",
+      focusKw: "pembuangan lumpur tinja resmi iplt pemda",
+      volume: "780 / bln",
+      lsi: ["lokasi iplt duri kosambi jakarta barat", "iplt pulo gebang paljaya", "surat bukti pembuangan lumpur tinja"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1516937941344-00b4e0337589?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1516937941344-00b4e0337589?w=600&q=80",
+        title: "Featured Image: Fasilitas IPLT Pemda DKI",
+        desc: "Truk tangki membuang limbah tinja secara sah ke instalasi pengolahan milik pemerintah.",
+        alt: "Proses pembuangan resmi lumpur tinja di fasilitas IPLT Pemda DKI"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
+        title: "In-Content: Peta & Surat Manifest IPLT",
+        desc: "Contoh lembar bukti setor resmi dari Perumda Paljaya DKI Jakarta.",
+        alt: "Contoh surat tanda setor resmi pembuangan lumpur tinja di IPLT DKI"
+      },
+      linkPath: "➔ /panduan-sedot-stp-limbah-domestik-pabrik/ (Pilar)"
+    },
+    {
+      code: "S4-04",
+      siloId: "silo-4",
+      siloName: "Silo 4: STP Industri",
+      category: "limbah-stp-industri",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-3",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Biaya Borongan Kuras STP Gedung Perkantoran & Ruko Bertingkat di Kawasan Bisnis Jakarta",
+      slug: "/biaya-kuras-stp-gedung-jakarta/",
+      focusKw: "tarif kuras stp gedung perkantoran",
+      volume: "670 / bln",
+      lsi: ["biaya sedot stp per m3 jakarta", "penawaran harga kuras stp komersial", "faktur pajak jasa sedot limbah gedung"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80",
+        title: "Featured Image: Gedung Perkantoran Jakarta",
+        desc: "Kawasan gedung bertingkat di koridor Sudirman-Thamrin-Kuningan.",
+        alt: "Gedung perkantoran bertingkat di pusat bisnis Jakarta"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80",
+        title: "In-Content: Struktur Penawaran Borongan",
+        desc: "Rincian klausul kontrak pemeliharaan sanitasi gedung 6 bulanan dan tahunan.",
+        alt: "Format penawaran harga kuras STP gedung komersial Jakarta"
+      },
+      linkPath: "➔ /panduan-sedot-stp-limbah-domestik-pabrik/ (Pilar)"
+    },
+    {
+      code: "S4-05",
+      siloId: "silo-4",
+      siloName: "Silo 4: STP Industri",
+      category: "limbah-stp-industri",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-3",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Tanda Endapan Lumpur STP Sudah Mengeras dan Membutuhkan Blower / Pengenceran High Pressure",
+      slug: "/cara-kuras-lumpur-stp-mengeras/",
+      focusKw: "kuras lumpur aktif stp mengeras",
+      volume: "540 / bln",
+      lsi: ["mengatasi lumpur mengendap keras di dasar bak stp", "teknik jetting pengencer lumpur tinja", "blower aerasi stp tersumbat"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?w=600&q=80",
+        title: "Featured Image: Jetting Tekanan Tinggi",
+        desc: "Peralatan water jetting bertekanan tinggi untuk mengurai lumpur padat membatu.",
+        alt: "Pengenceran endapan lumpur STP yang mengeras dengan water jetting"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?w=600&q=80",
+        title: "In-Content: Diagram Tahapan Pengenceran",
+        desc: "Proses 3 tahap: Penetrasi Nozzle ➔ Pengadukan Lumpur ➔ Penghisapan Pompa Vakum.",
+        alt: "Diagram tahapan pencairan dan penyedotan lumpur padat STP"
+      },
+      linkPath: "➔ /panduan-sedot-stp-limbah-domestik-pabrik/ (Pilar)"
+    },
+
+    // SILO 5
+    {
+      code: "S5-P",
+      siloId: "silo-5",
+      siloName: "Silo 5: Hyperlocal",
+      category: "area-layanan-jabodetabek",
+      role: "pillar",
+      roleLabel: "⭐ PILAR HUB",
+      wave: "wave-1",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Jaringan Pos Armada Sedot WC Terdekat se-Jabodetabek: Waktu Respon < 5 Menit & Teknisi Siaga 24 Jam",
+      slug: "/pos-armada-sedot-wc-terdekat-jabodetabek/",
+      focusKw: "jasa sedot wc terdekat jabodetabek 24 jam",
+      volume: "5.400 / bln",
+      lsi: ["sedot wc panggilan terdekat", "nomor wa sedot wc 24 jam", "tukang sedot wc cepat datang", "pos armada sedot tinja jabodetabek"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&q=80",
+        title: "Featured Image: Peta Jaringan Armada",
+        desc: "Visual sebaran pangkalan mobil tangki di 5 kota administrasi DKI Jakarta.",
+        alt: "Peta jaringan pos armada sedot WC terdekat di Jabodetabek"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=600&q=80",
+        title: "In-Content: Estimasi Waktu Tempuh Wilayah",
+        desc: "Tabel jarak tempuh rata-rata 30-45 menit dari pos terdekat ke rumah warga.",
+        alt: "Estimasi waktu tempuh armada sedot WC terdekat per kecamatan"
+      },
+      linkPath: "➔ /area-layanan/ & WhatsApp Direct"
+    },
+    {
+      code: "S5-01",
+      siloId: "silo-5",
+      siloName: "Silo 5: Hyperlocal",
+      category: "area-layanan-jabodetabek",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-1",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Sedot WC Jakarta Selatan: Jangkauan Armada Tebet, Kebayoran Baru, Cilandak & Jagakarsa",
+      slug: "/sedot-wc-jakarta-selatan-tebet-kebayoran/",
+      focusKw: "sedot wc tebet jakarta selatan",
+      volume: "2.100 / bln",
+      lsi: ["sedot wc kebayoran baru", "jasa sedot wc cilandak barat", "sedot wc pasar minggu murah", "tukang sedot wc jagakarsa"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1555899434-94d1338c7f22?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1555899434-94d1338c7f22?w=600&q=80",
+        title: "Featured Image: Armada Jakarta Selatan",
+        desc: "Truk tangki melayani kawasan perumahan dan ruko di area Tebet dan Kebayoran.",
+        alt: "Layanan jasa sedot WC Jakarta Selatan wilayah Tebet dan Kebayoran"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&q=80",
+        title: "In-Content: Daftar Kelurahan Terlayani",
+        desc: "Peta kelurahan aktif yang dilayani pos tangki Tebet dan Cilandak.",
+        alt: "Peta jangkauan kelurahan sedot WC Jakarta Selatan"
+      },
+      linkPath: "➔ /jakarta-selatan/ & /pos-armada-sedot-wc-terdekat-jabodetabek/"
+    },
+    {
+      code: "S5-02",
+      siloId: "silo-5",
+      siloName: "Silo 5: Hyperlocal",
+      category: "area-layanan-jabodetabek",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-2",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Sedot WC Jakarta Barat: Layanan Cepat Kebon Jeruk, Cengkareng, Grogol & Kembangan",
+      slug: "/sedot-wc-jakarta-barat-kebon-jeruk-grogol/",
+      focusKw: "sedot wc kebon jeruk jakarta barat",
+      volume: "1.950 / bln",
+      lsi: ["sedot wc cengkareng timur barat", "sedot wc grogol petamburan", "tukang sedot wc kembangan puri indah"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80",
+        title: "Featured Image: Armada Jakarta Barat",
+        desc: "Pengerjaan sedot WC di kawasan padat Kebon Jeruk dan perumahan Cengkareng.",
+        alt: "Armada sedot WC Jakarta Barat wilayah Kebon Jeruk dan Grogol"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=600&q=80",
+        title: "In-Content: Solusi Akses Duri Kosambi",
+        desc: "Kemudahan rute pembuangan cepat ke IPLT Duri Kosambi Jakarta Barat.",
+        alt: "Akses pembuangan lumpur tinja ke IPLT Duri Kosambi Jakarta Barat"
+      },
+      linkPath: "➔ /jakarta-barat/ & /pos-armada-sedot-wc-terdekat-jabodetabek/"
+    },
+    {
+      code: "S5-03",
+      siloId: "silo-5",
+      siloName: "Silo 5: Hyperlocal",
+      category: "area-layanan-jabodetabek",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-2",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Sedot WC Jakarta Timur: Siaga 24 Jam Duren Sawit, Cakung, Matraman & Kramat Jati",
+      slug: "/sedot-wc-jakarta-timur-duren-sawit-cakung/",
+      focusKw: "sedot wc duren sawit jakarta timur",
+      volume: "1.850 / bln",
+      lsi: ["sedot wc cakung pulo gebang", "jasa sedot wc matraman utan kayu", "sedot wc kramat jati cililitan"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=600&q=80",
+        title: "Featured Image: Armada Jakarta Timur",
+        desc: "Pos mobil tangki siaga 24 jam di koridor Duren Sawit dan Cakung.",
+        alt: "Jasa sedot WC Jakarta Timur wilayah Duren Sawit dan Cakung"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&q=80",
+        title: "In-Content: Akses IPLT Pulo Gebang",
+        desc: "Rute resmi pembuangan limbah ramah lingkungan ke IPLT Pulo Gebang.",
+        alt: "Fasilitas pembuangan resmi IPLT Pulo Gebang Jakarta Timur"
+      },
+      linkPath: "➔ /jakarta-timur/ & /pos-armada-sedot-wc-terdekat-jabodetabek/"
+    },
+    {
+      code: "S5-04",
+      siloId: "silo-5",
+      siloName: "Silo 5: Hyperlocal",
+      category: "area-layanan-jabodetabek",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-3",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Sedot WC Jakarta Pusat: Akses Cepat Menteng, Tanah Abang, Kemayoran & Senen",
+      slug: "/sedot-wc-jakarta-pusat-menteng-tanah-abang/",
+      focusKw: "sedot wc tanah abang jakarta pusat",
+      volume: "1.700 / bln",
+      lsi: ["sedot wc menteng cikini", "jasa sedot wc kemayoran cempaka putih", "sedot wc pasar senen johar baru"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1555899434-94d1338c7f22?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1555899434-94d1338c7f22?w=600&q=80",
+        title: "Featured Image: Armada Jakarta Pusat",
+        desc: "Penanganan cepat sedot WC untuk ruko niaga Tanah Abang dan hunian Menteng.",
+        alt: "Jasa sedot WC Jakarta Pusat area Tanah Abang dan Menteng"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=600&q=80",
+        title: "In-Content: Peta Manuver Wilayah Padat",
+        desc: "Rute armada engkel melintasi jalan padat di Pasar Senen dan Kemayoran.",
+        alt: "Peta rute armada engkel sedot WC Jakarta Pusat"
+      },
+      linkPath: "➔ /jakarta-pusat/ & /pos-armada-sedot-wc-terdekat-jabodetabek/"
+    },
+    {
+      code: "S5-05",
+      siloId: "silo-5",
+      siloName: "Silo 5: Hyperlocal",
+      category: "area-layanan-jabodetabek",
+      role: "supporting",
+      roleLabel: "📄 Pendukung",
+      wave: "wave-3",
+      status: "planned",
+      statusLabel: "Planned",
+      title: "Sedot WC Jakarta Utara: Layanan Wilayah Kelapa Gading, Pluit, Sunter & Tanjung Priok",
+      slug: "/sedot-wc-jakarta-utara-kelapa-gading-pluit/",
+      focusKw: "sedot wc kelapa gading jakarta utara",
+      volume: "1.900 / bln",
+      lsi: ["sedot wc pluit pik muara karang", "jasa sedot wc sunter agung jaya", "sedot wc tanjung priok koja"],
+      featImg: {
+        thumb: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&q=80",
+        title: "Featured Image: Armada Jakarta Utara",
+        desc: "Armada tangki bervakum tinggi khusus kawasan pesisir Kelapa Gading dan Pluit.",
+        alt: "Layanan sedot WC Jakarta Utara area Kelapa Gading dan Pluit"
+      },
+      contentImg: {
+        thumb: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=100&q=80",
+        full: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&q=80",
+        title: "In-Content: Penanganan Wilayah Banjir Rob",
+        desc: "SOP khusus penanganan septic tank di daerah dengan muka air tanah tinggi.",
+        alt: "Teknik sedot septic tank di kawasan rob Jakarta Utara"
+      },
+      linkPath: "➔ /jakarta-utara/ & /pos-armada-sedot-wc-terdekat-jabodetabek/"
+    }
+  ];
+
+  let currentFilter = 'all';
+
+  // Generator SVG Visual Cetak Biru Sanitasi Resmi (SOP/06 Compliant - 100% Bebas Stock Photo Luar Negeri)
+  function generateSanitationVisual(siloId, type, code) {
+    const isFeat = type === 'feat';
+    
+    // Tema warna per Silo
+    const siloThemes = {
+      'silo-1': { bg1: '#2E190E', bg2: '#1A0E08', border: '#D97706', accent: '#F59E0B', label: 'SILO 1: SEPTIC TANK', icon: '🚛', sub: 'Truk Tangki Vakum & Septic Tank SNI' },
+      'silo-2': { bg1: '#08213D', bg2: '#04101F', border: '#0284C7', accent: '#38BDF8', label: 'SILO 2: SALURAN PIPA MAMPET', icon: '🌀', sub: 'Mesin Spiral Drain Snake Tanpa Bongkar' },
+      'silo-3': { bg1: '#2E1F00', bg2: '#170F00', border: '#CA8A04', accent: '#EAB308', label: 'SILO 3: GREASE TRAP RESTO & MBG', icon: '🍳', sub: 'Perangkap Lemak Dapur Komersial FOG' },
+      'silo-4': { bg1: '#09291E', bg2: '#04140F', border: '#059669', accent: '#10B981', label: 'SILO 4: STP INDUSTRI NON-B3', icon: '🏭', sub: 'Sewage Treatment Plant & Izin IPLT Pemda' },
+      'silo-5': { bg1: '#220B4D', bg2: '#120529', border: '#9333EA', accent: '#C084FC', label: 'SILO 5: HYPERLOCAL JABODETABEK', icon: '📍', sub: 'Truk Engkel Selang 100M Gang Sempit DKI' }
+    };
+
+    const theme = siloThemes[siloId] || siloThemes['silo-1'];
+    const typeLabel = isFeat ? 'FEATURED IMAGE (16:9 • 1200×675)' : 'IN-CONTENT BODY DIAGRAM (16:9)';
+
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 338" width="600" height="338">
+      <defs>
+        <linearGradient id="g_${code}_${type}" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="${theme.bg1}"/>
+          <stop offset="100%" stop-color="${theme.bg2}"/>
+        </linearGradient>
+      </defs>
+      <rect width="600" height="338" fill="url(#g_${code}_${type})"/>
+      <rect x="10" y="10" width="580" height="318" rx="8" fill="none" stroke="${theme.border}" stroke-width="1.5" stroke-dasharray="6,3"/>
+      
+      <!-- Header Top Bar -->
+      <rect x="20" y="20" width="560" height="32" rx="6" fill="rgba(0,0,0,0.5)"/>
+      <text x="32" y="41" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="${theme.accent}">${theme.icon} ${theme.label} • ${code}</text>
+      <text x="568" y="41" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38BDF8">SOP/06 WEBP HD</text>
+
+      <!-- Center Icon Graphic -->
+      <circle cx="300" cy="145" r="48" fill="rgba(0,0,0,0.4)" stroke="${theme.accent}" stroke-width="2"/>
+      <text x="300" y="160" text-anchor="middle" font-size="40">${theme.icon}</text>
+
+      <!-- Blueprint Content Card -->
+      <rect x="30" y="215" width="540" height="85" rx="8" fill="rgba(0,0,0,0.6)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <text x="300" y="240" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">${typeLabel}</text>
+      <text x="300" y="262" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#E2E8F0">${theme.sub}</text>
+      <text x="300" y="282" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="${theme.accent}">Zero Distortion • Standar Resmi sedotwcdijakarta.com</text>
+    </svg>`;
+
+    return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+  }
+
+  function renderTable(data) {
+    const tbody = document.getElementById('tableBody');
+    tbody.innerHTML = '';
+
+    if (data.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="9" style="text-align: center; padding: 40px; color: var(--text-muted);">Tidak ada artikel yang cocok dengan filter atau kata kunci pencarian.</td></tr>';
+      return;
+    }
+
+    data.forEach((item, index) => {
+      const tr = document.createElement('tr');
+
+      const roleBadgeClass = item.role === 'pillar' ? 'role-pillar' : 'role-supporting';
+      let statusBadgeClass = 'status-planned';
+      if (item.status === 'live') statusBadgeClass = 'status-live';
+      if (item.status === 'scheduled') statusBadgeClass = 'status-scheduled';
+
+      // Tema Silo untuk Visual Cetak Biru SOP/06
+      const siloThemes = {
+        'silo-1': { border: '#D97706', accent: '#F59E0B', label: 'SILO 1: SEPTIC TANK', icon: '🚛', bg1: '#2E190E', bg2: '#1A0E08' },
+        'silo-2': { border: '#0284C7', accent: '#38BDF8', label: 'SILO 2: SALURAN MAMPET', icon: '🌀', bg1: '#08213D', bg2: '#04101F' },
+        'silo-3': { border: '#CA8A04', accent: '#EAB308', label: 'SILO 3: GREASE TRAP', icon: '🍳', bg1: '#2E1F00', bg2: '#170F00' },
+        'silo-4': { border: '#059669', accent: '#10B981', label: 'SILO 4: STP INDUSTRI', icon: '🏭', bg1: '#09291E', bg2: '#04140F' },
+        'silo-5': { border: '#9333EA', accent: '#C084FC', label: 'SILO 5: HYPERLOCAL DKI', icon: '📍', bg1: '#220B4D', bg2: '#120529' }
+      };
+      const theme = siloThemes[item.siloId] || siloThemes['silo-1'];
+
+      // Komponen Featured Image (Live WP Image jika sudah terbit, atau Blueprint Card jika planned)
+      const featThumbContent = item.liveFeatImg 
+        ? `<img src="${item.liveFeatImg}" alt="${item.featImg.alt}">`
+        : `<span class="box-icon">${theme.icon}</span>`;
+
+      const featZoomBanner = item.liveFeatImg
+        ? `<div class="zoom-banner live-banner"><img src="${item.liveFeatImg}" alt="${item.featImg.alt}"></div>`
+        : `<div class="zoom-banner" style="background: linear-gradient(135deg, ${theme.bg1} 0%, ${theme.bg2} 100%); border: 1.5px solid ${theme.border};">
+            <div class="banner-header">
+              <span class="banner-badge" style="color: ${theme.accent}; border: 1px solid ${theme.border};">${item.code} • FEAT</span>
+              <span style="font-family: var(--font-mono); font-size: 9px; color: #94A3B8;">SOP/06 WEBP HD</span>
+            </div>
+            <div class="banner-body">
+              <span class="banner-icon">${theme.icon}</span>
+              <span class="banner-dim">16:9 • 1200×675 px</span>
+            </div>
+            <div class="banner-footer" style="color: ${theme.accent}; font-weight: 600;">
+              ⭐ Featured Hero (Above-the-Fold)
+            </div>
+          </div>`;
+
+      // Komponen In-Content Image
+      const bodyThumbContent = `<span class="box-icon">${theme.icon}</span>`;
+      const bodyZoomBanner = `<div class="zoom-banner" style="background: linear-gradient(135deg, ${theme.bg1} 0%, ${theme.bg2} 100%); border: 1.5px solid ${theme.border};">
+            <div class="banner-header">
+              <span class="banner-badge" style="color: ${theme.accent}; border: 1px solid ${theme.border};">${item.code} • BODY</span>
+              <span style="font-family: var(--font-mono); font-size: 9px; color: #94A3B8;">SOP/06 WEBP HD</span>
+            </div>
+            <div class="banner-body">
+              <span class="banner-icon">${theme.icon}</span>
+              <span class="banner-dim">16:9 • 1200×675 px</span>
+            </div>
+            <div class="banner-footer" style="color: ${theme.accent}; font-weight: 600;">
+              📐 Diagram / Infografis Lapangan
+            </div>
+          </div>`;
+
+      tr.innerHTML = `
+        <td>
+          <span style="font-weight: 800; color: #FFF;">#${index + 1}</span>
+          <span style="display: block; font-family: var(--font-mono); font-size: 11px; color: var(--accent-cyan);">${item.code}</span>
+        </td>
+        <td>
+          <span class="status-badge ${statusBadgeClass}">
+            <span>${item.status === 'live' ? '●' : '○'}</span> ${item.statusLabel}
+          </span>
+        </td>
+        <td>
+          <div style="font-weight: 700; color: #FFF;">${item.siloName}</div>
+          <span class="silo-tag">${item.category}</span>
+        </td>
+        <td>
+          <span class="role-badge ${roleBadgeClass}">${item.roleLabel}</span>
+        </td>
+        <td style="white-space: normal; min-width: 280px;">
+          <div style="font-weight: 700; color: #FFF; font-size: 13px; line-height: 1.4; margin-bottom: 4px;">
+            ${item.liveUrl ? `<a href="${item.liveUrl}" target="_blank" style="color: var(--accent-cyan); text-decoration: underline; text-underline-offset: 3px;">${item.title} 🔗</a>` : item.title}
+          </div>
+          <span class="slug-text">${item.slug}</span>
+        </td>
+        <td>
+          <span class="kw-main">${item.focusKw}</span>
+          <span class="kw-volume">📊 ${item.volume}</span>
+        </td>
+        <td>
+          <div class="lsi-list">
+            ${item.lsi.map(kw => `<span class="lsi-pill">${kw}</span>`).join('')}
+          </div>
+        </td>
+        <td>
+          <div class="img-cell-group">
+            <!-- Featured Image -->
+            <div class="img-thumb-container">
+              <div class="img-thumb-box" style="border-color: ${theme.border}; background: ${theme.bg2};">
+                ${featThumbContent}
+              </div>
+              <span class="img-type-badge badge-feat">Feat</span>
+              <div class="img-zoom-modal">
+                ${featZoomBanner}
+                <div class="img-zoom-title">${item.featImg.title}</div>
+                <div class="img-zoom-desc">${item.featImg.desc}</div>
+                <div class="img-zoom-alt">🏷️ Alt: "${item.featImg.alt}"</div>
+              </div>
+            </div>
+
+            <!-- In-Content Image -->
+            <div class="img-thumb-container">
+              <div class="img-thumb-box" style="border-color: ${theme.border}; background: ${theme.bg2};">
+                ${bodyThumbContent}
+              </div>
+              <span class="img-type-badge badge-cont">Body</span>
+              <div class="img-zoom-modal">
+                ${bodyZoomBanner}
+                <div class="img-zoom-title">${item.contentImg.title}</div>
+                <div class="img-zoom-desc">${item.contentImg.desc}</div>
+                <div class="img-zoom-alt">🏷️ Alt: "${item.contentImg.alt}"</div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <span class="link-path">${item.linkPath}</span>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  function filterData(filter) {
+    currentFilter = filter;
+    
+    // Update filter buttons UI
+    document.querySelectorAll('.btn-filter').forEach(btn => btn.classList.remove('active'));
+    if (event && event.target) {
+      event.target.classList.add('active');
+    }
+
+    applyFilters();
+  }
+
+  function handleSearch() {
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const query = document.getElementById('searchInput').value.toLowerCase().trim();
+    
+    let filtered = articlesData.filter(item => {
+      // Role or Silo filter
+      let matchFilter = true;
+      if (currentFilter === 'pillar') matchFilter = item.role === 'pillar';
+      else if (currentFilter === 'supporting') matchFilter = item.role === 'supporting';
+      else if (currentFilter === 'wave-1') matchFilter = item.wave === 'wave-1';
+      else if (currentFilter.startsWith('silo-')) matchFilter = item.siloId === currentFilter;
+
+      if (!matchFilter) return false;
+
+      // Text search
+      if (!query) return true;
+      const searchHaystack = (
+        item.title + " " + 
+        item.slug + " " + 
+        item.focusKw + " " + 
+        item.lsi.join(" ") + " " + 
+        item.siloName + " " + 
+        item.category
+      ).toLowerCase();
+
+      return searchHaystack.includes(query);
+    });
+
+    renderTable(filtered);
+  }
+
+  // Real-Time Live Sync with WordPress REST API Endpoint
+  async function syncWordPressData(isAuto = false) {
+    const statusText = document.getElementById('sync-status-text');
+    const syncDot = document.querySelector('.sync-dot');
+    statusText.innerHTML = "⏳ Menghubungi database live WordPress sedotwcdijakarta.com...";
+    if (syncDot) syncDot.style.background = "var(--accent-gold)";
+
+    try {
+      const response = await fetch('https://sedotwcdijakarta.com/wp-json/sedotwc/v1/roadmap-sync?_t=' + Date.now());
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      const data = await response.json();
+
+      if (data.success) {
+        const counts = data.counts;
+        const posts = data.posts || [];
+
+        // Update counts
+        document.getElementById('count-live').innerText = counts.live;
+        document.getElementById('count-sched').innerText = counts.scheduled;
+        document.getElementById('count-pages').innerText = counts.pages;
+        document.getElementById('count-plan').innerText = Math.max(0, 30 - counts.live - counts.scheduled);
+
+        // Update post statuses in articlesData
+        posts.forEach(p => {
+          const cleanSlug = p.slug.trim().toLowerCase();
+          const target = articlesData.find(a => a.slug.replace(/\//g, '').toLowerCase() === cleanSlug);
+          if (target) {
+            if (p.featured_image_url) {
+              target.liveFeatImg = p.featured_image_url;
+            }
+            if (p.status === 'publish') {
+              target.status = 'live';
+              target.statusLabel = 'Live';
+              target.liveUrl = p.url;
+            } else if (p.status === 'future') {
+              target.status = 'scheduled';
+              target.statusLabel = 'Scheduled (' + p.date.substring(0, 10) + ')';
+              target.liveUrl = p.url;
+            }
+          }
+        });
+
+        // Re-render
+        applyFilters();
+
+        if (syncDot) syncDot.style.background = "var(--accent-green)";
+        statusText.innerHTML = `✅ Terhubung live ke WordPress sedotwcdijakarta.com — Sinkron per <strong>${data.timestamp_id}</strong> (${counts.live} Post Publish, ${counts.scheduled} Scheduled, ${counts.pages} Halaman Statis).`;
+
+        if (!isAuto) {
+          alert(`Berhasil sinkronisasi live dengan WordPress!\n\n• Artikel Blog Live: ${counts.live}\n• Artikel Blog Scheduled: ${counts.scheduled}\n• Halaman Statis Aktif: ${counts.pages}\n• Waktu Server: ${data.timestamp_id}`);
+        }
+      }
+    } catch (err) {
+      console.warn("REST API live fetch fallback:", err);
+      if (syncDot) syncDot.style.background = "var(--accent-rose)";
+      statusText.innerHTML = `⚠️ Menampilkan data roadmap lokal (Terakhir dicek: 12 September 2026).`;
+    }
+  }
+
+  // Initial Render & Auto-Sync
+  document.addEventListener('DOMContentLoaded', () => {
+    renderTable(articlesData);
+    syncWordPressData(true); // Automatically sync on page open
+  });
+</script>
+
+</body>
+</html>

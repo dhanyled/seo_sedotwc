@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blueprint Master: Strategi Ad Group Google Ads & Pemetaan Dinamis If-So LP</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --surface-card: #24344d;
+    --border: #334155;
+    --primary: #38bdf8;
+    --primary-glow: rgba(56, 189, 248, 0.25);
+    --accent: #818cf8;
+    --success: #34d399;
+    --success-bg: rgba(52, 211, 153, 0.12);
+    --warning: #fbbf24;
+    --warning-bg: rgba(251, 191, 36, 0.12);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --tag-kw: #38bdf8;
+    --tag-ag: #a78bfa;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 30px 20px;
+  }
+  .container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  /* Header Section */
+  header {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 36px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(30px);
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  h1 span {
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  p.subtitle {
+    color: var(--text-muted);
+    font-size: 16px;
+    max-width: 900px;
+  }
+
+  /* Navigation Tabs */
+  .tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+  }
+  .tab-btn {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .tab-btn:hover {
+    color: #fff;
+    border-color: var(--primary);
+    background: rgba(56, 189, 248, 0.08);
+  }
+  .tab-btn.active {
+    background: linear-gradient(135deg, #0284c7, #2563eb);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+  }
+
+  /* Tab Content Panels */
+  .tab-pane {
+    display: none;
+    animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .tab-pane.active { display: block; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Card Grid & UI */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+  .card-split {
+    border-top: 4px solid var(--warning);
+  }
+  .card-kw {
+    border-top: 4px solid var(--primary);
+  }
+  .card-ag {
+    border-top: 4px solid var(--accent);
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+  .card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .badge-kw { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+  .badge-ag { background: rgba(167, 139, 250, 0.15); color: #a78bfa; border: 1px solid rgba(167, 139, 250, 0.3); }
+  .badge-split { background: var(--warning-bg); color: var(--warning); border: 1px solid rgba(251, 191, 36, 0.3); }
+
+  /* Keyword Chips */
+  .kw-box {
+    background: var(--surface-card);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 16px;
+  }
+  .kw-box-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .kw-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .kw-chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 4px 10px;
+    border-radius: 6px;
+    color: #e2e8f0;
+  }
+
+  /* LP Preview Simulation Box */
+  .lp-preview {
+    background: #0f172a;
+    border: 1px dashed rgba(56, 189, 248, 0.4);
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 10px;
+  }
+  .lp-preview-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #38bdf8;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .lp-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+  .lp-subtitle {
+    font-size: 13px;
+    color: #94a3b8;
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  /* Test Check Status */
+  .audit-status {
+    margin-top: 12px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .audit-pass { background: var(--success-bg); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3); }
+
+  /* Step by Step Workflow */
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+    margin: 20px 0;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: var(--border);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 24px;
+  }
+  .timeline-dot {
+    position: absolute;
+    left: -30px;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+  }
+  .timeline-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .timeline-desc {
+    color: var(--text-muted);
+    font-size: 14px;
+    background: var(--surface);
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+  code {
+    background: rgba(15, 23, 42, 0.8);
+    color: #38bdf8;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1><span>BLUEPRINT STRATEGI AD GROUP & TITLE IF-SO</span></h1>
+    <p class="subtitle">Panduan detail pembagian Ad Group (termasuk yang dipecah), daftar lengkap keyword riil, simulasi keterbacaan alami Title & Subtitle di Landing Page, serta langkah implementasi teknis di Google Ads dan If-So.</p>
+  </header>
+
+  <!-- Nav Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('tab-split')">✂️ 1. Ad Group Yang DIPECAH (3 Grup)</button>
+    <button class="tab-btn" onclick="switchTab('tab-ag-title')">🏷️ 2. Title Berdasarkan AD GROUP (1 Title Master)</button>
+    <button class="tab-btn" onclick="switchTab('tab-kw-title')">📍 3. Title Berdasarkan KEYWORD (Lokasi 100%)</button>
+    <button class="tab-btn" onclick="switchTab('tab-steps')">🚀 4. Langkah Implementasi (Google Ads & If-So)</button>
+  </div>
+
+  <!-- TAB 1: AD GROUP YANG DIPECAH -->
+  <div id="tab-split" class="tab-pane active">
+    <div style="background: var(--warning-bg); border: 1px solid rgba(251, 191, 36, 0.3); padding: 16px 20px; border-radius: 12px; margin-bottom: 24px;">
+      <h3 style="color: var(--warning); margin-bottom: 4px; font-size: 16px;">💡 Kenapa 3 Ad Group Ini Harus Dipecah?</h3>
+      <p style="color: #cbd5e1; font-size: 14px;">Karena di dalamnya mencampur 2 intensi yang bertolak belakang: <strong>Masalah Darurat WC Mampet/Buntu</strong> (yang butuh judul spesifik perbaikan) dan <strong>Kebutuhan Kuras Septic Tank Rutin</strong>. Memecah grup ini membuat iklan 100% relevan dan Quality Score Google Ads melonjak tinggi.</p>
+    </div>
+
+    <div class="grid">
+      <!-- SPLIT 1: AD GROUP 8. JASA -->
+      <div class="card card-split">
+        <div>
+          <div class="card-header">
+            <div>
+              <span style="font-size: 12px; color: var(--text-muted); display: block;">Asal: Ad Group 8.Jasa & 8.Jasa Broad</span>
+              <div class="card-title">Pecahan 8A: Saluran Mampet</div>
+            </div>
+            <span class="badge badge-kw">Title per Keyword</span>
+          </div>
+          
+          <div class="kw-box">
+            <div class="kw-box-title">Daftar Keyword di Grup Ini (2 Keyword):</div>
+            <div class="kw-list">
+              <span class="kw-chip">jasa wc mampet</span>
+              <span class="kw-chip">jasa perbaikan wc mampet</span>
+            </div>
+          </div>
+
+          <div class="lp-preview">
+            <div class="lp-preview-label">Simulasi Tampilan di LP (Dynamic by Keyword)</div>
+            <div class="lp-title">Jasa Perbaikan WC Mampet Jakarta</div>
+            <div class="lp-subtitle">Pelancaran Tanpa Bongkar – Tuntas dalam Hitungan Menit Bergaransi</div>
+          </div>
+        </div>
+
+        <div class="audit-status audit-pass">
+          <span>✓</span> <strong>Uji Alami:</strong> Sangat natural, langsung menyelesaikan ketakutan user kloset meluap.
+        </div>
+      </div>
+
+      <div class="card card-split">
+        <div>
+          <div class="card-header">
+            <div>
+              <span style="font-size: 12px; color: var(--text-muted); display: block;">Asal: Ad Group 8.Jasa & 8.Jasa Broad</span>
+              <div class="card-title">Pecahan 8B: Sedot Biasa</div>
+            </div>
+            <span class="badge badge-ag">1 Title Master</span>
+          </div>
+          
+          <div class="kw-box">
+            <div class="kw-box-title">Daftar Keyword di Grup Ini (3 Keyword):</div>
+            <div class="kw-list">
+              <span class="kw-chip">jasa sedot wc</span>
+              <span class="kw-chip">jasa sedot tinja</span>
+              <span class="kw-chip">jasa sedot septic tank</span>
+            </div>
+          </div>
+
+          <div class="lp-preview">
+            <div class="lp-preview-label">Simulasi Tampilan di LP (1 Title Mewakili Grup)</div>
+            <div class="lp-title">Jasa Sedot WC & Kuras Septic Tank Jakarta</div>
+            <div class="lp-subtitle">Layanan Cepat 24 Jam – Bersih Higienis, Bebas Bau & Terima Beres</div>
+          </div>
+        </div>
+
+        <div class="audit-status audit-pass">
+          <span>✓</span> <strong>Uji Alami:</strong> Mengakomodir 100% keyword sedot septic tank & tinja secara elegan.
+        </div>
+      </div>
+
+      <!-- SPLIT 2: AD GROUP 13. AHLI -->
+      <div class="card card-split">
+        <div>
+          <div class="card-header">
+            <div>
+              <span style="font-size: 12px; color: var(--text-muted); display: block;">Asal: Ad Group 13.Ahli</span>
+              <div class="card-title">Pecahan 13A: Ahli Mampet</div>
+            </div>
+            <span class="badge badge-kw">Title per Keyword</span>
+          </div>
+          
+          <div class="kw-box">
+            <div class="kw-box-title">Daftar Keyword di Grup Ini (2 Keyword):</div>
+            <div class="kw-list">
+              <span class="kw-chip">ahli wc mampet</span>
+              <span class="kw-chip">ahli wc buntu</span>
+            </div>
+          </div>
+
+          <div class="lp-preview">
+            <div class="lp-preview-label">Simulasi Tampilan di LP (Dynamic by Keyword)</div>
+            <div class="lp-title">Ahli WC Mampet Jakarta Profesional</div>
+            <div class="lp-subtitle">Spesialis Pelancaran Kloset & Saluran Tersumbat Tanpa Bongkar</div>
+          </div>
+        </div>
+
+        <div class="audit-status audit-pass">
+          <span>✓</span> <strong>Uji Alami:</strong> Menonjolkan otoritas teknisi ahli khusus pipa mampet.
+        </div>
+      </div>
+
+      <div class="card card-split">
+        <div>
+          <div class="card-header">
+            <div>
+              <span style="font-size: 12px; color: var(--text-muted); display: block;">Asal: Ad Group 13.Ahli</span>
+              <div class="card-title">Pecahan 13B: Ahli Sedot WC</div>
+            </div>
+            <span class="badge badge-ag">1 Title Master</span>
+          </div>
+          
+          <div class="kw-box">
+            <div class="kw-box-title">Daftar Keyword di Grup Ini (2 Keyword):</div>
+            <div class="kw-list">
+              <span class="kw-chip">ahli sedot wc</span>
+              <span class="kw-chip">ahli wc</span>
+            </div>
+          </div>
+
+          <div class="lp-preview">
+            <div class="lp-preview-label">Simulasi Tampilan di LP (1 Title Mewakili Grup)</div>
+            <div class="lp-title">Ahli Jasa Sedot WC Jakarta Bergaransi</div>
+            <div class="lp-subtitle">Peralatan Vakum Bertenaga Tinggi – Penanganan Tuntas untuk Rumah & Ruko</div>
+          </div>
+        </div>
+
+        <div class="audit-status audit-pass">
+          <span>✓</span> <strong>Uji Alami:</strong> Menghilangkan kesan buntung dari kata <i>'ahli wc'</i> menjadi kalimat profesional.
+        </div>
+      </div>
+
+      <!-- SPLIT 3: AD GROUP 12. TUKANG -->
+      <div class="card card-split">
+        <div>
+          <div class="card-header">
+            <div>
+              <span style="font-size: 12px; color: var(--text-muted); display: block;">Asal: Ad Group 12.Tukang</span>
+              <div class="card-title">Pecahan 12A: Tukang Mampet</div>
+            </div>
+            <span class="badge badge-kw">Title per Keyword</span>
+          </div>
+          
+          <div class="kw-box">
+            <div class="kw-box-title">Daftar Keyword di Grup Ini (1 Keyword):</div>
+            <div class="kw-list">
+              <span class="kw-chip">tukang wc mampet</span>
+            </div>
+          </div>
+
+          <div class="lp-preview">
+            <div class="lp-preview-label">Simulasi Tampilan di LP (Dynamic by Keyword)</div>
+            <div class="lp-title">Tukang WC Mampet Jakarta (Langsung Datang)</div>
+            <div class="lp-subtitle">Tukang Siap Datang Hari Ini Menggunakan Mesin Spiral Modern</div>
+          </div>
+        </div>
+
+        <div class="audit-status audit-pass">
+          <span>✓</span> <strong>Uji Alami:</strong> Sangat dicari oleh user yang butuh tukang fisik instan ke rumah.
+        </div>
+      </div>
+
+      <div class="card card-split">
+        <div>
+          <div class="card-header">
+            <div>
+              <span style="font-size: 12px; color: var(--text-muted); display: block;">Asal: Ad Group 12.Tukang</span>
+              <div class="card-title">Pecahan 12B: Tukang Sedot Tinja</div>
+            </div>
+            <span class="badge badge-ag">1 Title Master</span>
+          </div>
+          
+          <div class="kw-box">
+            <div class="kw-box-title">Daftar Keyword di Grup Ini (2 Keyword):</div>
+            <div class="kw-list">
+              <span class="kw-chip">tukang sedot wc</span>
+              <span class="kw-chip">tukang sedot tinja</span>
+            </div>
+          </div>
+
+          <div class="lp-preview">
+            <div class="lp-preview-label">Simulasi Tampilan di LP (1 Title Mewakili Grup)</div>
+            <div class="lp-title">Tukang Sedot WC & Tinja Terdekat di Jakarta</div>
+            <div class="lp-subtitle">Armada Mobil Tangki Terdekat Siap Meluncur ke Lokasi Anda Hari Ini</div>
+          </div>
+        </div>
+
+        <div class="audit-status audit-pass">
+          <span>✓</span> <strong>Uji Alami:</strong> Menggabungkan sedot WC dan sedot tinja dalam 1 penawaran utuh.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 2: AD GROUP YANG PAKAI 1 TITLE MASTER -->
+  <div id="tab-ag-title" class="tab-pane">
+    <div style="background: rgba(167, 139, 250, 0.12); border: 1px solid rgba(167, 139, 250, 0.3); padding: 16px 20px; border-radius: 12px; margin-bottom: 24px;">
+      <h3 style="color: #a78bfa; margin-bottom: 4px; font-size: 16px;">🏷️ Kenapa Grup Ini Cukup 1 Title Master?</h3>
+      <p style="color: #cbd5e1; font-size: 14px;">Seluruh keyword di dalam tiap grup ini adalah sinonim/variasi kata dari tema yang sama (Harga, Kontak, Kedekatan Armada, Layanan 24 Jam). Menggunakan 1 Title Master yang terkurasi membuat tampilan landing page jauh lebih kokoh dan hemat baris CSV If-So.</p>
+    </div>
+
+    <div class="grid">
+      <!-- AD GROUP 11. MURAH -->
+      <div class="card card-ag">
+        <div>
+          <div class="card-header">
+            <div class="card-title">Ad Group: 11. Murah</div>
+            <span class="badge badge-ag">1 Title Master</span>
+          </div>
+          
+          <div class="kw-box">
+            <div class="kw-box-title">Daftar Seluruh Keyword (3 Keyword):</div>
+            <div class="kw-list">
+              <span class="kw-chip">sedot wc murah</span>
+              <span class="kw-chip">sedot wc termurah</span>
+              <span class="kw-chip">sedot tinja murah</span>
+            </div>
+          </div>
+
+          <div class="lp-preview">
+            <div class="lp-preview-label">Simulasi Title Master di LP</div>
+            <div class="lp-title">Sedot WC Murah & Transparan di Jakarta</div>
+            <div class="lp-subtitle">Biaya Jujur Mulai 350rb Tanpa Biaya Tersembunyi + Garansi Tuntas</div>
+          </div>
+        </div>
+
+        <div class="audit-status audit-pass">
+          <span>✓</span> <strong>Uji Alami:</strong> Menjawab langsung pertanyaan calon pelanggan soal harga murah & garansi.
+        </div>
+      </div>
+
+      <!-- AD GROUP 10. NOMOR -->
+      <div class="card card-ag">
+        <div>
+          <div class="card-header">
+            <div class="card-title">Ad Group: 10. Nomor</div>
+            <span class="badge badge-ag">1 Title Master</span>
+          </div>
+          
+          <div class="kw-box">
+            <div class="kw-box-title">Daftar Seluruh Keyword (3 Keyword):</div>
+            <div class="kw-list">
+              <span class="kw-chip">no sedot wc</span>
+              <span class="kw-chip">nomor sedot wc</span>
+              <span class="kw-chip">nomor tukang sedot wc</span>
+            </div>
+          </div>
+
+          <div class="lp-preview">
+            <div class="lp-preview-label">Simulasi Title Master di LP</div>
+            <div class="lp-title">Nomor Telepon & WhatsApp Resmi Sedot WC Jakarta</div>
+            <div class="lp-subtitle">Layanan Darurat 24 Jam – Respon WhatsApp Cepat &lt; 5 Menit</div>
+          </div>
+        </div>
+
+        <div class="audit-status audit-pass">
+          <span>✓</span> <strong>Uji Alami:</strong> Mengubah kata pendek <i>'no sedot wc'</i> menjadi kontak darurat resmi.
+        </div>
+      </div>
+
+      <!-- AD GROUP 1. TERDEKAT -->
+      <div class="card card-ag">
+        <div>
+          <div class="card-header">
+            <div class="card-title">Ad Group: 1. Terdekat</div>
+            <span class="badge badge-ag">1 Title Master</span>
+          </div>
+          
+          <div class="kw-box">
+            <div class="kw-box-title">Daftar Seluruh Keyword (4 Keyword):</div>
+            <div class="kw-list">
+              <span class="kw-chip">jasa sedot wc terdekat</span>
+              <span class="kw-chip">sedot tinja terdekat</span>
+              <span class="kw-chip">sedot wc terdekat</span>
+              <span class="kw-chip">tukang sedot wc terdekat</span>
+            </div>
+          </div>
+
+          <div class="lp-preview">
+            <div class="lp-preview-label">Simulasi Title Master di LP</div>
+            <div class="lp-title">Tukang Sedot WC Terdekat di Lokasi Anda</div>
+            <div class="lp-subtitle">Teknisi Standby Siap Datang Hari Ini (Tiba di Lokasi 15-30 Menit)</div>
+          </div>
+        </div>
+
+        <div class="audit-status audit-pass">
+          <span>✓</span> <strong>Uji Alami:</strong> Mengunci rasa urgensi calon pelanggan yang butuh penanganan instan.
+        </div>
+      </div>
+
+      <!-- AD GROUP 14. LAIN2 -->
+      <div class="card card-ag">
+        <div>
+          <div class="card-header">
+            <div class="card-title">Ad Group: 14. Lain2</div>
+            <span class="badge badge-ag">1 Title Master</span>
+          </div>
+          
+          <div class="kw-box">
+            <div class="kw-box-title">Daftar Seluruh Keyword (4 Keyword):</div>
+            <div class="kw-list">
+              <span class="kw-chip">layanan sedot wc</span>
+              <span class="kw-chip">sedot wc 24 jam</span>
+              <span class="kw-chip">sedot wc bergaransi</span>
+              <span class="kw-chip">sedot wc online</span>
+            </div>
+          </div>
+
+          <div class="lp-preview">
+            <div class="lp-preview-label">Simulasi Title Master di LP</div>
+            <div class="lp-title">Layanan Sedot WC Jakarta 24 Jam Bergaransi</div>
+            <div class="lp-subtitle">Pemesanan Online Praktis & Cepat – Teknisi Standby Siang & Malam</div>
+          </div>
+        </div>
+
+        <div class="audit-status audit-pass">
+          <span>✓</span> <strong>Uji Alami:</strong> Menyatukan keunggulan 24 jam, online, dan garansi dalam 1 judul mantap.
+        </div>
+      </div>
+
+      <!-- AD GROUP 5. JAKARTA (UMUM) -->
+      <div class="card card-ag">
+        <div>
+          <div class="card-header">
+            <div class="card-title">Ad Group: 5. Jakarta (Umum)</div>
+            <span class="badge badge-ag">1 Title Master</span>
+          </div>
+          
+          <div class="kw-box">
+            <div class="kw-box-title">Daftar Seluruh Keyword (2 Keyword):</div>
+            <div class="kw-list">
+              <span class="kw-chip">sedot wc jakarta</span>
+              <span class="kw-chip">jasa sedot wc jakarta</span>
+            </div>
+          </div>
+
+          <div class="lp-preview">
+            <div class="lp-preview-label">Simulasi Title Master di LP</div>
+            <div class="lp-title">Jasa Sedot WC Jakarta 24 Jam Terpercaya</div>
+            <div class="lp-subtitle">Solusi Cepat WC Penuh & Mampet untuk Rumah, Ruko & Gedung Kantor</div>
+          </div>
+        </div>
+
+        <div class="audit-status audit-pass">
+          <span>✓</span> <strong>Uji Alami:</strong> Menjadi penampung pencarian utama wilayah DKI Jakarta.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 3: AD GROUP YANG 100% PURE KEYWORD (LOKASI) -->
+  <div id="tab-kw-title" class="tab-pane">
+    <div style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.3); padding: 16px 20px; border-radius: 12px; margin-bottom: 24px;">
+      <h3 style="color: #38bdf8; margin-bottom: 4px; font-size: 16px;">📍 Ad Group Berbasis Pure Keyword (Lokasi Spesifik)</h3>
+      <p style="color: #cbd5e1; font-size: 14px;">Ad Group ini memiliki <strong>Local Intent tinggi</strong>. Menyebut nama kecamatan/area spesifik di Judul Landing Page meningkatkan konversi hingga 2x lipat. Seluruh keyword di bawah ini 100% dipetakan per baris di CSV If-So.</p>
+    </div>
+
+    <div class="grid">
+      <!-- AD GROUP 9. LOKASI -->
+      <div class="card card-kw" style="grid-column: 1 / -1;">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Ad Group: 9. Lokasi (96 Keyword Wilayah/Kecamatan)</div>
+            <span style="color: var(--text-muted); font-size: 13px;">Setiap keyword penelusuran lokasi langsung menjadi Title LP dengan nama wilayah tersebut.</span>
+          </div>
+          <span class="badge badge-kw">96 Baris CSV If-So</span>
+        </div>
+
+        <div class="kw-box">
+          <div class="kw-box-title">Contoh Sampel Keyword Lokasi Riil di Grup Ini:</div>
+          <div class="kw-list">
+            <span class="kw-chip">Sedot Wc Tebet</span>
+            <span class="kw-chip">Sedot Wc Kelapa Gading</span>
+            <span class="kw-chip">Sedot Wc Cibubur</span>
+            <span class="kw-chip">Sedot Wc Bintaro</span>
+            <span class="kw-chip">Sedot Wc Cilandak</span>
+            <span class="kw-chip">Sedot Wc PIK</span>
+            <span class="kw-chip">Sedot Wc Pondok Indah</span>
+            <span class="kw-chip">Sedot Wc Sunter</span>
+            <span class="kw-chip">Sedot Wc Duren Sawit</span>
+            <span class="kw-chip">Sedot Wc Jagakarsa</span>
+            <span class="kw-chip">Sedot Wc Meruya</span>
+            <span class="kw-chip">Sedot Wc Rawamangun</span>
+            <span class="kw-chip">...dan 84 lokasi lainnya</span>
+          </div>
+        </div>
+
+        <div class="lp-preview">
+          <div class="lp-preview-label">Pola Rumus Judul Dinamis di Landing Page:</div>
+          <div class="lp-title">[Keyword Asli Huruf Kapital] ➔ Contoh: Sedot WC Kelapa Gading</div>
+          <div class="lp-subtitle">Tukang Standby di Area [Nama Area] – Tiba di Lokasi 15-30 Menit Bebas Bau</div>
+        </div>
+
+        <div class="audit-status audit-pass">
+          <span>✓</span> <strong>Uji Alami:</strong> 100% Sempurna & sangat personal bagi calon pelanggan di wilayah bersangkutan.
+        </div>
+      </div>
+
+      <!-- 5 WILAYAH KOTA -->
+      <div class="card card-kw">
+        <div class="card-header">
+          <div class="card-title">2. Jakarta Selatan & 7. Jakarta Pusat</div>
+          <span class="badge badge-kw">Per Wilayah Kota</span>
+        </div>
+        <div class="kw-box">
+          <div class="kw-list">
+            <span class="kw-chip">sedot wc jakarta selatan</span>
+            <span class="kw-chip">jasa sedot wc jakarta selatan</span>
+            <span class="kw-chip">sedot wc jakarta pusat</span>
+            <span class="kw-chip">jasa sedot wc jakarta pusat</span>
+          </div>
+        </div>
+        <div class="lp-preview">
+          <div class="lp-title">Sedot WC Jakarta Selatan Resmi</div>
+          <div class="lp-subtitle">Layanan Cepat 24 Jam Bergaransi untuk Rumah & Gedung Kantor</div>
+        </div>
+      </div>
+
+      <div class="card card-kw">
+        <div class="card-header">
+          <div class="card-title">3. Jakarta Timur & 4. Jakarta Barat & 6. Jakarta Utara</div>
+          <span class="badge badge-kw">Per Wilayah Kota</span>
+        </div>
+        <div class="kw-box">
+          <div class="kw-list">
+            <span class="kw-chip">sedot wc jakarta timur</span>
+            <span class="kw-chip">sedot tinja jakarta barat</span>
+            <span class="kw-chip">sedot wc jakarta utara</span>
+            <span class="kw-chip">sedot wc murah jakarta utara</span>
+          </div>
+        </div>
+        <div class="lp-preview">
+          <div class="lp-title">Sedot WC Jakarta Timur 24 Jam</div>
+          <div class="lp-subtitle">Armada Mobil Tangki Terdekat Siap Meluncur Hari Ini</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 4: LANGKAH IMPLEMENTASI -->
+  <div id="tab-steps" class="tab-pane">
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-title">Langkah 1: Pecah 3 Ad Group di Dashboard Google Ads</div>
+        <div class="timeline-desc">
+          Buka akun Google Ads Anda ➔ Masuk ke Campaign Search:
+          <ul style="margin-left: 20px; margin-top: 8px;">
+            <li>Pada Ad Group <code>8.Jasa</code>: Buat Ad Group baru <code>8A.Mampet</code> (isi dengan <code>jasa wc mampet</code> & <code>jasa perbaikan wc mampet</code>), dan sisanya di <code>8B.Sedot</code>.</li>
+            <li>Pada Ad Group <code>13.Ahli</code>: Buat Ad Group baru <code>13A.Mampet</code> (isi dengan <code>ahli wc mampet</code> & <code>ahli wc buntu</code>).</li>
+            <li>Pada Ad Group <code>12.Tukang</code>: Buat Ad Group baru <code>12A.Tukang Mampet</code> (isi dengan <code>tukang wc mampet</code>).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-title">Langkah 2: Pastikan Final URL Suffix Terpasang di Google Ads</div>
+        <div class="timeline-desc">
+          Pada level Campaign Settings ➔ <strong>Campaign URL Options</strong>, pastikan parameter ini aktif:
+          <br><br>
+          <code>keyword={keyword}&matchtype={matchtype}</code>
+          <br><br>
+          <em>(Ini memastikan setiap keyword pencarian dikirim secara instan ke URL landing page saat iklan diklik).</em>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-title">Langkah 3: Upload / Update Tabel CSV di Plugin If-So WordPress</div>
+        <div class="timeline-desc">
+          Buka WP Admin ➔ Menu <strong>If-So ➔ Bulks Selection</strong>:
+          <ul style="margin-left: 20px; margin-top: 8px;">
+            <li><strong>Bulk Lokasi (ID 2):</strong> Upload file <code>Lokasi_Optimized_2Col.csv</code> untuk menangani 96 keyword lokasi.</li>
+            <li><strong>Bulk Kategori (ID 1):</strong> Masukkan baris trigger per Ad Group (Murah, Nomor, Terdekat, Mampet, Sedot Biasa) sesuai simulasi Title Master di atas.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-title">Langkah 4: Verifikasi Shortcode di Landing Page Elementor (Halaman 749)</div>
+        <div class="timeline-desc">
+          Pastikan shortcode If-So terpasang pada Widget Heading & Sub-Heading Elementor:
+          <br><br>
+          • <strong>Title Utama:</strong> <code>[ifso_bulks id='2' column='B']</code><br>
+          • <strong>Subtitle Utama:</strong> <code>[ifso_bulks id='2' column='C']</code><br>
+          • <strong>Fallback Otomatis (DKI):</strong> <code>[if_so_dki param="keyword" default="Jasa Sedot WC Jakarta"]</code>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function switchTab(tabId) {
+    document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+    
+    document.getElementById(tabId).classList.add('active');
+    event.currentTarget.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

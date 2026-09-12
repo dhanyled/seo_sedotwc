@@ -1,0 +1,18 @@
+# Credentials and secrets
+.agents/
+.playwright-mcp/
+client_secrets.json
+google-ads-mcp-setup.html
+*.yaml
+*.key
+*.pem
+
+# Large trace and log files
+*.gz
+*.log
+trace*.json
+
+# Temporary files
+scratch/
+tmp/
+.temp/
