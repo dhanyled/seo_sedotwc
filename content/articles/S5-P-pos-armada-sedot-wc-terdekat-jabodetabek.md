@@ -9,9 +9,9 @@ category_slug: "area-layanan-jabodetabek"
 post_status: "future"
 post_date: "2026-09-20 08:30:00"
 featured_image_id: 881
-featured_image_url: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/jasa-sedot-wc-terdekat-jabodetabek-24-jam.webp"
+featured_image_url: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/armada-truk-tangki-sedot-wc-jakarta.webp"
 in_content_image_id: 882
-in_content_image_url: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/peta-pos-armada-truk-tangki-jakarta.webp"
+in_content_image_url: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/peta-sebaran-pos-armada-sedot-wc-jabodetabek.webp"
 seopress_title: "Jaringan Pos Armada Sedot WC Terdekat se-Jabodetabek - Sedot WC Jakarta"
 seopress_desc: "Jasa sedot WC terdekat Jabodetabek 24 jam dengan waktu respon < 5 menit. Armada siaga di Jakarta Selatan, Barat, Timur, Pusat, Utara. WA 0813-8888-4349."
 ---
@@ -43,8 +43,8 @@ Untuk memangkas kendala kemacetan lalu lintas perkotaan yang padat di wilayah me
    Siaga di koridor Kelapa Gading, Pluit Penjaringan, Sunter Tanjung Priok, serta unit penyangga di Tangerang Kota, Depok, dan Bekasi.
 
 <figure style="margin: 30px 0; text-align: center;">
-  <img src="https://sedotwcdijakarta.com/wp-content/uploads/2026/09/peta-pos-armada-truk-tangki-jakarta.webp" alt="Estimasi waktu tempuh armada sedot WC terdekat per kecamatan" width="800" height="450" style="width: 100%; max-width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);" />
-  <figcaption style="margin-top: 10px; font-size: 0.85rem; color: #64748b;">Gambar 1: Pemetaan jaringan pos mobil tangki siaga untuk memastikan waktu tiba rata-rata di bawah 45 menit per kecamatan.</figcaption>
+  <img src="https://sedotwcdijakarta.com/wp-content/uploads/2026/09/peta-sebaran-pos-armada-sedot-wc-jabodetabek.webp" alt="Peta sebaran pos pangkalan armada sedot WC terdekat DKI Jakarta dan Jabodetabek" width="1200" height="675" style="width: 100%; max-width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);" />
+  <figcaption style="margin-top: 10px; font-size: 0.85rem; color: #64748b;">Gambar 1: Pemetaan logistik sebaran pos pangkalan armada sedot WC di DKI Jakarta &amp; Jabodetabek via koridor Tol JORR Jatiasih untuk respon cepat.</figcaption>
 </figure>
 
 <!-- TABEL SEBARAN ARMADA -->

@@ -586,6 +586,66 @@
       border-radius: 6px;
       display: block;
     }
+    /* Standardized White Placeholder for Scheduled/Draft Posts */
+    .no-pic-box {
+      width: 100%;
+      height: 100%;
+      background: #FFFFFF !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 6px;
+      user-select: none;
+    }
+    .no-pic-icon {
+      font-size: 13px;
+      line-height: 1;
+      display: block;
+    }
+    .no-pic-text {
+      font-size: 8px;
+      font-weight: 800;
+      color: #334155;
+      font-family: var(--font-mono);
+      line-height: 1.1;
+      margin-top: 2px;
+      letter-spacing: -0.2px;
+    }
+    .zoom-banner.no-pic-banner {
+      background: #FFFFFF !important;
+      border: 1.5px dashed #CBD5E1 !important;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 16px;
+      border-radius: 8px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+    .no-pic-large-icon {
+      font-size: 32px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .no-pic-large-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: #1E293B;
+      font-family: var(--font-mono);
+      letter-spacing: 0.5px;
+    }
+    .no-pic-large-sub {
+      font-size: 10.5px;
+      color: #64748B;
+      margin-top: 6px;
+      line-height: 1.4;
+      max-width: 260px;
+    }
     .banner-header {
       display: flex;
       justify-content: space-between;
@@ -1047,18 +1107,18 @@
       volume: "5.400 / bln",
       lsi: ["sedot wc panggilan terdekat", "nomor wa sedot wc 24 jam", "tukang sedot wc cepat datang", "pos armada sedot tinja jabodetabek"],
       featImg: {
-        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/jasa-sedot-wc-terdekat-jabodetabek-24-jam.webp",
-        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/jasa-sedot-wc-terdekat-jabodetabek-24-jam.webp",
-        title: "Featured Image: Pos Pangkalan Armada Jakarta",
-        desc: "Visual sebaran pangkalan mobil tangki di 5 kota administrasi DKI Jakarta.",
-        alt: "Peta jaringan pos armada sedot WC terdekat di Jabodetabek"
+        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/armada-truk-tangki-sedot-wc-jakarta.webp",
+        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/armada-truk-tangki-sedot-wc-jakarta.webp",
+        title: "Featured Image: Armada Truk Tangki Sedot WC Jakarta",
+        desc: "Armada truk tangki vakum bersih dan teknisi berseragam siaga melayani perumahan di Jakarta.",
+        alt: "Armada truk tangki vakum sedot WC siaga 24 jam Jabodetabek"
       },
       contentImg: {
-        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/peta-pos-armada-truk-tangki-jakarta.webp",
-        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/peta-pos-armada-truk-tangki-jakarta.webp",
-        title: "In-Content: Peta Respon Cepat DKI Jakarta",
-        desc: "Tabel jarak tempuh rata-rata 30-45 menit dari pos terdekat ke rumah warga.",
-        alt: "Estimasi waktu tempuh armada sedot WC terdekat per kecamatan"
+        thumb: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/peta-sebaran-pos-armada-sedot-wc-jabodetabek.webp",
+        full: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/peta-sebaran-pos-armada-sedot-wc-jabodetabek.webp",
+        title: "In-Content: Peta Logistik Sebaran Pos Armada Jakarta",
+        desc: "Peta jaringan pos reaksi cepat 5 wilayah DKI Jakarta dengan koridor Tol JORR Jatiasih.",
+        alt: "Peta sebaran pos pangkalan armada sedot WC DKI Jakarta dan Jabodetabek"
       },
       linkPath: "➔ /area-layanan/ & WhatsApp Direct"
     },
@@ -2026,24 +2086,30 @@
       const bodyTitle = (item.contentImg && item.contentImg.title) || 'In-Content Image';
       const bodyDesc = (item.contentImg && item.contentImg.desc) || '';
 
-      const featSvg = generateSanitationVisual(item.siloId, 'feat', item.code);
-      const bodySvg = generateSanitationVisual(item.siloId, 'content', item.code);
+      // Standardized White Placeholder Box (SOP/06 - "NO PIC" Clean & Bulletproof)
+      const noPicThumb = `<div class="no-pic-box"><span class="no-pic-icon">📷</span><span class="no-pic-text">NO PIC</span></div>`;
+
+      const noPicBanner = `<div class="zoom-banner no-pic-banner">
+        <div class="no-pic-large-icon">📷</div>
+        <div class="no-pic-large-title">NO PIC / BELUM ADA GAMBAR</div>
+        <div class="no-pic-large-sub">Aset WebP asli akan diproduksi saat artikel masuk jadwal penulisan WordPress (Standar SOP/06).</div>
+      </div>`;
 
       const featThumbContent = featThumbUrl 
-        ? `<img src="${featThumbUrl}" alt="${featAlt}" loading="lazy" onerror="this.onerror=null; this.src='${featSvg}';">`
-        : `<img src="${featSvg}" alt="${featAlt}">`;
+        ? `<img src="${featThumbUrl}" alt="${featAlt}" loading="lazy" onerror="this.parentElement.innerHTML='${noPicThumb}';">`
+        : noPicThumb;
 
       const featZoomBanner = featFullUrl
-        ? `<div class="zoom-banner live-banner"><img src="${featFullUrl}" alt="${featAlt}" loading="lazy" onerror="this.onerror=null; this.src='${featSvg}';"></div>`
-        : `<div class="zoom-banner live-banner"><img src="${featSvg}" alt="${featAlt}"></div>`;
+        ? `<div class="zoom-banner live-banner"><img src="${featFullUrl}" alt="${featAlt}" loading="lazy"></div>`
+        : noPicBanner;
 
       const bodyThumbContent = bodyThumbUrl 
-        ? `<img src="${bodyThumbUrl}" alt="${bodyAlt}" loading="lazy" onerror="this.onerror=null; this.src='${bodySvg}';">`
-        : `<img src="${bodySvg}" alt="${bodyAlt}">`;
+        ? `<img src="${bodyThumbUrl}" alt="${bodyAlt}" loading="lazy" onerror="this.parentElement.innerHTML='${noPicThumb}';">`
+        : noPicThumb;
 
       const bodyZoomBanner = bodyFullUrl
-        ? `<div class="zoom-banner live-banner"><img src="${bodyFullUrl}" alt="${bodyAlt}" loading="lazy" onerror="this.onerror=null; this.src='${bodySvg}';"></div>`
-        : `<div class="zoom-banner live-banner"><img src="${bodySvg}" alt="${bodyAlt}"></div>`;
+        ? `<div class="zoom-banner live-banner"><img src="${bodyFullUrl}" alt="${bodyAlt}" loading="lazy"></div>`
+        : noPicBanner;
 
       const modalPosClass = index < 3 ? 'modal-down' : '';
 
