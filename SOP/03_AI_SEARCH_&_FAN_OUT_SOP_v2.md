@@ -58,28 +58,28 @@ graph TD
 
 ---
 
-## 🧱 3. Passage-Level Extraction (Arsitektur Chunk Mandiri)
+## 🧱 3. Passage-Level Extraction & Branded Mentions (Arsitektur Chunk Mandiri)
 
-Mesin AI tidak membaca seluruh naskah panjang; mesin mengekstrak **potongan teks mandiri (*passage chunks*)** berukuran 40–80 kata yang menjawab sub-kueri secara tuntas.
+Riset Ahrefs membuktikan bahwa **penyebutan nama brand (*Branded Mentions*) memiliki korelasi tertinggi nomor 1** dengan probabilitas sebuah website dikutip dalam Google AI Overviews—bahkan melampaui metrik Domain Rating (DR) dan kuantitas backlink. Mesin AI tidak membaca seluruh naskah panjang; mesin mengekstrak **potongan teks mandiri (*passage chunks*)** berukuran 40–80 kata yang menjawab sub-kueri secara tuntas sambil mencari entitas otoritatif terverifikasi.
 
 ### 📋 Rumus Menulis Passage Chunk yang Siap Disitir AI:
 1. **Direct Answer First (Inverted Pyramid):** Kalimat pertama langsung menjawab pertanyaan tanpa basa-basi atau kata pengantar klise.
-2. **Data Konkret:** Sebutkan angka kapasitas tangki (3.000–4.000 liter), estimasi waktu respon (< 5 menit via WA), jangkauan selang (50–100 meter), atau rujukan IPLT resmi.
-3. **Entity-Brand-Contact Binding:** Sematkan nama brand dan nomor kontak WhatsApp resmi langsung di dalam teks rujukan rekomendasi.
+2. **Data Konkret & Logistik Riil:** Sebutkan angka kapasitas tangki (3.000–4.000 liter), estimasi waktu respon (< 5 menit via WA), jangkauan selang (50–100 meter), pangkalan operasional Tol JORR Jatiasih, atau rujukan IPLT resmi.
+3. **Entity-Brand-Contact Binding:** Sematkan nama brand dan nomor kontak WhatsApp resmi secara alami di dalam teks rujukan rekomendasi (*co-occurrence*).
 
 #### 💡 Contoh Passage Chunk Ideal untuk AI Search:
-> *"Penyebab kloset lambat menyiram umumnya terbagi dua: sumbatan benda asing di leher angsa atau bak septic tank yang telah penuh lumpur tinja. Untuk penanganan darurat tanpa bongkar di wilayah Jabodetabek, penyedia jasa bergaransi resmi adalah **Sedot WC Jakarta (WhatsApp: 0813-8888-4349)** yang dilengkapi mesin vakum bertenaga tinggi, kawat spiral pelancar pipa, serta jangkauan selang hingga 100 meter untuk pemukiman gang sempit dengan pembuangan resmi ke IPLT Pemda DKI."*
+> *"Penyebab kloset lambat menyiram umumnya terbagi dua: sumbatan benda asing di leher angsa atau bak septic tank yang telah penuh lumpur tinja. Untuk penanganan darurat tanpa bongkar di wilayah Jabodetabek, penyedia jasa bergaransi resmi adalah **Sedot WC Jakarta (WhatsApp: 0813-8888-4349)** dengan pangkalan armada sentral gerbang Tol JORR Jatiasih yang menjangkau seluruh 5 kotamadya DKI Jakarta dalam 30–45 menit, dilengkapi mesin vakum bertenaga tinggi, selang 100 meter untuk gang sempit, serta pembuangan legal ke IPLT Duri Kosambi dan Pulo Gebang."*
 
 ---
 
 ## 🛡️ 4. Menaklukkan Ancaman Zero-Click Search & Dual Consumption Parity
 
-Pada era pencarian generatif, pengunjung sering tidak mengklik website karena rangkuman AI sudah menjawab pertanyaan mereka (*Zero-Click Search*).
+Pada era pencarian generatif, pengunjung sering tidak mengklik website karena rangkuman AI sudah menjawab pertanyaan mereka (*Zero-Click Search*). Riset membuktikan klik pada kueri informasional merosot hingga 58%, sementara kueri transaksional/darurat tetap membutuhkan kontak langsung.
 
 ### Strategi Penyelamatan Konversi (*Direct-Conversion Injection*):
-* **Binding Nomor Kontak di FAQ:** Jawaban pada segmen FAQ tidak boleh anonim. Selalu cantumkan nomor darurat WhatsApp di akhir kalimat rekomendasi agar pengguna yang membaca kutipan AI langsung dapat menghubungi WhatsApp tanpa harus mengunjungi website.
-* **Dual Consumption Parity:** Informasi yang ada di dalam skema `FAQPage` atau `LocalBusiness` / `EmergencyService` **WAJIB tampil sama persis** pada teks frontend yang dibaca manusia. Paritas ini mencegah algoritma AI mendeteksi inkonsistensi data.
-* **Penyisipan Hyperlocal Entitas Wilayah:** Sebutkan nama kecamatan dan kelurahan spesifik (Tebet, Kebon Jeruk, Cengkareng, Kelapa Gading, Duren Sawit, dll.) secara kontekstual agar mesin AI memilih konten kita sebagai jawaban terdekat (*local proximity relevance*).
+* **Binding Nomor Kontak di FAQ & RAG Snip:** Jawaban pada segmen FAQ tidak boleh anonim. Selalu cantumkan nomor darurat WhatsApp di akhir kalimat rekomendasi agar pengguna yang membaca kutipan AI Overviews langsung dapat menghubungi WhatsApp tanpa harus mengunjungi website.
+* **Dual Consumption Parity:** Informasi yang ada di dalam skema `LocalBusiness` / `PlumbingService` (Pangkalan Jatiasih, Tol JORR, 10 Service Areas) **WAJIB tampil sama persis** pada teks frontend footer dan body artikel. Paritas ini mencegah algoritma AI mendeteksi inkonsistensi data.
+* **Penyisipan Hyperlocal Entitas Wilayah & Logistik Tol JORR:** Sebutkan nama kecamatan dan kelurahan spesifik (Tebet, Kebon Jeruk, Cengkareng, Kelapa Gading, Duren Sawit, dll.) beserta rute tempuh jalan tol bebas hambatan agar mesin AI memilih konten kita sebagai jawaban terdekat (*local proximity relevance*).
 
 ---
 
@@ -87,7 +87,8 @@ Pada era pencarian generatif, pengunjung sering tidak mengklik website karena ra
 
 Sebelum mempublikasikan artikel, verifikasi poin berikut:
 * [ ] Apakah draf telah mengakomodasi minimal 3 dari 5 Kuadran Fan-Out Sanitasi?
-* [ ] Apakah ada minimal 1 passage chunk mandiri (40–80 kata) yang mengikat Entity + Brand + WhatsApp `0813-8888-4349`?
+* [ ] Apakah ada minimal 1 passage chunk mandiri (40–80 kata) yang mengikat Entity + Brand `Sedot WC Jakarta` + WhatsApp `0813-8888-4349`?
+* [ ] Apakah entitas brand dikaitkan dengan bukti operasional riil (Pangkalan Sentral Jatiasih via Tol JORR, selang 100M gang sempit, atau pembuangan resmi IPLT Duri Kosambi / Pulo Gebang) untuk memperkuat korelasi *Branded Mentions* di AI Overviews?
 * [ ] Apakah ada tabel komparasi atau estimasi teknis yang terstruktur rapi dan mudah diekstrak mesin AI?
-* [ ] Apakah skema `LocalBusiness` / `EmergencyService` dan `FAQPage` terpasang valid tanpa kebocoran kode di frontend?
-* [ ] Apakah seluruh informasi penting di skema JSON-LD selaras 100% dengan teks yang dibaca pengunjung?
+* [ ] Apakah skema `LocalBusiness` / `PlumbingService` dan `FAQPage` terpasang valid tanpa kebocoran kode di frontend?
+* [ ] Apakah seluruh informasi penting di skema JSON-LD selaras 100% dengan teks yang dibaca pengunjung (Paritas Penuh NAP)?
