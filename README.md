@@ -33,5 +33,19 @@ Seluruh kueri pencarian warga Jabodetabek diserap secara sistematis ke dalam 3 s
 ---
 
 ## 📈 Roadmap Skalabilitas 2 Fase (Anti-Kanibalisasi)
-* **Fase 1 (Aktif):** 30 Artikel Blog (Minimum Viable Topical Authority) untuk domain warming logaritmik (2–3 artikel/minggu).
+* **Fase 1 (Aktif):** 30 Artikel Blog (Minimum Viable Topical Authority) untuk domain warming.
 * **Fase 2 (Terencana):** Tambahan 15–25 artikel baru (Maksimal 45–55 artikel) setelah evaluasi 60–90 hari via data Google Search Console (`SOP/04`).
+
+---
+
+## 📅 Jadwal Rilis: Kurva Akselerasi Eksponensial (12 Sep – 29 Okt 2026)
+* **Pola Rilis:** Progresif meningkat (Makin tua umur domain, makin rapat kuota publikasi):
+  - **Fase Awal (Minggu 1–2):** Interval 3 hari (Seed Otoritas & Trust Bot Google).
+  - **Fase Menengah (Minggu 3–4):** Interval 2 hari (Akselerasi Moderat).
+  - **Fase Lanjutan (Minggu 5–6):** Interval 1–2 hari (Akselerasi Tinggi).
+  - **Fase Matang (Minggu 7):** Interval 1 hari / Harian Penuh (Crawl Budget Establish).
+* **Kickoff Artikel Pertama:** **Sabtu, 12 September 2026** (`S1-P`: Panduan Lengkap Kuras Septic Tank Rumah Tangga).
+* **Penyelesaian Gelombang 1 (10 Artikel):** 03 Oktober 2026.
+* **Penyelesaian Gelombang 2 (20 Artikel):** 19 Oktober 2026.
+* **Penyelesaian Gelombang 3 (30 Artikel Penuh):** 29 Oktober 2026.
+
