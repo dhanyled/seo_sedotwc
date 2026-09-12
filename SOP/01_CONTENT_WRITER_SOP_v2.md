@@ -33,13 +33,16 @@
 
 Konten artikel di `sedotwcdijakarta.com` ditulis untuk **pembaca nyata yang sedang menghadapi masalah darurat sanitasi** (WC mampet, septic tank meluap, wastafel mampet, grease trap berbau busuk). 
 
-### 1.1 Standar Penghitungan Kata Resmi (`@wordpress/wordcount`) & Dynamic Word Count
+### 1.1 Standar Penghitungan Kata Resmi (`@wordpress/wordcount`), Riset Kompetitor SERP & Dynamic Word Count
 * **Modul Resmi Penghitungan Kata:** Seluruh penghitungan jumlah kata wajib menggunakan algoritma resmi WordPress Block Editor (`@wordpress/wordcount`) mode `'words'`. DILARANG menggunakan metode `split(/\s+/)` mentah yang menghitung emoji (`📌`, `💬`) atau simbol tanda baca mandiri (`+`, `/`, `-`).
 * **Pemisahan Judul H1:** Judul utama (`<h1>`) berada di luar tubuh postingan sehingga TIDAK dihitung ke dalam indikator jumlah kata badan artikel WordPress.
+* **Protokol Riset Kompetitor SERP Top 3:**
+  - **Analisis Kesenjangan Konten (*Content Gap Analysis*):** Sebelum menulis, telusuri kompetitor top 3 di Google Indonesia untuk fokus keyword. Temukan kelemahan umum kompetitor lokal (tulisan tipis/dangkal 400–600 kata, tanpa rujukan SNI 2398:2017, minim edukasi hukum Perda DKI No. 3/2013, tidak transparan tarif per tangki vs $m^3$, dan tidak memberi solusi gang sempit selang 100m).
+  - **Penyuntikan Information Gain Riil:** Setiap artikel wajib mengisi kesenjangan tersebut dengan data teknis operasional nyata (biologi bakteri anaerob, tabel interval sedot, legalitas manifest IPLT Duri Kosambi / Pulo Gebang, dan kuis diagnosa mandiri).
 * **Formula Dynamic Word Count Baseline:**
   $$\text{Target Minimal Kata} = \max(1.000\text{ kata},\; \text{Rata-rata Kata Kompetitor Top 3} \times 1.10\text{ s/d }1.20)$$
   - *Jika kompetitor rata-rata < 1.000 kata:* Draf wajib minimal **1.000 kata** front-end murni (*floor minimum*).
-  - *Jika kompetitor rata-rata > 1.000 kata:* Draf wajib melampaui rata-rata kompetitor minimal +10% s/d +20% dengan menyuntikkan *Information Gain* nyata (kendala gang sempit, rincian teknis selang 100m, standar SNI tangki septik, dan legalitas IPLT).
+  - *Jika kompetitor rata-rata > 1.000 kata:* Draf wajib melampaui rata-rata kompetitor minimal +10% s/d +20% dengan menyuntikkan *Information Gain* nyata.
 
 ### 1.2 Distribusi Kata Kunci 3 Tingkat (Fokus, Turunan & LSI Semantik)
 
@@ -92,22 +95,19 @@ Penulis wajib menerapkan penyerapan kata kunci yang terstruktur mengacu pada daf
 
 ---
 
-## 🏗️ 2. Anatomi Struktur Artikel Konversi (AIDA & PAS Framework)
+## 🏗️ 2. Anatomi Struktur Artikel & Tata Letak Template Single Post
 
-Setiap artikel blog/edukasi wajib mengikuti urutan struktur berikut:
+Setiap artikel blog/edukasi wajib mengikuti urutan struktur dan hierarki tata letak berikut:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
+│ [HEADER: Dark Slate #1E1E26, Logo & Menu Teks Putih #FFF (WCAG AAA)]   │
+├────────────────────────────────────────────────────────────────────────┤
 │ 1. JUDUL ARTIKEL (H1 - Exact Match Fokus Keyword dari Silo/04 Roadmap) │
 ├────────────────────────────────────────────────────────────────────────┤
 │ 2. HOOK EMPATIK & PAS LEAD (80–120 Kata): Masalah Darurat Pembaca     │
-│    "Kloset mendadak meluap saat ada banyak tamu di rumah? Jangan buru- │
-│     buru siram soda api sebelum tahu apakah pipa yang tersumbat atau   │
-│     bak septic tank yang sudah penuh..."                               │
 ├────────────────────────────────────────────────────────────────────────┤
-│ 3. BOX DARURAT / MICRO-HOOK CTA (Above The Fold):                      │
-│    "Butuh bantuan tukang datang langsung sekarang? Hubungi Teknisi     │
-│     Sedot WC Jakarta (Respon WA < 5 Menit di 0813-8888-4349)"          │
+│ 3. BOX DARURAT / MICRO-HOOK CTA (Above The Fold): Respon WA < 5 Menit  │
 ├────────────────────────────────────────────────────────────────────────┤
 │ 4. INTI EDUKASI (H2 & H3): Solusi Praktis, Penyebab Riil & Tips        │
 │    - Gunakan Bullet Points & Numbering agar mudah di-skim              │
@@ -119,11 +119,15 @@ Setiap artikel blog/edukasi wajib mengikuti urutan struktur berikut:
 │ 5. FAQ INTERAKTIF (3–5 Pertanyaan Paling Sering Diajukan di SERP)     │
 │    - Mengikat Brand + Nomor WhatsApp pada jawaban rekomendasi          │
 ├────────────────────────────────────────────────────────────────────────┤
-│ 6. PENUTUP & CTA AKHIR: Tawaran Cek Lokasi & Konsultasi Gratis via WA  │
+│ 6. PENUTUP & FOOTER CTA CARD: Tawaran Cek Lokasi & Konsultasi Gratis   │
 ├────────────────────────────────────────────────────────────────────────┤
-│ 7. BLOK REKOMENDASI INBOUND LINK (Anti-Orphan Post Langkah 1):        │
-│    Menentukan 1–2 artikel seklaster eksisting yang akan menyisipkan    │
-│    tautan ke artikel baru ini.                                         │
+│ 7. REKOMENDASI ARTIKEL TERKAIT (3-Column Grid + Featured Image 16:9):  │
+│    [WAJIB BERADA TEPAT DI ATAS COMMENTS AREA - BUKAN DI BAWAHNYA]      │
+│    Menampilkan Featured Image, Silo Category, Judul & Tanggal Terbit.  │
+├────────────────────────────────────────────────────────────────────────┤
+│ 8. KOLOM KOMENTAR (Comments Area & Leave Reply Form)                   │
+├────────────────────────────────────────────────────────────────────────┤
+│ [FOOTER: Dark Slate #1E1E26, Identik dengan Header, Teks WCAG AAA]    │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 

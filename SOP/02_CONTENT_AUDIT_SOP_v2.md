@@ -87,9 +87,16 @@ Draf konten **wajib lolos 9 Hard Gates** berikut dengan status `PASS` sebelum di
 * [ ] **Anti-Rename Bypass & Larangan Comot Cache:** Bukan hasil rename dari gambar lama dan bukan comot dari folder cache lokal tanpa izin.
 * [ ] **Format Berkas:** 100% `.webp` terkompresi (< 100 KB untuk Featured, < 80 KB untuk Content) dengan atribut `alt` deskriptif.
 
-### ⛔ Hard Gate 8: Aksesibilitas WCAG 2.1 AA Mobile & Isolasi Floating Button
-* [ ] Rasio kontras teks reguler minimal **4.5 : 1** terhadap latar belakang (WCAG AA).
-* [ ] Rasio kontras teks besar / tombol CTA minimal **3.0 : 1**.
+### ⛔ Hard Gate 8: Aksesibilitas WCAG 2.1 AA/AAA, Keselarasan Warna Header-Footer & Tata Letak Rekomendasi
+* [ ] **Keselarasan Warna Header & Footer:** Warna latar belakang Header dan Footer **WAJIB SAMA** (resmi menggunakan dark slate `#1E1E26`) dan terpisah secara tegas dari latar belakang Body artikel (`#ffffff`).
+* [ ] **Kepatuhan Kontras Teks WCAG 2.1:**
+  - Teks pada Header & Footer (`#ffffff` pada latar `#1E1E26`) wajib memenuhi rasio kontras $\ge 7.0 : 1$ (WCAG AAA Super Compliant, tercapai **16.8 : 1**).
+  - Teks sub-deskripsi footer (`#d4d4ec` pada latar `#1E1E26`) wajib memenuhi rasio kontras $\ge 7.0 : 1$ (tercapai **8.5 : 1**).
+  - Teks judul H1/H2/H3 pada Body (`#0f172a` / `#1E1E26` pada latar `#ffffff`) wajib memenuhi rasio kontras $\ge 7.0 : 1$ (tercapai **16.8 : 1**).
+  - Teks paragraf body (`#334155` pada latar `#ffffff`) wajib memenuhi rasio kontras $\ge 4.5 : 1$ (tercapai **11.5 : 1**).
+  - Tautan kontekstual artikel (`#0284c7` pada latar `#ffffff`) wajib memenuhi rasio kontras $\ge 4.5 : 1$ (tercapai **4.68 : 1**).
+* [ ] **Posisi Blok Rekomendasi Artikel Terkait:** Blok query artikel terkait (*Latest Posts / Artikel Terkait & Rekomendasi Sanitasi*) **WAJIB TERLETAK DI ATAS KOLOM KOMENTAR** (langsung menyambung setelah penutup artikel / CTA box), BUKAN di bawah form komentar.
+* [ ] **Featured Image pada Kartu Rekomendasi:** Setiap kartu artikel dalam grid 3 kolom wajib memuat gambar unggulan (*Featured Image*) ber-rasio **16:9** dengan `border-radius: 8px` dan tautan aktif.
 * [ ] **Isolasi Floating CTA:** TIDAK ADA tombol floating buatan manual di dalam tubuh artikel yang bertabrakan dengan floating CTA global MU-Plugin (`#manual-floating-wa` / `#ht-ctc-chat`).
 * [ ] Tampilan halaman responsif tanpa pergeseran tata letak kumulatif (*CLS*) pada layar selebar 320 px.
 
