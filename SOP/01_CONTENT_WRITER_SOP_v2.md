@@ -234,6 +234,8 @@ Sesuai dokumentasi resmi Google Search Central (*"Control your title links in se
 * **SEOPress Meta Description (`_seopress_titles_desc`):** Wajib diisi **140–160 karakter**, memuat fokus keyword secara alami, keunggulan legalitas/alat, dan ajakan tindakan darurat (*"Respon WA < 5 Menit di 0813-8888-4349"*). Dilarang dibiarkan kosong.
 * **SEOPress Target Keyword (`_seopress_analysis_target_kw`):** Diisi fokus keyword resmi dari `Silo/04`.
 * **Pencatatan Skor SEOPress di Frontmatter Markdown:** Wajib mencantumkan status audit `seopress_score: "Good (100% - 16/16 Checks Passed)"` dan `seopress_audit_date: "YYYY-MM-DD"`.
+* **Protokol Kontak Interaktif (Zero Static Number):** Dilarang menulis deretan angka nomor telepon statis tanpa tautan aksi. Setiap nomor kontak wajib berupa tombol klik langsung berkelas `.wa-btn-static` dengan pola Two-Layer CTA (Layer 1 teks tombol ringkas, Layer 2 microcopy penenang).
+* **Pre-Publishing Verification Gate (Paritas Database vs Markdown):** Artikel atau halaman **DILARANG BERUBAH STATUS MENJADI `publish`** sebelum publisher memverifikasi bahwa metadata di database WordPress identik 100% dengan frontmatter markdown lokal (Title 50–60 char, Desc 140–160 char, Target KW terisi).
 * **Protokol Pencegahan Kebocoran Kode Front-End (Zero Code Leaks):**
   - DILARANG KERAS menaruh tag `<script type="application/ld+json">` mentah di dalam editor teks postingan karena sanitasi `wp_kses` WordPress akan mencabut tag pembungkus dan menyebabkan barisan kode JSON mentah bocor ke layar pembaca.
   - Schema JSON-LD diproses melalui integrasi tema/plugin SEOPress atau blok Custom HTML terisolasi.
