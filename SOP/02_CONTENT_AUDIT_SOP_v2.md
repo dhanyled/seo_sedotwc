@@ -70,13 +70,15 @@ Draf konten **wajib lolos 9 Hard Gates** berikut dengan status `PASS` sebelum di
 * [ ] Pembuangan limbah disebutkan secara resmi ke Instalasi Pengolahan Lumpur Tinja (IPLT) Pemda DKI Jakarta: **IPLT Duri Kosambi** (Jakarta Barat) dan **IPLT Pulo Gebang** (Jakarta Timur).
 
 ### ⛔ Hard Gate 5: Integritas SEO, SEOPress & Evidence-Grade Verification
-* [ ] **Exact Match Fokus Keyword pada Judul H1:** Tag `<h1>` memuat Fokus Keyword secara utuh dan alami.
+* [ ] **Exact Match Fokus Keyword pada Judul H1:** Tag `<h1>` memuat Fokus Keyword secara utuh dan alami (panjang optimal **60–90 karakter** untuk *reader experience* & kenyamanan pembaca).
+* [ ] **Diferensiasi & Batas Karakter SEOPress Title (`_seopress_titles_title`):** Panjang judul SERP dibatasi ketat **50–60 karakter** (termasuk akhiran `- Sedot WC Jakarta`), memuat fokus keyword di depan, dan bebas *keyword stuffing* agar tidak terpotong `...` atau di-rewrite oleh Google.
+* [ ] **Batas Karakter SEOPress Meta Description (`_seopress_titles_desc`):** Terisi **140–160 karakter**, memuat fokus keyword, trust seal alat/legalitas, dan ajakan bertindak darurat (*"Respon WA < 5 Menit"*).
+* [ ] **Audit Skor Analisis Konten SEOPress (*Content Analysis Score*):** Artikel wajib meraih status evaluasi **"Good" (100% / Seluruh Checklist Hijau)** pada modul analisis SEOPress di WordPress (`wp_seopress_content_analysis`), dan dicatat di frontmatter markdown (`seopress_score`).
 * [ ] **Struktur URL Bersih:** Permalink slug memuat Fokus Keyword secara utuh (`/fokus-keyword/`).
 * [ ] **Distribusi Keyword Turunan pada H2/H3:** Seluruh kata kunci turunan dari tabel Silo/04 terpasang sebagai sub-heading H2/H3 dan dijawab tuntas minimal 150 kata per heading.
 * [ ] **Cakupan LSI & Entitas Semantik Wajib:** Memuat entitas teknis sanitasi wajib dari tabel Silo/04 (*bakteri anaerob, pipa hawa, resapan tanah, IPLT Duri Kosambi/Pulo Gebang, truk engkel, dll.*) secara ko-okurensi alami tanpa keyword stuffing.
 * [ ] **Uji Diferensiasi Intensi (Anti-Kanibalisasi):** Sudut pandang artikel terbukti unik dan tidak tumpang tindih (*zero cannibalization*) dengan artikel tetangga seklaster sesuai batasan intensi di Silo/01.
 * [ ] **Taksonomi:** Tepat memilih **1 Kategori Silo** resmi (ID 20–24), dan **Tag berjumlah 0 (NOL - 0 Tag Policy)**.
-* [ ] **Metadata SEOPress:** `_seopress_titles_title` terpasang exact match, `_seopress_titles_desc` terisi 140–160 karakter dengan ajakan bertindak (tidak kosong), dan `_seopress_analysis_target_kw` terisi fokus keyword resmi.
 * [ ] **Evidence-Grade External Link Test:** Rujukan ke regulasi sanitasi (SNI 2398:2017, Permen LHK No. P.68/2016, Perda DKI No. 3/2013) terverifikasi lolos uji 4-Object: `[Kalimat Klaim] <-> [Anchor Text] <-> [Final URL] <-> [Isi Sumber]`. Wajib live HTTP 200 deep-link (bukan broken, bukan soft-404, dan bukan root homepage).
 * [ ] **Zero Front-End Code Leaks:** Tidak ada kode JSON-LD mentah, tag `<script>`, kode CSS mentah, atau komentar HTML yang bocor di layar pembaca akibat filter sanitasi `wp_kses`.
 * [ ] **Zero Frontmatter & Editorial Leaks:** Memastikan `post_content` bersih 100% dari header YAML markdown (`--- code: S... ---`) dan blok catatan internal redaksi (`[REKOMENDASI INBOUND LINK - ANTI-ORPHAN]`).
@@ -134,7 +136,7 @@ Draf konten **wajib lolos 9 Hard Gates** berikut dengan status `PASS` sebelum di
 | HG 2: Proteksi Halaman 749 | PASS | Nol link ke 749, Elementor steril, CSS/JS aman |
 | HG 3: Burstiness & Anti-AI | PASS | Zero parallel triads, ritme kalimat bervariasi, bebas kata arkais |
 | HG 4: Realisme Jabodetabek | PASS | Disebutkan selang 100m, truk engkel gang sempit, IPLT Duri Kosambi |
-| HG 5: SEO, SEOPress & Evidence Link | PASS | H1 Exact Match, 0 Tag, 1 Silo, rujukan SNI 2398:2017 HTTP 200 deep-link, 0 code leaks |
+| HG 5: SEO, SEOPress & Evidence Link | PASS | H1 Exact Match (60–90 char), Meta Title (50–60 char), Meta Desc (140–160 char), SEOPress Score Good (100%), 0 Tag, 1 Silo, rujukan SNI HTTP 200, 0 code leaks |
 | HG 6: Anti-Orphan Post (3 Langkah) | PASS | Inbound link dari [Slug Artikel Lama] terverifikasi aktif HTTP 200 |
 | HG 7: Visual WebP & Zero Distortion | PASS | Two-way media terpenuhi, WebP HD, rasio 16:9 proporsional, usage count === 1 |
 | HG 8: WCAG 2.1 Mobile AA | PASS | Touch target valid, kontras 5.1:1, floating CTA steril |

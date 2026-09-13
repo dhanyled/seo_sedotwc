@@ -221,14 +221,19 @@ Seluruh pengadaan media wajib mematuhi panduan master di [`SOP/06_IMAGE_&_MEDIA_
 
 ---
 
-## ⚙️ 6. Parameter Penerbitan WordPress, SEOPress & Pencegahan Kebocoran Kode
+## ⚙️ 6. Parameter Penerbitan WordPress, SEOPress & Diferensiasi Judul (Google SERP vs On-Page H1)
 
-Sebelum artikel diterbitkan atau dijadwalkan, parameter berikut wajib diset:
+Sesuai dokumentasi resmi Google Search Central (*"Control your title links in search results"*), judul untuk mesin pencari (`<title>`) dan judul untuk pembaca artikel (`<h1>`) memiliki fungsi serta batasan yang berbeda:
 * **Kategori (Category):** Centang tepat **1 Kategori Silo** resmi (Pilihan: `septic-tank-pemukiman`, `saluran-pipa-mampet`, `grease-trap-resto-mbg`, `limbah-stp-industri`, `area-layanan-jabodetabek`). Dilarang mencentang kategori default `Info Update`.
 * **Tag:** Dikosongkan total (**0 Tag Policy**).
-* **SEOPress Title (`_seopress_titles_title`):** Format: `[Judul H1 Menarik] - Sedot WC Jakarta`. Wajib memuat fokus keyword secara utuh (*Exact Match*).
-* **SEOPress Meta Description (`_seopress_titles_desc`):** Wajib diisi 140–160 karakter, memuat fokus keyword dan ajakan tindakan darurat (*"Respon < 5 Menit / Siaga 24 Jam Jabodetabek"*). Dilarang dibiarkan kosong.
+* **On-Page Heading (`<h1>`):** Ditujukan untuk pengunjung yang mendarat di artikel (*reader experience & dwell time*). Panjang: **60–90 karakter**. Mengalir alami, edukatif, empati, memuat fokus keyword, dan tidak memerlukan nama brand di akhir.
+* **SEOPress Title (`_seopress_titles_title`):** Ditujukan untuk etalase hasil pencarian Google SERP (*Click-Through Rate / CTR*). 
+  - **Batas Karakter Wajib:** **50–60 karakter** (termasuk spasi dan akhiran brand) agar tidak terpotong elipsis (`...`) di layar ponsel maupun desktop.
+  - **Format:** `[Fokus Keyword di Depan / Hook Padat] - Sedot WC Jakarta`.
+  - **Bebas Keyword Stuffing:** Dilarang menumpuk kata kunci repetitif yang dapat memicu Google menulis ulang (*rewrite*) judul Anda.
+* **SEOPress Meta Description (`_seopress_titles_desc`):** Wajib diisi **140–160 karakter**, memuat fokus keyword secara alami, keunggulan legalitas/alat, dan ajakan tindakan darurat (*"Respon WA < 5 Menit di 0813-8888-4349"*). Dilarang dibiarkan kosong.
 * **SEOPress Target Keyword (`_seopress_analysis_target_kw`):** Diisi fokus keyword resmi dari `Silo/04`.
+* **Pencatatan Skor SEOPress di Frontmatter Markdown:** Wajib mencantumkan status audit `seopress_score: "Good (100% - 16/16 Checks Passed)"` dan `seopress_audit_date: "YYYY-MM-DD"`.
 * **Protokol Pencegahan Kebocoran Kode Front-End (Zero Code Leaks):**
   - DILARANG KERAS menaruh tag `<script type="application/ld+json">` mentah di dalam editor teks postingan karena sanitasi `wp_kses` WordPress akan mencabut tag pembungkus dan menyebabkan barisan kode JSON mentah bocor ke layar pembaca.
   - Schema JSON-LD diproses melalui integrasi tema/plugin SEOPress atau blok Custom HTML terisolasi.

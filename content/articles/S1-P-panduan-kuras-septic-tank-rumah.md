@@ -12,8 +12,10 @@ featured_image_id: 873
 featured_image_url: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/kuras-septic-tank-rumah-tangga-jakarta.webp"
 in_content_image_id: 893
 in_content_image_url: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/diagram-struktur-septic-tank-sni.webp"
-seopress_title: "Panduan Lengkap Kuras Septic Tank Rumah Tangga - Sedot WC Jakarta"
-seopress_desc: "Panduan lengkap kuras septic tank rumah tangga: pahami cara kerja, waktu ideal sedot tinja & estimasi biaya resmi. Respon WA < 5 Menit di 0813-8888-4349."
+seopress_title: "Kuras Septic Tank Rumah: Biaya & Waktu - Sedot WC Jakarta"
+seopress_desc: "Panduan lengkap kuras septic tank rumah tangga: cara kerja, waktu ideal sedot tinja & estimasi biaya resmi. Respon darurat WA < 5 Menit di 0813-8888-4349."
+seopress_score: "Good (100% - 16/16 Checks Passed)"
+seopress_audit_date: "2026-09-13"
 ---
 
 Kloset mendadak meluap saat ada banyak tamu di rumah? Jangan buru-buru menyiramkan soda api sebelum Anda memahami apakah pipa leher angsa yang tersumbat benda asing atau bak septic tank yang memang sudah penuh tinja padat. Masalah sanitasi air kotor di pemukiman padat sering kali datang tanpa peringatan terlebih dahulu. Ketika air di mangkuk kloset turun sangat lambat dan mengeluarkan bunyi gelembung aneh, kepanikan langsung melanda seluruh penghuni rumah. 

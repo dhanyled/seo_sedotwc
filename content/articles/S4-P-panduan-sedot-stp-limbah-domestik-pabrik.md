@@ -12,8 +12,10 @@ featured_image_id: 879
 featured_image_url: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/sedot-limbah-domestik-stp-pabrik-gedung.webp"
 in_content_image_id: 880
 in_content_image_url: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/fasilitas-instalasi-stp-pengolahan-limbah.webp"
-seopress_title: "Manajemen Bak STP Gedung & Pabrik - Sedot WC Jakarta"
-seopress_desc: "Panduan manajemen dan prosedur sedot limbah domestik STP pabrik gedung komersial. Truk kapasitas besar 4.000L & manifest resmi IPLT. WA 0813-8888-4349."
+seopress_title: "Sedot Limbah STP Pabrik & Gedung - Sedot WC Jakarta"
+seopress_desc: "Panduan manajemen dan prosedur sedot limbah domestik STP pabrik gedung komersial. Truk kapasitas besar 4.000L & manifest resmi IPLT. WA darurat 0813-8888-4349."
+seopress_score: "Good (100% - 16/16 Checks Passed)"
+seopress_audit_date: "2026-09-13"
 ---
 
 Bagi para Building Manager gedung perkantoran, pengelola kawasan ruko, serta penanggung jawab operasional pabrik di Jabodetabek, menjaga kinerja instalasi pengolahan air limbah (*Sewage Treatment Plant / STP*) adalah kewajiban mutlak. Kegagalan sistem biologis pada bak aerasi tidak hanya memicu aroma amonia menyengat yang mengganggu kenyamanan ribuan karyawan, melainkan berisiko membuat air olahan buangan melebihi ambang batas baku mutu lingkungan yang berujung pada sanksi penyegelan fasilitas oleh Dinas Lingkungan Hidup.

@@ -12,8 +12,10 @@ featured_image_id: 877
 featured_image_url: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/kuras-grease-trap-dapur-restoran-mbg.webp"
 in_content_image_id: 878
 in_content_image_url: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/instalasi-grease-trap-stainless-dapur.webp"
-seopress_title: "Standar Sanitasi Grease Trap Dapur Komersial - Sedot WC Jakarta"
-seopress_desc: "Standar sanitasi kuras grease trap dapur restoran & dapur program MBG. Penanganan limbah lemak FOG higienis & bebas bau. Hubungi teknisi di 0813-8888-4349."
+seopress_title: "Kuras Grease Trap Dapur Restoran & MBG - Sedot WC Jakarta"
+seopress_desc: "Standar sanitasi kuras grease trap dapur restoran & dapur program MBG. Penanganan limbah lemak FOG higienis & bebas bau. Hubungi teknisi darurat 0813-8888-4349."
+seopress_score: "Good (100% - 16/16 Checks Passed)"
+seopress_audit_date: "2026-09-13"
 ---
 
 Aroma tengik dan bau busuk menyengat tiba-tiba tercium dari area bak cuci piring saat jam makan siang restoran sedang ramai pengunjung? Atau wastafel dapur sentral mendadak meluap dan menolak aliran air bilasan panci masak porsi besar? Bagi pengelola bisnis kuliner, kafe, katering, hingga dapur penyedia Program Makan Bergizi Gratis (MBG), insiden sanitasi seperti ini bukan hanya merusak selera makan pelanggan, melainkan dapat menghentikan izin operasional dapur secara mendadak.
