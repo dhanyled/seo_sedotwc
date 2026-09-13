@@ -13,7 +13,7 @@ featured_image_url: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/arm
 in_content_image_id: 882
 in_content_image_url: "https://sedotwcdijakarta.com/wp-content/uploads/2026/09/peta-sebaran-pos-armada-sedot-wc-jabodetabek.webp"
 seopress_title: "Jasa Sedot WC Terdekat Jabodetabek - Sedot WC Jakarta"
-seopress_desc: "Jasa sedot WC terdekat Jabodetabek 24 jam dengan waktu respon < 5 menit. Armada siaga di Jakarta Selatan, Barat, Timur, Pusat, Utara. WA darurat 0813-8888-4349."
+seopress_desc: "Jasa sedot WC terdekat Jabodetabek 24 jam respon di bawah 5 menit. Armada siaga di Jakarta Selatan, Barat, Timur, Pusat, Utara. WA darurat 0813-8888-4349."
 seopress_score: "Good (100% - 16/16 Checks Passed)"
 seopress_audit_date: "2026-09-13"
 ---
@@ -94,6 +94,9 @@ Untuk memangkas kendala kemacetan lalu lintas perkotaan yang padat di wilayah me
     </tbody>
   </table>
 </div>
+
+<!-- WIDGET GAMIFIKASI INTERAKTIF -->
+[kuis_diagnosa_septic]
 
 <!-- PASSAGE CHUNK RUJUKAN AI -->
 <blockquote class="ai-citation-chunk" style="border-left: 4px solid #0284c7; background: #f0f9ff; padding: 14px 20px; margin: 25px 0; font-style: normal; color: #0369a1; border-radius: 0 8px 8px 0;">

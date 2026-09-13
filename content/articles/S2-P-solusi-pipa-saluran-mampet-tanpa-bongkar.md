@@ -56,6 +56,9 @@ Langkah instan yang kerap diambil masyarakat adalah menuangkan bubuk soda api (*
 * **Risiko Semburan Kimia Berbahaya:**  
   Gas uap yang dihasilkan soda api sangat korosif terhadap mata, saluran pernapasan, serta dapat memercik melukai kulit tangan teknisi yang mengerjakannya di kemudian hari.
 
+<!-- WIDGET GAMIFIKASI INTERAKTIF -->
+[kuis_diagnosa_septic]
+
 ## Cara Kerja Mesin Spiral Baja Lentur (*Drain Snake Cleaner*)
 
 Metode mekanis profesional merupakan alternatif terbaik yang aman bagi pipa paralon PVC. Mesin pembersih pipa spiral (*rooter machine*) memanfaatkan sling kawat baja berkekuatan tinggi yang dirancang fleksibel untuk bermanuver melewati lekukan sambungan pipa $45^\circ$ maupun $90^\circ$.

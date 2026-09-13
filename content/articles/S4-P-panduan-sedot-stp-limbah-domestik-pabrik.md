@@ -87,6 +87,9 @@ Banyak pengelola gedung dan pabrik yang ragu menggunakan jasa penyedotan limbah 
 
 Selama limbah yang dikuras dari bak STP gedung atau pabrik berasal dari aktivitas sanitasi manusia (toilet dan dapur kantin), limbah tersebut berstatus **Limbah Cair Domestik Non-B3** dan sah secara hukum untuk diangkut dan dibuang ke IPLT pemerintah daerah.
 
+<!-- WIDGET GAMIFIKASI INTERAKTIF -->
+[kuis_diagnosa_septic]
+
 ## Kapan Bak STP Membutuhkan Penyedotan Lumpur Massal?
 
 Meskipun sistem aerasi mendegradasi sebagian besar bahan organik, akumulasi lumpur mati (*dead sludge*) yang tidak dapat terurai akan terus menumpuk di dasar bak pengendapan. Parameter operasional berikut menandakan bak STP Anda wajib segera dikuras:

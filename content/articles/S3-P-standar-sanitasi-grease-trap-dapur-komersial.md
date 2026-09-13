@@ -58,6 +58,9 @@ Alat penangkap lemak (*grease trap*) bekerja murni secara fisik mengandalkan per
 * **Sekat 3 — Ruang Aliran Air Bersih (*Discharge Outlet*):**  
   Pipa saluran keluar mengambil air dari bagian tengah bawah kompartemen (zona air bersih bebas minyak) untuk kemudian dialirkan dengan aman menuju saluran pipa pembuangan umum kota.
 
+<!-- WIDGET GAMIFIKASI INTERAKTIF -->
+[kuis_diagnosa_septic]
+
 ## Standar Khusus Dapur Program Makan Bergizi Gratis (MBG) & SPPG
 
 Pelaksanaan Program Makan Bergizi Gratis (MBG) yang melibatkan **Satuan Pelayanan Program Gizi (SPPG)** dan dapur sentral catering porsi ribuan kotak makan setiap hari menuntut disiplin sanitasi air limbah ekstra ketat.
